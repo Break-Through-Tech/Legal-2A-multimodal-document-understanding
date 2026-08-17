@@ -1,1 +1,30 @@
+# Dataset files — pulled with data/load_data.py, never committed
+data/raw/
+data/labels.csv
+*.parquet
+*.arrow
 
+# Cached embeddings (these get large — ~260 MB per model)
+*.npy
+*.npz
+embeddings/
+cache/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Environment / secrets — never commit API keys or tokens
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
