@@ -2,7 +2,7 @@
 
 **Company / Org:** Independent project, legal domain focus  
 **Challenge Advisor:** Grace Lang, graceelang@gmail.com  
-**AI Studio Coach:** 
+**AI Studio Coach:** Parth Dali, parth.dali@breakthroughtech.org  
 **Program:** Break Through Tech AI Studio - Fall 2026
 
 ---
