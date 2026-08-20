@@ -2,7 +2,7 @@
 
 **Company / Org:** Independent project, legal domain focus  
 **Challenge Advisor:** Grace Lang, graceelang@gmail.com  
-**AI Studio Coach:** Hrushikesh Shetty, hrushikesh.shetty@breakthroughtech.org  
+**AI Studio Coach:** 
 **Program:** Break Through Tech AI Studio - Fall 2026
 
 ---
@@ -16,7 +16,7 @@ Law firms and in-house teams process large volumes of scanned documents during d
 ## 🎯 The Challenge
 
 ### Project Summary
-Build a pipeline that takes a scanned document arriving in a legal review queue and produces structured data from it: embed → cluster/classify → flag unrecognized documents → extract JSON. Along the way, answer an open research question: do multimodal vision embeddings (ex. ColPali, ColQwen2) separate legal document types better than embeddings built from OCR text?
+Build a pipeline that takes a scanned document arriving in a legal review queue and produces structured data from it: embed → cluster/classify → flag unrecognized documents → extract JSON. Along the way, answer an open research question: do multimodal vision embeddings separate legal document types better than embeddings built from OCR text?
 
 ### Why This Matters
 Legal teams pay people to look at each incoming document, decide what it is, route it, and retype the important fields. This is called intelligent document processing (IDP). Vision models that read document images directly, without a separate OCR step, are new enough that whether they beat OCR is still open.
@@ -33,7 +33,7 @@ For legal documents specifically, the answer is not obvious. Vision embeddings d
 ### Success Criteria
 By the end of the semester, the team should be able to demonstrate:
 - Document type labels parsed out of the raw dataset and a documented policy for which types count as in-scope
-- A head-to-head embedding comparison with metrics, not just visualizations
+- A head-to-head embedding comparison with metrics and visualizations
 - Clustering evaluated against true labels across at least three algorithms
 - A classifier over in-scope legal document types, with a documented baseline and at least one measured improvement
 - A detector that flags documents falling outside the legal types the classifier was trained on
@@ -66,7 +66,7 @@ Use these milestones to guide your work. Your team should maintain a GitHub Proj
 
 | Month | Focus | Expected Outcomes |
 |---|---|---|
-| **September** | Data understanding and embeddings | Labels parsed, scope policy documented, splits built, evaluation harness written, all embedding channels cached, clustering compared, head-to-head verdict delivered |
+| **September** | Data understanding and embeddings | Labels parsed, scope policy documented, splits built, all embedding channels cached, clustering compared, head-to-head verdict delivered |
 | **October** | Classification and out-of-scope documents | Classifier trained and tuned on legal types, confusion-matrix analysis, out-of-scope detector built and evaluated, first error analysis |
 | **November** | Extraction and evaluation | Multimodal LLM extraction working, deterministic schema validation, field-level scoring against ground truth, error analysis by document quality |
 | **December** | Integration and presentation | End-to-end pipeline, final results tables, documented limitations, portfolio-ready repository, final demo |
@@ -183,7 +183,6 @@ Validate extracted JSON with `jsonschema`, not by asking the LLM whether its own
 The resources below are enough to start productively without overloading the first month.
 
 **Background Reading**
-- ColPali paper, the basis for the core research question: https://arxiv.org/abs/2407.01449
 - What intelligent document processing is: https://aws.amazon.com/what-is/intelligent-document-processing/
 - Benchmark methodology from the dataset authors, including their JSON scoring formula: https://github.com/getomni-ai/benchmark/blob/main/README.md
 
