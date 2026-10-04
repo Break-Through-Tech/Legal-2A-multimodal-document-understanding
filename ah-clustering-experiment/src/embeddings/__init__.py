@@ -44,6 +44,10 @@ def _decode(bundle: dict) -> dict[int, dict]:
     ids = document_ids(frame.document_id)
     images = {row["document_id"]: row for row in config["documents"]}
     require(set(ids) == set(images), "Missing or unexpected embedding document IDs")
+    # Pandas groupby drops null keys by default. Validate every record before
+    # grouping so a malformed shard cannot silently remove a document.
+    require(all(isinstance(value, (int, np.integer)) and not isinstance(value, (bool, np.bool_)) and value >= 0
+                for value in frame["shard"]), "Every document must have a nonnegative integer shard index")
     used = set()
     result = {}
     for shard, rows in frame.groupby("shard", sort=True):
@@ -73,6 +77,7 @@ def _decode(bundle: dict) -> dict[int, dict]:
             _validate_document(document, config)
             result[doc_id] = document
     require(used == set(bundle["arrays"]), "Unexpected tensor shard")
+    require(set(result) == set(images), "Missing or unexpected decoded document IDs")
     return result
 
 
@@ -104,7 +109,10 @@ def write_embeddings(storage_root: str | Path, config: dict, documents, *, sourc
                     offsets[name] += len(array)
                 records.append(row)
             for name in config["tensors"]:
-                writer.array(f"shard-{shard:05d}-{name}", np.concatenate([doc["tensors"][name] for doc in batch], axis=0))
+                # Without dtype, concatenate normalizes non-native byte order.
+                writer.array(f"shard-{shard:05d}-{name}", np.concatenate(
+                    [doc["tensors"][name] for doc in batch], axis=0,
+                    dtype=np.dtype(config["tensors"][name]["dtype"]), casting="no"))
             batch.clear()
 
         for document in documents:

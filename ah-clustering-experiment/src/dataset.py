@@ -33,6 +33,7 @@ LIMITATIONS = [
     "The benchmark includes business documents beyond the legal subset.",
     "Shared partitions do not group source or template families.",
 ]
+REFERENCE_TEXT_POLICY = "Kept only in raw source cache; excluded from manifest and model inputs; not actual OCR."
 
 
 def fingerprint(value: object) -> str:
@@ -240,11 +241,48 @@ def _load_source(root: Path):
     return source.select_columns(["id", "image", "metadata"]).cast_column("image", DatasetImage(decode=False))
 
 
+def _validate_preparation_metadata(metadata: dict) -> None:
+    """Require a complete provenance record without comparing historical code to today's code."""
+    if metadata.get("reference_text_policy") != REFERENCE_TEXT_POLICY or metadata.get("limitations") != LIMITATIONS:
+        raise ValueError("Missing or incompatible reference-text policy or research limitations")
+    if not isinstance(metadata.get("python_version"), str) or not metadata["python_version"].strip():
+        raise ValueError("Missing preparation Python version")
+    try:
+        created_at = datetime.fromisoformat(metadata["created_at"])
+        if created_at.tzinfo is None:
+            raise ValueError("Missing creation timezone")
+    except (KeyError, TypeError, ValueError) as error:
+        raise ValueError("Invalid preparation timestamp") from error
+    dependencies = metadata.get("dependencies")
+    if (not isinstance(dependencies, dict) or not {"datasets", "pandas", "pyarrow", "Pillow"}.issubset(dependencies)
+            or not all(isinstance(version, str) and version.strip() for version in dependencies.values())):
+        raise ValueError("Missing preparation dependency versions")
+    provenance = metadata.get("preparation_provenance")
+    if not isinstance(provenance, dict):
+        raise ValueError("Missing preparation provenance")
+    files = provenance.get("source_files_sha256")
+
+    def is_hex(value, lengths):
+        return isinstance(value, str) and len(value) in lengths and all(char in "0123456789abcdef" for char in value)
+
+    if (not isinstance(files, dict) or not {"src/dataset.py", "experiments/prepare_dataset.py"}.issubset(files)
+            or not all(is_hex(digest, {64}) for digest in files.values())
+            or provenance.get("source_digest") != fingerprint(files)):
+        raise ValueError("Missing or inconsistent preparation source hashes")
+    if ("git_commit" not in provenance or "experiment_dirty" not in provenance
+            or (provenance["git_commit"] is not None and not is_hex(provenance["git_commit"], {40, 64}))
+            or (provenance["experiment_dirty"] is not None and type(provenance["experiment_dirty"]) is not bool)):
+        raise ValueError("Invalid preparation Git state")
+
+
 def validate_artifact(root: Path, manifest_path: Path, metadata_path: Path, identity: dict, assignments: pd.DataFrame, metadata: dict | None = None) -> pd.DataFrame:
     if metadata is None:
         metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+    if not isinstance(metadata, dict):
+        raise ValueError("Dataset metadata must be a JSON object")
     if metadata.get("status") != "complete" or metadata.get("identity") != identity:
         raise ValueError("Incomplete or incompatible dataset artifact")
+    _validate_preparation_metadata(metadata)
     if metadata.get("manifest_sha256") != file_sha256(manifest_path):
         raise ValueError("Manifest checksum mismatch")
     manifest = pd.read_parquet(manifest_path)
@@ -331,7 +369,7 @@ def prepare_dataset(config: dict, storage_root: str | Path, assignments_path: st
             "identity_sha256": fingerprint(identity),
             "manifest_sha256": file_sha256(manifest_path), "document_count": len(manifest),
             "partition_counts": manifest["split"].value_counts().to_dict(), "final_label_count": manifest["label"].nunique(),
-            "extraction_scope": "all_1000_documents", "reference_text_policy": "Kept only in raw source cache; excluded from manifest and model inputs; not actual OCR.",
+            "extraction_scope": "all_1000_documents", "reference_text_policy": REFERENCE_TEXT_POLICY,
             "label_usage": "evaluation_only", "limitations": LIMITATIONS,
             "created_at": datetime.now(timezone.utc).isoformat(), "python_version": platform.python_version(),
             "preparation_provenance": preparation_provenance(),
