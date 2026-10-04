@@ -1,0 +1,10 @@
+# Generated experiment data and local runtimes
+outputs/
+cache/
+.venv/
+checkpoints/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.env
+.env.*

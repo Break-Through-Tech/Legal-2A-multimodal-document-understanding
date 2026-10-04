@@ -1,0 +1,15 @@
+{
+  "dataset": {
+    "name": "getomni-ai/ocr-benchmark",
+    "revision": "4ed0d95271ca00107726230f7a0944ed9e90d897",
+    "upstream_split": "test"
+  },
+  "shared_manifest": "data/split.csv",
+  "default_cohort": "train",
+  "label_usage": "evaluation_only",
+  "cluster_count_policy": {
+    "mode": "independently_chosen",
+    "n_clusters": null,
+    "rationale": "Choose and record a count in the clustering configuration before fitting; this dataset preparation does not choose one."
+  }
+}

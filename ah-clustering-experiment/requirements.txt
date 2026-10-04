@@ -1,0 +1,6 @@
+# Step 2 dataset preparation. Encoder dependencies will be added separately.
+datasets==5.0.1
+huggingface_hub==1.30.0
+pandas==3.0.5
+pyarrow==25.0.1
+Pillow==12.3.0
