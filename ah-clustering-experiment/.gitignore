@@ -8,3 +8,5 @@ __pycache__/
 .ipynb_checkpoints/
 .env
 .env.*
+# The repository-wide embeddings/ rule also matches source packages.
+!/src/embeddings/

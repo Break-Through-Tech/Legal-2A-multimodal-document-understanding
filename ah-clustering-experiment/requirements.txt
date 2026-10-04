@@ -1,4 +1,5 @@
-# Step 2 dataset preparation. Encoder dependencies will be added separately.
+# Dataset preparation and artifact storage. Encoder dependencies come later.
+numpy==2.5.3
 datasets==5.0.1
 huggingface_hub==1.30.0
 pandas==3.0.5
