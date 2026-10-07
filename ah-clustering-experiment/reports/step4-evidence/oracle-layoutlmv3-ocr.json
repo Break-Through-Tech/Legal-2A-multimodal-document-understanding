@@ -1,0 +1,123 @@
+{
+  "status": "passed",
+  "evidence_grade": "LIVE_VERIFIED",
+  "settings": {
+    "family": "layoutlmv3",
+    "checkpoint": "microsoft/layoutlmv3-base",
+    "revision": "cfbbbff0762e6aab37086fdd4739ad14fe7d5db4",
+    "input_mode": "image_and_ocr",
+    "dtype": "float32",
+    "batch_size": 2,
+    "processor_options": {}
+  },
+  "source_digest": "7acf6ea0273b332ba63421772ff955530c739242a5f049a256d0e9a7a2801335",
+  "artifact_id": "embeddings-6c93da1854e5670cfe3d",
+  "document_ids": [
+    0,
+    1,
+    2
+  ],
+  "shapes": {
+    "0": {
+      "cls": [
+        1,
+        768
+      ],
+      "tokens": [
+        304,
+        768
+      ],
+      "attention_mask": [
+        304
+      ],
+      "input_ids": [
+        107
+      ],
+      "boxes": [
+        107,
+        4
+      ],
+      "word_ids": [
+        107
+      ]
+    },
+    "1": {
+      "cls": [
+        1,
+        768
+      ],
+      "tokens": [
+        304,
+        768
+      ],
+      "attention_mask": [
+        304
+      ],
+      "input_ids": [
+        107
+      ],
+      "boxes": [
+        107,
+        4
+      ],
+      "word_ids": [
+        107
+      ]
+    },
+    "2": {
+      "cls": [
+        1,
+        768
+      ],
+      "tokens": [
+        709,
+        768
+      ],
+      "attention_mask": [
+        709
+      ],
+      "input_ids": [
+        512
+      ],
+      "boxes": [
+        512,
+        4
+      ],
+      "word_ids": [
+        512
+      ]
+    }
+  },
+  "differential_tolerance": 1e-05,
+  "negative_controls": [
+    "native numeric value mutation rejected",
+    "short output mask rejected",
+    "flipped output mask rejected"
+  ],
+  "metamorphic_checks": [],
+  "cache_reuse_without_loading": true,
+  "frozen_eval_inference_mode_verified": true,
+  "observed_model_forwards": 4,
+  "constructed_ocr_edge_checks": [
+    {
+      "case": "constructed_empty_ocr",
+      "parent_document_id": 0,
+      "text_tokens": 2,
+      "total_tokens": 199,
+      "input_authority": "constructed processor boundary input derived from actual OCR; not an OCR engine accuracy claim"
+    },
+    {
+      "case": "constructed_overlong_actual_word_replay",
+      "parent_document_id": 0,
+      "text_tokens": 512,
+      "total_tokens": 709,
+      "input_authority": "constructed processor boundary input derived from actual OCR; not an OCR engine accuracy claim"
+    }
+  ],
+  "dependencies": {
+    "torch": "2.11.0+cu130",
+    "transformers": "5.17.0",
+    "numpy": "2.5.3",
+    "Pillow": "12.3.0"
+  }
+}

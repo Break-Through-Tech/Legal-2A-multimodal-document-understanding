@@ -1,0 +1,74 @@
+{
+  "status": "passed",
+  "evidence_grade": "LIVE_VERIFIED",
+  "settings": {
+    "family": "colqwen2",
+    "checkpoint": "vidore/colqwen2-v1.0-hf",
+    "revision": "ddc07d2317c80f75fc742b7362ee9ad1912908f9",
+    "input_mode": "image_only",
+    "dtype": "float16",
+    "batch_size": 2,
+    "processor_options": {}
+  },
+  "source_digest": "7acf6ea0273b332ba63421772ff955530c739242a5f049a256d0e9a7a2801335",
+  "artifact_id": "embeddings-ec70b1327ca4d51d930e",
+  "document_ids": [
+    0,
+    1
+  ],
+  "shapes": {
+    "0": {
+      "vectors": [
+        755,
+        128
+      ],
+      "attention_mask": [
+        755
+      ],
+      "input_ids": [
+        755
+      ],
+      "image_mask": [
+        755
+      ],
+      "special_mask": [
+        755
+      ]
+    },
+    "1": {
+      "vectors": [
+        755,
+        128
+      ],
+      "attention_mask": [
+        755
+      ],
+      "input_ids": [
+        755
+      ],
+      "image_mask": [
+        755
+      ],
+      "special_mask": [
+        755
+      ]
+    }
+  },
+  "differential_tolerance": 0.003,
+  "negative_controls": [
+    "native numeric value mutation rejected",
+    "short output mask rejected",
+    "flipped output mask rejected"
+  ],
+  "metamorphic_checks": [],
+  "cache_reuse_without_loading": true,
+  "frozen_eval_inference_mode_verified": true,
+  "observed_model_forwards": 1,
+  "constructed_ocr_edge_checks": [],
+  "dependencies": {
+    "torch": "2.11.0+cu130",
+    "transformers": "5.17.0",
+    "numpy": "2.5.3",
+    "Pillow": "12.3.0"
+  }
+}

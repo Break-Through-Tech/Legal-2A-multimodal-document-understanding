@@ -1,0 +1,171 @@
+{
+  "status": "pass",
+  "run_count": 14,
+  "projection_count": 6,
+  "score_slots": 280,
+  "training_document_count": 700,
+  "checked_payload_files": 56,
+  "runs": [
+    {
+      "artifact_id": "metrics-017648c85fd92d988bb0",
+      "model": "dinov3",
+      "algorithm": "hdbscan",
+      "document_count": 700,
+      "noise_count": 180,
+      "metric_slots": 20,
+      "renumbered_agreement": 1.0
+    },
+    {
+      "artifact_id": "metrics-059e6287ca1b8d5d3f00",
+      "model": "layoutlmv3-image",
+      "algorithm": "agglomerative",
+      "document_count": 700,
+      "noise_count": 0,
+      "metric_slots": 20,
+      "renumbered_agreement": 1.0
+    },
+    {
+      "artifact_id": "metrics-2abb4654f1be19776302",
+      "model": "dinov3",
+      "algorithm": "spectral",
+      "document_count": 700,
+      "noise_count": 0,
+      "metric_slots": 20,
+      "renumbered_agreement": 1.0
+    },
+    {
+      "artifact_id": "metrics-3026701ed2d79b33bfc8",
+      "model": "colqwen2",
+      "algorithm": "spectral",
+      "document_count": 700,
+      "noise_count": 0,
+      "metric_slots": 20,
+      "renumbered_agreement": 1.0
+    },
+    {
+      "artifact_id": "metrics-36b2ec46394c4b78e326",
+      "model": "colpali",
+      "algorithm": "hdbscan",
+      "document_count": 700,
+      "noise_count": 75,
+      "metric_slots": 20,
+      "renumbered_agreement": 1.0
+    },
+    {
+      "artifact_id": "metrics-47a7fef83bccfe8950fe",
+      "model": "layoutlmv3-image",
+      "algorithm": "hdbscan",
+      "document_count": 700,
+      "noise_count": 468,
+      "metric_slots": 20,
+      "renumbered_agreement": 1.0
+    },
+    {
+      "artifact_id": "metrics-4abc90e447daf4c326b9",
+      "model": "colpali",
+      "algorithm": "spectral",
+      "document_count": 700,
+      "noise_count": 0,
+      "metric_slots": 20,
+      "renumbered_agreement": 1.0
+    },
+    {
+      "artifact_id": "metrics-54e1fcbaf1a0bc914c94",
+      "model": "colqwen2",
+      "algorithm": "hdbscan",
+      "document_count": 700,
+      "noise_count": 76,
+      "metric_slots": 20,
+      "renumbered_agreement": 1.0
+    },
+    {
+      "artifact_id": "metrics-67d2b7b2919d072373d1",
+      "model": "layoutlmv3-image",
+      "algorithm": "kmeans",
+      "document_count": 700,
+      "noise_count": 0,
+      "metric_slots": 20,
+      "renumbered_agreement": 1.0
+    },
+    {
+      "artifact_id": "metrics-71967027d3b1c04fcd18",
+      "model": "dinov3",
+      "algorithm": "agglomerative",
+      "document_count": 700,
+      "noise_count": 0,
+      "metric_slots": 20,
+      "renumbered_agreement": 1.0
+    },
+    {
+      "artifact_id": "metrics-925a5dbbdc796edc8422",
+      "model": "colpali",
+      "algorithm": "agglomerative",
+      "document_count": 700,
+      "noise_count": 0,
+      "metric_slots": 20,
+      "renumbered_agreement": 1.0
+    },
+    {
+      "artifact_id": "metrics-ca3f65b30ad9565e6fee",
+      "model": "colqwen2",
+      "algorithm": "agglomerative",
+      "document_count": 700,
+      "noise_count": 0,
+      "metric_slots": 20,
+      "renumbered_agreement": 1.0
+    },
+    {
+      "artifact_id": "metrics-caa6e7d343a717723785",
+      "model": "dinov3",
+      "algorithm": "kmeans",
+      "document_count": 700,
+      "noise_count": 0,
+      "metric_slots": 20,
+      "renumbered_agreement": 1.0
+    },
+    {
+      "artifact_id": "metrics-da8f99af889c4ea9e822",
+      "model": "layoutlmv3-image",
+      "algorithm": "spectral",
+      "document_count": 700,
+      "noise_count": 0,
+      "metric_slots": 20,
+      "renumbered_agreement": 1.0
+    }
+  ],
+  "issues": [
+    {
+      "status": "pending",
+      "artifact_id": null,
+      "model": "layoutlmv3-ocr",
+      "reason": "Full expected-cohort embedding cache is unavailable"
+    },
+    {
+      "status": "unavailable",
+      "artifact_id": null,
+      "model": "colpali",
+      "reason": "kmeans: Standard K-means needs fixed feature vectors; retained-token similarity is not a feature matrix."
+    },
+    {
+      "status": "unavailable",
+      "artifact_id": null,
+      "model": "colqwen2",
+      "reason": "kmeans: Standard K-means needs fixed feature vectors; retained-token similarity is not a feature matrix."
+    }
+  ],
+  "negative_controls": [
+    "checksum corruption excluded run and exposed invalid status",
+    "missing score file excluded run and exposed issue",
+    "missing original image produced explicit ValueError"
+  ],
+  "dashboard_file_sha256": {
+    "dashboard/__init__.py": "5d247356e2ba76bfba148ad4108ee0820fb9c5076be375a61ebde9016435d85e",
+    "dashboard/app.py": "ba2344f149d98cb4715269cb6f57041b1c6ce311e51c5e93aeb83423399dd06e",
+    "dashboard/comparison.py": "ac0f0f246da249e0013e016d9317eb488961273f6f8e613140ce0e1b4f262f12",
+    "dashboard/data.py": "684ce9b9f078d5e1fb7b45c29d41081b1efcc5e0a04ace757833c0cb89c24c4d",
+    "dashboard/explorer.py": "900ce9301de909cc8cbb623c444fc5250ef72dec9f476c3739a29ba73cd746ab",
+    "dashboard/overview.py": "69b7779a1ba03e50f40304b2219b910f19ef2e6b349ee6e62af64fc8e242173c",
+    "dashboard/review.py": "e733bfd967bf1a448cef5f7940dc07246a61045dfc9515468669e82fd8414391",
+    "dashboard/ui.py": "4d9ce82dec5c011bb33d7b3eeb57b99ed42bff189d18f2ad9ca477eb515c61b8"
+  }
+}

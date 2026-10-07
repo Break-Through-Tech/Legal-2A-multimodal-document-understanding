@@ -1,0 +1,8 @@
+# Verified with Python 3.13 on Colab T4. CPU works for DINOv3/LayoutLMv3 pilots.
+-r requirements.txt
+torch==2.11.0
+torchvision==0.26.0
+transformers==5.17.0
+tokenizers==0.23.2
+safetensors==0.8.0
+sentencepiece==0.2.2

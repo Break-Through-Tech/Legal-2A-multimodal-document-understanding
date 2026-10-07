@@ -1,0 +1,242 @@
+{
+  "cohort": "train",
+  "elapsed_seconds": 815.2405734000495,
+  "encoder_imports_blocked": true,
+  "pending": {
+    "layoutlmv3-ocr": "Full expected-cohort embedding cache is unavailable"
+  },
+  "results": [
+    {
+      "algorithm": "kmeans",
+      "artifact_id": "clusters-7c58a2ef2e2dc1e1560a",
+      "cluster_count": 19,
+      "document_count": 700,
+      "elapsed_seconds": 2.2310088999802247,
+      "model": "dinov3",
+      "noise_count": 0,
+      "repeat_partition_equal": true,
+      "reused": false,
+      "status": "complete"
+    },
+    {
+      "algorithm": "agglomerative",
+      "artifact_id": "clusters-40b280874929384e5bc9",
+      "cluster_count": 19,
+      "document_count": 700,
+      "elapsed_seconds": 0.9434964000247419,
+      "model": "dinov3",
+      "noise_count": 0,
+      "repeat_partition_equal": true,
+      "reused": false,
+      "status": "complete"
+    },
+    {
+      "algorithm": "hdbscan",
+      "artifact_id": "clusters-2c570644206a69347818",
+      "cluster_count": 19,
+      "document_count": 700,
+      "elapsed_seconds": 0.9177088999422267,
+      "model": "dinov3",
+      "noise_count": 180,
+      "repeat_partition_equal": true,
+      "reused": false,
+      "status": "complete"
+    },
+    {
+      "algorithm": "spectral",
+      "artifact_id": "clusters-a3b97f5bd553ae9cc906",
+      "cluster_count": 19,
+      "document_count": 700,
+      "elapsed_seconds": 1.3677626999560744,
+      "model": "dinov3",
+      "noise_count": 0,
+      "repeat_partition_equal": true,
+      "reused": false,
+      "status": "complete"
+    },
+    {
+      "algorithm": "kmeans",
+      "artifact_id": "clusters-5faff8c976b54b2a2fbd",
+      "cluster_count": 19,
+      "document_count": 700,
+      "elapsed_seconds": 3.799491999903694,
+      "model": "layoutlmv3-image",
+      "noise_count": 0,
+      "repeat_partition_equal": true,
+      "reused": false,
+      "status": "complete"
+    },
+    {
+      "algorithm": "agglomerative",
+      "artifact_id": "clusters-39ac0cd9385da467f171",
+      "cluster_count": 19,
+      "document_count": 700,
+      "elapsed_seconds": 1.2713311000261456,
+      "model": "layoutlmv3-image",
+      "noise_count": 0,
+      "repeat_partition_equal": true,
+      "reused": false,
+      "status": "complete"
+    },
+    {
+      "algorithm": "hdbscan",
+      "artifact_id": "clusters-baecfbbcb1204706c2c5",
+      "cluster_count": 9,
+      "document_count": 700,
+      "elapsed_seconds": 0.9334791000001132,
+      "model": "layoutlmv3-image",
+      "noise_count": 468,
+      "repeat_partition_equal": true,
+      "reused": false,
+      "status": "complete"
+    },
+    {
+      "algorithm": "spectral",
+      "artifact_id": "clusters-c876fa642aa6c4948b1b",
+      "cluster_count": 19,
+      "document_count": 700,
+      "elapsed_seconds": 1.1760960000101477,
+      "model": "layoutlmv3-image",
+      "noise_count": 0,
+      "repeat_partition_equal": true,
+      "reused": false,
+      "status": "complete"
+    },
+    {
+      "algorithm": "kmeans",
+      "model": "colpali",
+      "reason": "Standard K-means needs fixed feature vectors; retained-token similarity is not a feature matrix.",
+      "status": "unavailable"
+    },
+    {
+      "algorithm": "agglomerative",
+      "artifact_id": "clusters-79f57ed40739b91cf392",
+      "cluster_count": 19,
+      "document_count": 700,
+      "elapsed_seconds": 0.8237008999567479,
+      "model": "colpali",
+      "noise_count": 0,
+      "repeat_partition_equal": true,
+      "reused": false,
+      "status": "complete"
+    },
+    {
+      "algorithm": "hdbscan",
+      "artifact_id": "clusters-4700e2bad113d169c12c",
+      "cluster_count": 19,
+      "document_count": 700,
+      "elapsed_seconds": 0.8242868999950588,
+      "model": "colpali",
+      "noise_count": 75,
+      "repeat_partition_equal": true,
+      "reused": false,
+      "status": "complete"
+    },
+    {
+      "algorithm": "spectral",
+      "artifact_id": "clusters-b187c9c9938cc1b5bc38",
+      "cluster_count": 19,
+      "document_count": 700,
+      "elapsed_seconds": 1.1487378999590874,
+      "model": "colpali",
+      "noise_count": 0,
+      "repeat_partition_equal": true,
+      "reused": false,
+      "status": "complete"
+    },
+    {
+      "algorithm": "kmeans",
+      "model": "colqwen2",
+      "reason": "Standard K-means needs fixed feature vectors; retained-token similarity is not a feature matrix.",
+      "status": "unavailable"
+    },
+    {
+      "algorithm": "agglomerative",
+      "artifact_id": "clusters-dbe077efe92a963b03df",
+      "cluster_count": 19,
+      "document_count": 700,
+      "elapsed_seconds": 0.7841584000270814,
+      "model": "colqwen2",
+      "noise_count": 0,
+      "repeat_partition_equal": true,
+      "reused": false,
+      "status": "complete"
+    },
+    {
+      "algorithm": "hdbscan",
+      "artifact_id": "clusters-f0085da7b8db3aa2a971",
+      "cluster_count": 20,
+      "document_count": 700,
+      "elapsed_seconds": 0.814026299980469,
+      "model": "colqwen2",
+      "noise_count": 76,
+      "repeat_partition_equal": true,
+      "reused": false,
+      "status": "complete"
+    },
+    {
+      "algorithm": "spectral",
+      "artifact_id": "clusters-cc13d69204a20acd6d26",
+      "cluster_count": 19,
+      "document_count": 700,
+      "elapsed_seconds": 1.210066800005734,
+      "model": "colqwen2",
+      "noise_count": 0,
+      "repeat_partition_equal": true,
+      "reused": false,
+      "status": "complete"
+    }
+  ],
+  "settings": {
+    "algorithms": {
+      "agglomerative": {
+        "linkage": "average",
+        "metric": "euclidean",
+        "n_clusters": 19
+      },
+      "hdbscan": {
+        "algorithm": "brute",
+        "allow_single_cluster": false,
+        "cluster_selection_method": "eom",
+        "copy": true,
+        "metric": "euclidean",
+        "min_cluster_size": 10,
+        "min_samples": 5,
+        "n_jobs": 1
+      },
+      "kmeans": {
+        "algorithm": "lloyd",
+        "init": "k-means++",
+        "max_iter": 300,
+        "n_clusters": 19,
+        "n_init": 20,
+        "tol": 0.0001
+      },
+      "spectral": {
+        "affinity": "rbf",
+        "assign_labels": "kmeans",
+        "eigen_solver": "arpack",
+        "eigen_tol": 0.0,
+        "gamma": 1.0,
+        "n_clusters": 19,
+        "n_init": 20,
+        "n_jobs": 1
+      }
+    },
+    "cluster_count_policy": {
+      "mode": "class_count_informed",
+      "n_clusters": 19,
+      "rationale": "Fixed before fitting from the 19 known benchmark labels; not a discovered number of document groups."
+    },
+    "cohort": "train",
+    "models": {
+      "colpali": "embeddings-d987f31cbdb073fed394",
+      "colqwen2": "embeddings-17d7e1b5ec380770c824",
+      "dinov3": "embeddings-9ef1694d986576ba0acf",
+      "layoutlmv3-image": "embeddings-af5fe5262fbc515a18be"
+    },
+    "normalization": "l2",
+    "seed": 42
+  },
+  "source_digest": "f90312ada4ecf46676ca601f23a1bdc74bbcb1e8a9a4bab6d3762da1dc344b7c"
+}

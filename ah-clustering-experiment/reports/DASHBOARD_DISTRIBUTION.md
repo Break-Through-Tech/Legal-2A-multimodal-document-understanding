@@ -1,0 +1,11 @@
+# Fork-and-run dashboard verification
+
+The Git distribution includes the experiment source and a 1,289,747-byte saved-results archive. The archive contains 164 files: 14 evaluations, their clustering assignments and metadata, and six projections. It contains no embeddings, model weights or document images. The archive SHA-256 is `436e52726e0bba28d5e58b02dbf565a280a646346eb204fc32e4dc1a5e079bf0`.
+
+The setup instructions are in [DASHBOARD_QUICKSTART.md](../DASHBOARD_QUICKSTART.md). Restoration verifies the archive and each payload before writing, rejects conflicting local files, and publishes completion markers last. A second restoration writes zero files. The shared CSV has a Git attribute preventing line-ending conversion because its exact bytes identify the dataset.
+
+Verification used a separate checkout exported from the Git staging area, with an empty results directory and a fresh Python 3.14 environment on Windows. Installing only `requirements-dashboard.txt` succeeded, and `pip check` reported no broken requirements. All 29 dashboard/bundle tests and 13 independent comparison tests passed. The same 48 Streamlit AppTest checks passed against the restored results while PyTorch, Transformers and scikit-learn were absent. These AppTest checks also confirmed usable missing-image states before image preparation completed.
+
+The documented dataset preparation command downloaded and validated all 1,000 source documents from the pinned upstream revision without a Hugging Face token and prepared the exact 700-document training cohort. All 700 dashboard image references match their saved checksums. Preview conversion was checked on documents 0, 76 and 356; dataset preparation had already decoded all original images. [Clean-install evidence](fork-evidence/clean-install.json) and [interaction evidence](fork-evidence/clean-apptest.json) record the results.
+
+The clean install found that the pinned NumPy release requires Python 3.12 or newer, so the instructions were corrected. Deeply nesting the test checkout also exceeded Windows path limits; the successful check used a short directory and the instructions recommend a short clone name. macOS and Linux commands are documented but were not executed. Earlier live-browser evidence for the unchanged dashboard source remains in [STEP_8_VERIFICATION.md](STEP_8_VERIFICATION.md).

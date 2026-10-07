@@ -82,11 +82,11 @@ def _decode(bundle: dict) -> dict[int, dict]:
 
 
 def write_embeddings(storage_root: str | Path, config: dict, documents, *, source_root: Path,
-                     shard_size: int = 32, measurements: dict | None = None) -> str:
+                     shard_size: int = 32, measurements: dict | None = None, journal=None) -> str:
     """Persist an iterable of ID-keyed native outputs in bounded document batches.
 
-    All expected documents must be present before completion. Partial files are
-    unpublished; inference resume and failure records are a later pipeline step.
+    All expected documents must be present before completion. The extraction
+    pipeline supplies validated restart checkpoints through the iterable.
     """
     validate_embedding_config(config)
     require(type(shard_size) is int and shard_size > 0, "shard_size must be positive")
@@ -95,6 +95,8 @@ def write_embeddings(storage_root: str | Path, config: dict, documents, *, sourc
     seen = set()
     records = []
     with ArtifactWriter(storage_root, "embeddings", config) as writer:
+        if journal is not None:
+            journal.mark_artifact_writer(writer.artifact_id)
         batch = []
         shard = 0
 

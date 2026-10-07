@@ -1,0 +1,9 @@
+{
+  "family": "layoutlmv3",
+  "checkpoint": "microsoft/layoutlmv3-base",
+  "revision": "cfbbbff0762e6aab37086fdd4739ad14fe7d5db4",
+  "input_mode": "image_and_ocr",
+  "dtype": "float32",
+  "batch_size": 1,
+  "processor_options": {}
+}

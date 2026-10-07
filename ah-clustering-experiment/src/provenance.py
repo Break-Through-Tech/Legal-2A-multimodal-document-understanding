@@ -24,7 +24,7 @@ def source_identity(source_root: Path) -> dict:
         for path in (root / directory).rglob("*"):
             if path.is_file() and "__pycache__" not in path.parts and path.suffix in {".py", ".json", ".toml", ".yaml", ".yml"}:
                 paths.add(path)
-    for name in ("requirements.txt", "pyproject.toml", "uv.lock", "poetry.lock", ".gitignore"):
+    for name in ("requirements.txt", "requirements-embeddings.txt", "requirements-clustering.txt", "requirements-evaluation.txt", "requirements-dashboard.txt", "pyproject.toml", "uv.lock", "poetry.lock", ".gitignore"):
         if (root / name).is_file():
             paths.add(root / name)
     hashes = {p.relative_to(root).as_posix(): file_sha256(p) for p in sorted(paths)}

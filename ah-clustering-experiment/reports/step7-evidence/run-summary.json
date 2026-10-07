@@ -1,0 +1,1707 @@
+{
+  "clustering_refit": false,
+  "compute": "local CPU",
+  "elapsed_seconds": 240.73757869994733,
+  "encoder_imports_blocked": true,
+  "pending": {
+    "layoutlmv3-ocr": "Full expected-cohort embedding cache is unavailable"
+  },
+  "projections": [
+    {
+      "artifact_id": "projections-3e26f408fd49e60a16cc",
+      "manifest_sha256": "cc1dc6dc379a3f3ce4245a3762d3da66ce36825b7dc91d75e7fc35e1fcc67e4e",
+      "method": "pca",
+      "model": "dinov3",
+      "reused": false,
+      "status": "complete"
+    },
+    {
+      "artifact_id": "projections-c579da635a1bd5c492d7",
+      "manifest_sha256": "2b5c10ab25d010a7d130d91cca1998840d385a28127ef1b0b00884aa9d56fcca",
+      "method": "umap",
+      "model": "dinov3",
+      "reused": false,
+      "status": "complete"
+    },
+    {
+      "artifact_id": "projections-24c44b03a03e2cb16728",
+      "manifest_sha256": "68ad978cf16ae084024e1e852d2de43539245c1b2d6f6c810ad04e508a8aed42",
+      "method": "pca",
+      "model": "layoutlmv3-image",
+      "reused": false,
+      "status": "complete"
+    },
+    {
+      "artifact_id": "projections-10d88662f6c1bb1d1582",
+      "manifest_sha256": "4a686aa16861e6ab3d86cce88fd0188c3c71866adc88c698ee8d667e5d094246",
+      "method": "umap",
+      "model": "layoutlmv3-image",
+      "reused": false,
+      "status": "complete"
+    },
+    {
+      "artifact_id": "projections-07d761c4bba0ce5c33a4",
+      "manifest_sha256": "99fdaf6a3b97dce8f4976f863703649e19fef447058fac8af6fe44398f68ffab",
+      "method": "umap",
+      "model": "colpali",
+      "reused": false,
+      "status": "complete"
+    },
+    {
+      "artifact_id": "projections-296636281ddd354aecdc",
+      "manifest_sha256": "e8bd127c9a89c2b273ddd480f3e86298cd32a3b13fc5afbe71ad5bf04bb43b04",
+      "method": "umap",
+      "model": "colqwen2",
+      "reused": false,
+      "status": "complete"
+    }
+  ],
+  "results": [
+    {
+      "algorithm": "kmeans",
+      "artifact_id": "metrics-caa6e7d343a717723785",
+      "clustering_artifact": "clusters-7c58a2ef2e2dc1e1560a",
+      "document_count": 700,
+      "elapsed_seconds": 1.6220842000329867,
+      "model": "dinov3",
+      "reused": false,
+      "scores": {
+        "excluding_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.8155618777989221
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.7029189609433771
+            },
+            "calinski_harabasz": {
+              "reason": null,
+              "value": 46.69000069489499
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.8378224136094196
+            },
+            "davies_bouldin": {
+              "reason": null,
+              "value": 1.6946116189262208
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.8271165397944216
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.8324350563005274
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.7885714285714286
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.23993477993068307
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.8324350563005274
+            }
+          },
+          "noise_policy": "Noise label -1 is excluded from all metrics in this scope."
+        },
+        "including_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.8155618777989221
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.7029189609433771
+            },
+            "calinski_harabasz": {
+              "reason": null,
+              "value": 46.69000069489499
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.8378224136094196
+            },
+            "davies_bouldin": {
+              "reason": null,
+              "value": 1.6946116189262208
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.8271165397944216
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.8324350563005274
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.7885714285714286
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.23993477993068307
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.8324350563005274
+            }
+          },
+          "noise_policy": "Noise label -1 participates as one group."
+        }
+      },
+      "status": "complete"
+    },
+    {
+      "algorithm": "agglomerative",
+      "artifact_id": "metrics-71967027d3b1c04fcd18",
+      "clustering_artifact": "clusters-40b280874929384e5bc9",
+      "document_count": 700,
+      "elapsed_seconds": 1.7412799999583513,
+      "model": "dinov3",
+      "reused": false,
+      "scores": {
+        "excluding_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.022193613093809066
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.000131180805702771
+            },
+            "calinski_harabasz": {
+              "reason": null,
+              "value": 3.976167564180298
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.42793626424419967
+            },
+            "davies_bouldin": {
+              "reason": null,
+              "value": 0.9674235925290173
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.046957029372381665
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.08462791957574421
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.10285714285714286
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.15212258990677396
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.08462791957574421
+            }
+          },
+          "noise_policy": "Noise label -1 is excluded from all metrics in this scope."
+        },
+        "including_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.022193613093809066
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.000131180805702771
+            },
+            "calinski_harabasz": {
+              "reason": null,
+              "value": 3.976167564180298
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.42793626424419967
+            },
+            "davies_bouldin": {
+              "reason": null,
+              "value": 0.9674235925290173
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.046957029372381665
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.08462791957574421
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.10285714285714286
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.15212258990677396
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.08462791957574421
+            }
+          },
+          "noise_policy": "Noise label -1 participates as one group."
+        }
+      },
+      "status": "complete"
+    },
+    {
+      "algorithm": "hdbscan",
+      "artifact_id": "metrics-017648c85fd92d988bb0",
+      "clustering_artifact": "clusters-2c570644206a69347818",
+      "document_count": 700,
+      "elapsed_seconds": 1.5768529999768361,
+      "model": "dinov3",
+      "reused": false,
+      "scores": {
+        "excluding_noise": {
+          "coverage": 0.7428571428571429,
+          "document_count": 520,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 520,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.9561092569188988
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.9110971117449971
+            },
+            "calinski_harabasz": {
+              "reason": null,
+              "value": 73.40613109088497
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.9539640241095099
+            },
+            "davies_bouldin": {
+              "reason": null,
+              "value": 1.1328939944430194
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.9681900427572171
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.9610243894725975
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.9615384615384616
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.37110560222442607
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.9610243894725974
+            }
+          },
+          "noise_policy": "Noise label -1 is excluded from all metrics in this scope."
+        },
+        "including_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.7893015692187269
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.4862077424313622
+            },
+            "calinski_harabasz": {
+              "reason": null,
+              "value": 32.26652677464132
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.8467214407284129
+            },
+            "davies_bouldin": {
+              "reason": null,
+              "value": 1.9088453381181296
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.7766791184885188
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.8101892764007537
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.79
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.20567720867916356
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.8101892764007537
+            }
+          },
+          "noise_policy": "Noise label -1 participates as one group."
+        }
+      },
+      "status": "complete"
+    },
+    {
+      "algorithm": "spectral",
+      "artifact_id": "metrics-2abb4654f1be19776302",
+      "clustering_artifact": "clusters-a3b97f5bd553ae9cc906",
+      "document_count": 700,
+      "elapsed_seconds": 1.7709447999950498,
+      "model": "dinov3",
+      "reused": false,
+      "scores": {
+        "excluding_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.8314830117011933
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.7409775902685712
+            },
+            "calinski_harabasz": {
+              "reason": null,
+              "value": 46.399834566297834
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.8504736688561519
+            },
+            "davies_bouldin": {
+              "reason": null,
+              "value": 1.7290456290038754
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.8434229257789909
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.8469336231697817
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.8357142857142857
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.2413062687124223
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.8469336231697817
+            }
+          },
+          "noise_policy": "Noise label -1 is excluded from all metrics in this scope."
+        },
+        "including_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.8314830117011933
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.7409775902685712
+            },
+            "calinski_harabasz": {
+              "reason": null,
+              "value": 46.399834566297834
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.8504736688561519
+            },
+            "davies_bouldin": {
+              "reason": null,
+              "value": 1.7290456290038754
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.8434229257789909
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.8469336231697817
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.8357142857142857
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.2413062687124223
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.8469336231697817
+            }
+          },
+          "noise_policy": "Noise label -1 participates as one group."
+        }
+      },
+      "status": "complete"
+    },
+    {
+      "algorithm": "kmeans",
+      "artifact_id": "metrics-67d2b7b2919d072373d1",
+      "clustering_artifact": "clusters-5faff8c976b54b2a2fbd",
+      "document_count": 700,
+      "elapsed_seconds": 1.4366821000585333,
+      "model": "layoutlmv3-image",
+      "reused": false,
+      "scores": {
+        "excluding_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.3980440578005408
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.21528927155056243
+            },
+            "calinski_harabasz": {
+              "reason": null,
+              "value": 25.716983093561993
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.47141650297469145
+            },
+            "davies_bouldin": {
+              "reason": null,
+              "value": 2.266925210442503
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.43057755764258665
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.4500725123275022
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.4328571428571429
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.12731178095094492
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.4500725123275022
+            }
+          },
+          "noise_policy": "Noise label -1 is excluded from all metrics in this scope."
+        },
+        "including_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.3980440578005408
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.21528927155056243
+            },
+            "calinski_harabasz": {
+              "reason": null,
+              "value": 25.716983093561993
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.47141650297469145
+            },
+            "davies_bouldin": {
+              "reason": null,
+              "value": 2.266925210442503
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.43057755764258665
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.4500725123275022
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.4328571428571429
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.12731178095094492
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.4500725123275022
+            }
+          },
+          "noise_policy": "Noise label -1 participates as one group."
+        }
+      },
+      "status": "complete"
+    },
+    {
+      "algorithm": "agglomerative",
+      "artifact_id": "metrics-059e6287ca1b8d5d3f00",
+      "clustering_artifact": "clusters-39ac0cd9385da467f171",
+      "document_count": 700,
+      "elapsed_seconds": 1.4692241000011563,
+      "model": "layoutlmv3-image",
+      "reused": false,
+      "scores": {
+        "excluding_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.06845100895435564
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.003466143777275224
+            },
+            "calinski_harabasz": {
+              "reason": null,
+              "value": 5.570104304564322
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.4692274814888716
+            },
+            "davies_bouldin": {
+              "reason": null,
+              "value": 1.2077155626022833
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.07939816618918713
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.13581501963484355
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.14
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.03761133114771408
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.13581501963484355
+            }
+          },
+          "noise_policy": "Noise label -1 is excluded from all metrics in this scope."
+        },
+        "including_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.06845100895435564
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.003466143777275224
+            },
+            "calinski_harabasz": {
+              "reason": null,
+              "value": 5.570104304564322
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.4692274814888716
+            },
+            "davies_bouldin": {
+              "reason": null,
+              "value": 1.2077155626022833
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.07939816618918713
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.13581501963484355
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.14
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.03761133114771408
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.13581501963484355
+            }
+          },
+          "noise_policy": "Noise label -1 participates as one group."
+        }
+      },
+      "status": "complete"
+    },
+    {
+      "algorithm": "hdbscan",
+      "artifact_id": "metrics-47a7fef83bccfe8950fe",
+      "clustering_artifact": "clusters-baecfbbcb1204706c2c5",
+      "document_count": 700,
+      "elapsed_seconds": 1.3139069000026211,
+      "model": "layoutlmv3-image",
+      "reused": false,
+      "scores": {
+        "excluding_noise": {
+          "coverage": 0.3314285714285714,
+          "document_count": 232,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 232,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.6758651337329065
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.4775331184971328
+            },
+            "calinski_harabasz": {
+              "reason": null,
+              "value": 62.44811883365181
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.8269492426053547
+            },
+            "davies_bouldin": {
+              "reason": null,
+              "value": 1.137768142019203
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.6372306027799902
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.7197986859260191
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.6724137931034483
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.4449334869945265
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.719798685926019
+            }
+          },
+          "noise_policy": "Noise label -1 is excluded from all metrics in this scope."
+        },
+        "including_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.3143218653125971
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.048055055110685294
+            },
+            "calinski_harabasz": {
+              "reason": null,
+              "value": 18.959492200826382
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.5828447250925637
+            },
+            "davies_bouldin": {
+              "reason": null,
+              "value": 1.925649640716409
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.25697146158869755
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.35668391074520506
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.2914285714285714
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.023376454412898633
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.356683910745205
+            }
+          },
+          "noise_policy": "Noise label -1 participates as one group."
+        }
+      },
+      "status": "complete"
+    },
+    {
+      "algorithm": "spectral",
+      "artifact_id": "metrics-da8f99af889c4ea9e822",
+      "clustering_artifact": "clusters-c876fa642aa6c4948b1b",
+      "document_count": 700,
+      "elapsed_seconds": 2.214143200078979,
+      "model": "layoutlmv3-image",
+      "reused": false,
+      "scores": {
+        "excluding_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.3935810511920261
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.20899385000243204
+            },
+            "calinski_harabasz": {
+              "reason": null,
+              "value": 24.83221375121372
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.4609951895135017
+            },
+            "davies_bouldin": {
+              "reason": null,
+              "value": 2.414363074696985
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.4355451840673646
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.44790896336073893
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.42
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.11848990376830167
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.44790896336073893
+            }
+          },
+          "noise_policy": "Noise label -1 is excluded from all metrics in this scope."
+        },
+        "including_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.3935810511920261
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.20899385000243204
+            },
+            "calinski_harabasz": {
+              "reason": null,
+              "value": 24.83221375121372
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.4609951895135017
+            },
+            "davies_bouldin": {
+              "reason": null,
+              "value": 2.414363074696985
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.4355451840673646
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.44790896336073893
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.42
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.11848990376830167
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.44790896336073893
+            }
+          },
+          "noise_policy": "Noise label -1 participates as one group."
+        }
+      },
+      "status": "complete"
+    },
+    {
+      "algorithm": "agglomerative",
+      "artifact_id": "metrics-925a5dbbdc796edc8422",
+      "clustering_artifact": "clusters-79f57ed40739b91cf392",
+      "document_count": 700,
+      "elapsed_seconds": 1.9888546000001952,
+      "model": "colpali",
+      "reused": false,
+      "scores": {
+        "excluding_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.6150566480269805
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.1879793402328878
+            },
+            "calinski_harabasz": {
+              "reason": "Unsupported for precomputed dissimilarity: requires original Euclidean features.",
+              "value": null
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.862526307241729
+            },
+            "davies_bouldin": {
+              "reason": "Unsupported for precomputed dissimilarity: requires original Euclidean features.",
+              "value": null
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.5155875213584413
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.6453861671338541
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.4085714285714286
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.23126756705651494
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.645386167133854
+            }
+          },
+          "noise_policy": "Noise label -1 is excluded from all metrics in this scope."
+        },
+        "including_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.6150566480269805
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.1879793402328878
+            },
+            "calinski_harabasz": {
+              "reason": "Unsupported for precomputed dissimilarity: requires original Euclidean features.",
+              "value": null
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.862526307241729
+            },
+            "davies_bouldin": {
+              "reason": "Unsupported for precomputed dissimilarity: requires original Euclidean features.",
+              "value": null
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.5155875213584413
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.6453861671338541
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.4085714285714286
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.23126756705651494
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.645386167133854
+            }
+          },
+          "noise_policy": "Noise label -1 participates as one group."
+        }
+      },
+      "status": "complete"
+    },
+    {
+      "algorithm": "hdbscan",
+      "artifact_id": "metrics-36b2ec46394c4b78e326",
+      "clustering_artifact": "clusters-4700e2bad113d169c12c",
+      "document_count": 700,
+      "elapsed_seconds": 1.9574488999787718,
+      "model": "colpali",
+      "reused": false,
+      "scores": {
+        "excluding_noise": {
+          "coverage": 0.8928571428571429,
+          "document_count": 625,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 625,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.9897537348038724
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.9809403333042749
+            },
+            "calinski_harabasz": {
+              "reason": "Unsupported for precomputed dissimilarity: requires original Euclidean features.",
+              "value": null
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.9873472508940004
+            },
+            "davies_bouldin": {
+              "reason": "Unsupported for precomputed dissimilarity: requires original Euclidean features.",
+              "value": null
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.9942409526479445
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.9907821106005096
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.9952
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.4788910878587154
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.9907821106005095
+            }
+          },
+          "noise_policy": "Noise label -1 is excluded from all metrics in this scope."
+        },
+        "including_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.9579956611140006
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.904822320005667
+            },
+            "calinski_harabasz": {
+              "reason": "Unsupported for precomputed dissimilarity: requires original Euclidean features.",
+              "value": null
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.9616433942244145
+            },
+            "davies_bouldin": {
+              "reason": "Unsupported for precomputed dissimilarity: requires original Euclidean features.",
+              "value": null
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.9624149389863063
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.962029011911163
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.96
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.41557947327080674
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.9620290119111629
+            }
+          },
+          "noise_policy": "Noise label -1 participates as one group."
+        }
+      },
+      "status": "complete"
+    },
+    {
+      "algorithm": "spectral",
+      "artifact_id": "metrics-4abc90e447daf4c326b9",
+      "clustering_artifact": "clusters-b187c9c9938cc1b5bc38",
+      "document_count": 700,
+      "elapsed_seconds": 1.9016309001017362,
+      "model": "colpali",
+      "reused": false,
+      "scores": {
+        "excluding_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.9608847646225193
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.8995138697527365
+            },
+            "calinski_harabasz": {
+              "reason": "Unsupported for precomputed dissimilarity: requires original Euclidean features.",
+              "value": null
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.9719580216852106
+            },
+            "davies_bouldin": {
+              "reason": "Unsupported for precomputed dissimilarity: requires original Euclidean features.",
+              "value": null
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.9570933544513943
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.9644684168274467
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.94
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.4130802115994903
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.9644684168274467
+            }
+          },
+          "noise_policy": "Noise label -1 is excluded from all metrics in this scope."
+        },
+        "including_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.9608847646225193
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.8995138697527365
+            },
+            "calinski_harabasz": {
+              "reason": "Unsupported for precomputed dissimilarity: requires original Euclidean features.",
+              "value": null
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.9719580216852106
+            },
+            "davies_bouldin": {
+              "reason": "Unsupported for precomputed dissimilarity: requires original Euclidean features.",
+              "value": null
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.9570933544513943
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.9644684168274467
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.94
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.4130802115994903
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.9644684168274467
+            }
+          },
+          "noise_policy": "Noise label -1 participates as one group."
+        }
+      },
+      "status": "complete"
+    },
+    {
+      "algorithm": "agglomerative",
+      "artifact_id": "metrics-ca3f65b30ad9565e6fee",
+      "clustering_artifact": "clusters-dbe077efe92a963b03df",
+      "document_count": 700,
+      "elapsed_seconds": 2.1084496000548825,
+      "model": "colqwen2",
+      "reused": false,
+      "scores": {
+        "excluding_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.47921972510253413
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.09613357887439285
+            },
+            "calinski_harabasz": {
+              "reason": "Unsupported for precomputed dissimilarity: requires original Euclidean features.",
+              "value": null
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.8281073371494552
+            },
+            "davies_bouldin": {
+              "reason": "Unsupported for precomputed dissimilarity: requires original Euclidean features.",
+              "value": null
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.37719833886297466
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.5183095345678843
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.3142857142857143
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.11546193044307802
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.5183095345678842
+            }
+          },
+          "noise_policy": "Noise label -1 is excluded from all metrics in this scope."
+        },
+        "including_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.47921972510253413
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.09613357887439285
+            },
+            "calinski_harabasz": {
+              "reason": "Unsupported for precomputed dissimilarity: requires original Euclidean features.",
+              "value": null
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.8281073371494552
+            },
+            "davies_bouldin": {
+              "reason": "Unsupported for precomputed dissimilarity: requires original Euclidean features.",
+              "value": null
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.37719833886297466
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.5183095345678843
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.3142857142857143
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.11546193044307802
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.5183095345678842
+            }
+          },
+          "noise_policy": "Noise label -1 participates as one group."
+        }
+      },
+      "status": "complete"
+    },
+    {
+      "algorithm": "hdbscan",
+      "artifact_id": "metrics-54e1fcbaf1a0bc914c94",
+      "clustering_artifact": "clusters-f0085da7b8db3aa2a971",
+      "document_count": 700,
+      "elapsed_seconds": 2.0256802000803873,
+      "model": "colqwen2",
+      "reused": false,
+      "scores": {
+        "excluding_noise": {
+          "coverage": 0.8914285714285715,
+          "document_count": 624,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 624,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.9835704802450534
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.9710364178576761
+            },
+            "calinski_harabasz": {
+              "reason": "Unsupported for precomputed dissimilarity: requires original Euclidean features.",
+              "value": null
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.9755053431790003
+            },
+            "davies_bouldin": {
+              "reason": "Unsupported for precomputed dissimilarity: requires original Euclidean features.",
+              "value": null
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.9952637569167114
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.9852855037127444
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.9967948717948718
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.3710142936486574
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.9852855037127445
+            }
+          },
+          "noise_policy": "Noise label -1 is excluded from all metrics in this scope."
+        },
+        "including_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.9549817527558963
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.899724777808833
+            },
+            "calinski_harabasz": {
+              "reason": "Unsupported for precomputed dissimilarity: requires original Euclidean features.",
+              "value": null
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.9546205107156527
+            },
+            "davies_bouldin": {
+              "reason": "Unsupported for precomputed dissimilarity: requires original Euclidean features.",
+              "value": null
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.9644136861428969
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.9594921102646278
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.9614285714285714
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.3219134953391866
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.9594921102646278
+            }
+          },
+          "noise_policy": "Noise label -1 participates as one group."
+        }
+      },
+      "status": "complete"
+    },
+    {
+      "algorithm": "spectral",
+      "artifact_id": "metrics-3026701ed2d79b33bfc8",
+      "clustering_artifact": "clusters-cc13d69204a20acd6d26",
+      "document_count": 700,
+      "elapsed_seconds": 1.9133345000445843,
+      "model": "colqwen2",
+      "reused": false,
+      "scores": {
+        "excluding_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.9397220795494698
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.8773501962300786
+            },
+            "calinski_harabasz": {
+              "reason": "Unsupported for precomputed dissimilarity: requires original Euclidean features.",
+              "value": null
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.949095961847276
+            },
+            "davies_bouldin": {
+              "reason": "Unsupported for precomputed dissimilarity: requires original Euclidean features.",
+              "value": null
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.9414409634710044
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.945252964680932
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.92
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.3149111625269111
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.945252964680932
+            }
+          },
+          "noise_policy": "Noise label -1 is excluded from all metrics in this scope."
+        },
+        "including_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.9397220795494698
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.8773501962300786
+            },
+            "calinski_harabasz": {
+              "reason": "Unsupported for precomputed dissimilarity: requires original Euclidean features.",
+              "value": null
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.949095961847276
+            },
+            "davies_bouldin": {
+              "reason": "Unsupported for precomputed dissimilarity: requires original Euclidean features.",
+              "value": null
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.9414409634710044
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.945252964680932
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.92
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.3149111625269111
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.945252964680932
+            }
+          },
+          "noise_policy": "Noise label -1 participates as one group."
+        }
+      },
+      "status": "complete"
+    }
+  ],
+  "settings": {
+    "examples_per_cluster": 3,
+    "pending": {
+      "layoutlmv3-ocr": "Full expected-cohort embedding cache is unavailable"
+    },
+    "projections": {
+      "pca": {
+        "n_components": 2,
+        "svd_solver": "full",
+        "whiten": false
+      },
+      "umap": {
+        "min_dist": 0.1,
+        "n_epochs": 500,
+        "n_neighbors": 15
+      }
+    },
+    "runs": [
+      {
+        "artifact_id": "clusters-7c58a2ef2e2dc1e1560a",
+        "model": "dinov3"
+      },
+      {
+        "artifact_id": "clusters-40b280874929384e5bc9",
+        "model": "dinov3"
+      },
+      {
+        "artifact_id": "clusters-2c570644206a69347818",
+        "model": "dinov3"
+      },
+      {
+        "artifact_id": "clusters-a3b97f5bd553ae9cc906",
+        "model": "dinov3"
+      },
+      {
+        "artifact_id": "clusters-5faff8c976b54b2a2fbd",
+        "model": "layoutlmv3-image"
+      },
+      {
+        "artifact_id": "clusters-39ac0cd9385da467f171",
+        "model": "layoutlmv3-image"
+      },
+      {
+        "artifact_id": "clusters-baecfbbcb1204706c2c5",
+        "model": "layoutlmv3-image"
+      },
+      {
+        "artifact_id": "clusters-c876fa642aa6c4948b1b",
+        "model": "layoutlmv3-image"
+      },
+      {
+        "artifact_id": "clusters-79f57ed40739b91cf392",
+        "model": "colpali"
+      },
+      {
+        "artifact_id": "clusters-4700e2bad113d169c12c",
+        "model": "colpali"
+      },
+      {
+        "artifact_id": "clusters-b187c9c9938cc1b5bc38",
+        "model": "colpali"
+      },
+      {
+        "artifact_id": "clusters-dbe077efe92a963b03df",
+        "model": "colqwen2"
+      },
+      {
+        "artifact_id": "clusters-f0085da7b8db3aa2a971",
+        "model": "colqwen2"
+      },
+      {
+        "artifact_id": "clusters-cc13d69204a20acd6d26",
+        "model": "colqwen2"
+      }
+    ],
+    "seed": 42,
+    "unavailable": [
+      {
+        "algorithm": "kmeans",
+        "model": "colpali",
+        "reason": "Standard K-means needs fixed feature vectors; retained-token similarity is not a feature matrix.",
+        "status": "unavailable"
+      },
+      {
+        "algorithm": "kmeans",
+        "model": "colqwen2",
+        "reason": "Standard K-means needs fixed feature vectors; retained-token similarity is not a feature matrix.",
+        "status": "unavailable"
+      }
+    ]
+  },
+  "source_digest": "1a77022f866aec4931fa67603c155401a0aaa20ed6cddcebe930f73c1963b71a",
+  "unavailable": [
+    {
+      "algorithm": "kmeans",
+      "model": "colpali",
+      "reason": "Standard K-means needs fixed feature vectors; retained-token similarity is not a feature matrix.",
+      "status": "unavailable"
+    },
+    {
+      "algorithm": "kmeans",
+      "model": "colqwen2",
+      "reason": "Standard K-means needs fixed feature vectors; retained-token similarity is not a feature matrix.",
+      "status": "unavailable"
+    }
+  ]
+}

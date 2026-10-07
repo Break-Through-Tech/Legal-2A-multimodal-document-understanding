@@ -1,7 +1,7 @@
 """Checksummed numeric/Parquet bundles, published only after read-back validation.
 
 One writer owns each identity. A failed write has no completion manifest and is
-never a cache hit. Step 5 will add inference-level resume on persistent storage.
+never a cache hit. The extraction pipeline owns inference restart checkpoints.
 """
 
 from __future__ import annotations
@@ -12,6 +12,7 @@ import json
 import os
 from pathlib import Path
 import re
+import uuid
 
 import numpy as np
 import pandas as pd
@@ -79,7 +80,7 @@ class ArtifactWriter:
         self.metadata_path.parent.mkdir(parents=True, exist_ok=True)
         try:
             with self.lock_path.open("x", encoding="utf-8") as handle:
-                handle.write(json.dumps({"pid": os.getpid(), "artifact_id": self.artifact_id}))
+                handle.write(json.dumps({"pid": os.getpid(), "artifact_id": self.artifact_id, "token": uuid.uuid4().hex}))
         except FileExistsError as error:
             raise ValueError("Artifact already has a writer lock; verify the owner is stopped before removing a stale lock") from error
         self.active = True

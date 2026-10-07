@@ -1,0 +1,217 @@
+{
+  "status": "complete",
+  "initial_run_date": "2026-10-04",
+  "recovery_started_date": "2026-10-06",
+  "completed_at": "2026-10-07T00:18:21.140702+00:00",
+  "gpu": "Tesla T4",
+  "runtime_status": "Released after verified local publication",
+  "models": [
+    {
+      "model": "dinov3",
+      "artifact_id": "embeddings-9ef1694d986576ba0acf",
+      "document_count": 1000,
+      "local_readback": "passed",
+      "source_digest": "7acf6ea0273b332ba63421772ff955530c739242a5f049a256d0e9a7a2801335",
+      "elapsed_seconds": 358.4239061809999,
+      "tensor_names": [
+        "cls",
+        "patches",
+        "registers"
+      ],
+      "payload_bytes": 309224564,
+      "sample_shapes": {
+        "cls": [
+          1,
+          384
+        ],
+        "patches": [
+          196,
+          384
+        ],
+        "registers": [
+          4,
+          384
+        ]
+      },
+      "project_imported": true
+    },
+    {
+      "model": "layoutlmv3-image",
+      "artifact_id": "embeddings-af5fe5262fbc515a18be",
+      "document_count": 1000,
+      "local_readback": "passed",
+      "source_digest": "7acf6ea0273b332ba63421772ff955530c739242a5f049a256d0e9a7a2801335",
+      "elapsed_seconds": 320.56357210400006,
+      "tensor_names": [
+        "attention_mask",
+        "cls",
+        "tokens"
+      ],
+      "payload_bytes": 608944885,
+      "sample_shapes": {
+        "attention_mask": [
+          197
+        ],
+        "cls": [
+          1,
+          768
+        ],
+        "tokens": [
+          197,
+          768
+        ]
+      },
+      "project_imported": true
+    },
+    {
+      "model": "colpali",
+      "artifact_id": "embeddings-d987f31cbdb073fed394",
+      "document_count": 1000,
+      "local_readback": "passed",
+      "source_digest": "7acf6ea0273b332ba63421772ff955530c739242a5f049a256d0e9a7a2801335",
+      "elapsed_seconds": 778.9822262700002,
+      "tensor_names": [
+        "attention_mask",
+        "image_mask",
+        "input_ids",
+        "special_mask",
+        "vectors"
+      ],
+      "payload_bytes": 275764459,
+      "sample_shapes": {
+        "attention_mask": [
+          1030
+        ],
+        "image_mask": [
+          1030
+        ],
+        "input_ids": [
+          1030
+        ],
+        "special_mask": [
+          1030
+        ],
+        "vectors": [
+          1030,
+          128
+        ]
+      },
+      "project_imported": true
+    },
+    {
+      "model": "colqwen2",
+      "artifact_id": "embeddings-17d7e1b5ec380770c824",
+      "document_count": 1000,
+      "local_readback": "passed",
+      "source_digest": "7acf6ea0273b332ba63421772ff955530c739242a5f049a256d0e9a7a2801335",
+      "elapsed_seconds": 1088.755223958,
+      "tensor_names": [
+        "attention_mask",
+        "image_mask",
+        "input_ids",
+        "special_mask",
+        "vectors"
+      ],
+      "payload_bytes": 199081397,
+      "sample_shapes": {
+        "attention_mask": [
+          551
+        ],
+        "image_mask": [
+          551
+        ],
+        "input_ids": [
+          551
+        ],
+        "special_mask": [
+          551
+        ],
+        "vectors": [
+          551,
+          128
+        ]
+      },
+      "project_imported": true
+    },
+    {
+      "model": "layoutlmv3-ocr",
+      "artifact_id": "embeddings-14f0c9c4cc8cb38ae601",
+      "document_count": 1000,
+      "local_readback": "passed",
+      "source_digest": "7acf6ea0273b332ba63421772ff955530c739242a5f049a256d0e9a7a2801335",
+      "elapsed_seconds": 239.91437309500003,
+      "tensor_names": [
+        "attention_mask",
+        "boxes",
+        "cls",
+        "input_ids",
+        "tokens",
+        "word_ids"
+      ],
+      "payload_bytes": 1817351161,
+      "sample_shapes": {
+        "attention_mask": [
+          304
+        ],
+        "boxes": [
+          107,
+          4
+        ],
+        "cls": [
+          1,
+          768
+        ],
+        "input_ids": [
+          107
+        ],
+        "tokens": [
+          304,
+          768
+        ],
+        "word_ids": [
+          107
+        ]
+      },
+      "ocr": {
+        "artifact_id": "ocr-6a40a0906e051e963e73",
+        "documents": 1000,
+        "words": 329869,
+        "empty_documents": [
+          4,
+          44,
+          649
+        ],
+        "engine_version": "tesseract 5.3.4",
+        "options": {
+          "language": "eng",
+          "oem": 1,
+          "psm": 3,
+          "timeout_seconds": 600
+        }
+      },
+      "project_imported": true
+    }
+  ],
+  "notebook_url": "https://colab.research.google.com/drive/1nc4iDTxv0hJvn_0JRYhxekUxiuzwa1qn",
+  "recovery": {
+    "restored_documents_after_runtime_loss": 425,
+    "final_ocr_invocation_seconds": 2491.108832377,
+    "ocr_artifact_id": "ocr-6a40a0906e051e963e73",
+    "checkpoint_root": "D:\\ColabRuns\\recovery-20261006\\checkpoints",
+    "source_digest": "7acf6ea0273b332ba63421772ff955530c739242a5f049a256d0e9a7a2801335",
+    "helper_sha256": "58c9aeac4260ac38c8538dbe231d984b64f0efa9aed79acff3056d8fb3cbe8a1",
+    "live_two_page_differential": "passed",
+    "corrupt_checkpoint_negative_control": "passed in local fixture test"
+  },
+  "historical_lost_export": {
+    "model": "layoutlmv3-ocr",
+    "artifact_id": "embeddings-7ba3d5806c8fe014f085",
+    "document_count": 1000,
+    "elapsed_seconds": 294.2181602700002,
+    "archive_sha256": "f71e3f05b3cd57d591e264a9cf3bdf27dbe2546fb24c6817a20fd4d752a29810",
+    "archive_bytes": 1690174931,
+    "parts_remote": "/content/workspaces/legal-full-20261004/bundles/layoutlmv3-ocr/parts",
+    "part_count": 17,
+    "local_readback": "unavailable: runtime expired; incomplete transfer failed SHA-256 validation"
+  }
+}

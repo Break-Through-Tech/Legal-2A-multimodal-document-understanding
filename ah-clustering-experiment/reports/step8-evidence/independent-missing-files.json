@@ -1,0 +1,20 @@
+{
+  "status": "pass",
+  "surface": "Streamlit AppTest Python behavior",
+  "negative_controls": [
+    "copied real run renders overview",
+    "missing projection displayed warning without exception",
+    "missing original image displayed warning with cluster still usable",
+    "corrupt score file hidden after refresh with invalid status"
+  ],
+  "dashboard_file_sha256": {
+    "dashboard/__init__.py": "5d247356e2ba76bfba148ad4108ee0820fb9c5076be375a61ebde9016435d85e",
+    "dashboard/app.py": "ba2344f149d98cb4715269cb6f57041b1c6ce311e51c5e93aeb83423399dd06e",
+    "dashboard/comparison.py": "ac0f0f246da249e0013e016d9317eb488961273f6f8e613140ce0e1b4f262f12",
+    "dashboard/data.py": "684ce9b9f078d5e1fb7b45c29d41081b1efcc5e0a04ace757833c0cb89c24c4d",
+    "dashboard/explorer.py": "900ce9301de909cc8cbb623c444fc5250ef72dec9f476c3739a29ba73cd746ab",
+    "dashboard/overview.py": "69b7779a1ba03e50f40304b2219b910f19ef2e6b349ee6e62af64fc8e242173c",
+    "dashboard/review.py": "e733bfd967bf1a448cef5f7940dc07246a61045dfc9515468669e82fd8414391",
+    "dashboard/ui.py": "4d9ce82dec5c011bb33d7b3eeb57b99ed42bff189d18f2ad9ca477eb515c61b8"
+  }
+}

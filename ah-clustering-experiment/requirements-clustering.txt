@@ -1,0 +1,2 @@
+# Install with the existing storage dependencies. GPU similarity also uses torch.
+scikit-learn==1.9.1
