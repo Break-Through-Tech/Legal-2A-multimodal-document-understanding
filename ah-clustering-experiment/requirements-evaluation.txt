@@ -1,0 +1,5 @@
+-r requirements-clustering.txt
+umap-learn==0.5.12
+numba==0.68.0
+pynndescent==0.6.0
+llvmlite==0.50.0

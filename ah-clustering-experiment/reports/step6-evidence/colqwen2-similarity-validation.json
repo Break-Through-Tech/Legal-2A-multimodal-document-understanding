@@ -1,0 +1,16 @@
+{
+  "direct_reference_max_error": 3.6073145526227535e-08,
+  "distance_is_metric": false,
+  "max_directional_asymmetry": 0.29709547758102417,
+  "passed": true,
+  "reference_document_ids": [
+    0,
+    476,
+    999
+  ],
+  "selected_token_count_max": 768,
+  "selected_token_count_min": 12,
+  "similarity_max": 1.0,
+  "similarity_min": 0.16749447584152222,
+  "tolerance": 2e-05
+}

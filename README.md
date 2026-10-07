@@ -1,5 +1,9 @@
 # AI Studio Challenge Project Title
 
+## Run the clustering dashboard
+
+See [the dashboard quickstart](ah-clustering-experiment/DASHBOARD_QUICKSTART.md) to clone this repository and run the saved experiments locally. Use the `anh-embedding-experiments` branch until it is merged. The dashboard includes 18 saved runs and requires no GPU.
+
 > 💡 **Note for the team:** This is just a template. Update the above title with your AI Studio Challenge Project name. Remove all guidance notes and example text in this template and populate this README with your own content. You can work on this README throughout AI Studio, and get feedback from your AI Studio Coach and Challenge Advisor before finalizing it.  
 
 ---

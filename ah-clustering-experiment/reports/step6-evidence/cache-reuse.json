@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "claim": "Four completed real DINO clustering caches reused with fitting forbidden",
+  "results": [
+    {
+      "model": "dinov3",
+      "algorithm": "kmeans",
+      "status": "complete",
+      "artifact_id": "clusters-7c58a2ef2e2dc1e1560a",
+      "reused": true,
+      "cluster_count": 19,
+      "document_count": 700,
+      "noise_count": 0,
+      "repeat_partition_equal": true,
+      "elapsed_seconds": 0.020927099976688623
+    },
+    {
+      "model": "dinov3",
+      "algorithm": "agglomerative",
+      "status": "complete",
+      "artifact_id": "clusters-40b280874929384e5bc9",
+      "reused": true,
+      "cluster_count": 19,
+      "document_count": 700,
+      "noise_count": 0,
+      "repeat_partition_equal": true,
+      "elapsed_seconds": 0.018997999955900013
+    },
+    {
+      "model": "dinov3",
+      "algorithm": "hdbscan",
+      "status": "complete",
+      "artifact_id": "clusters-2c570644206a69347818",
+      "reused": true,
+      "cluster_count": 19,
+      "document_count": 700,
+      "noise_count": 180,
+      "repeat_partition_equal": true,
+      "elapsed_seconds": 0.02294569998048246
+    },
+    {
+      "model": "dinov3",
+      "algorithm": "spectral",
+      "status": "complete",
+      "artifact_id": "clusters-a3b97f5bd553ae9cc906",
+      "reused": true,
+      "cluster_count": 19,
+      "document_count": 700,
+      "noise_count": 0,
+      "repeat_partition_equal": true,
+      "elapsed_seconds": 0.021985800005495548
+    }
+  ],
+  "elapsed_seconds": 59.447251399978995
+}

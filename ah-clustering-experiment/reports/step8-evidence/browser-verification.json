@@ -1,0 +1,84 @@
+{
+  "grade": "LIVE_VERIFIED",
+  "date_local": "2026-10-06",
+  "timezone": "America/Chicago",
+  "url": "http://127.0.0.1:8501",
+  "source_digest": "0fc7619c291a2af6cfcc4e692b5307c6f1a597ea797ae30d2fbfa3578be666db",
+  "full_suite": {
+    "run": 248,
+    "failures": 0,
+    "skipped": 1,
+    "seconds": 239.42
+  },
+  "independent_evidence": [
+    {
+      "file": "independent-artifact-audit.json",
+      "status": "pass"
+    },
+    {
+      "file": "independent-apptest.json",
+      "status": "pass"
+    },
+    {
+      "file": "independent-missing-files.json",
+      "status": "pass"
+    }
+  ],
+  "browser_observations": {
+    "views": [
+      "Overview",
+      "Embedding explorer",
+      "Cluster explorer",
+      "Experiment comparison",
+      "Experiment details"
+    ],
+    "overview": {
+      "runs": 14,
+      "modes": 4,
+      "documents_per_run": 700,
+      "pending_or_unavailable": 3
+    },
+    "document_picker_id": 76,
+    "chart_selected_id": 0,
+    "equipment_inspection_filter_count": 35,
+    "representative_id": 356,
+    "comparison_both_non_noise": 625,
+    "comparison_right_noise": 75,
+    "negative_controls": [
+      "missing projection",
+      "missing image",
+      "corrupt score payload"
+    ],
+    "negative_control_isolation": "Disposable copied artifacts; test server stopped after verification",
+    "responsive_css_widths": [
+      320,
+      768,
+      1024,
+      1440
+    ],
+    "outer_horizontal_overflow": false,
+    "keyboard_checks": [
+      "Space selects radio",
+      "Tab advances focus"
+    ],
+    "console_clean_after_utc": "2026-10-07T00:13:00Z",
+    "console_caveat": "Earlier development server restarts produced WebSocket disconnect messages",
+    "screenshots": [
+      "cluster-representative.jpg",
+      "comparison.jpg",
+      "corrupt-artifact.jpg",
+      "explorer-point-selection.jpg",
+      "filtered-umap.jpg",
+      "missing-image.jpg",
+      "missing-projection.jpg",
+      "mobile-details.jpg",
+      "overview.jpg"
+    ]
+  },
+  "limits": [
+    "Full OCR mode pending",
+    "Drive/Colab recovery gate pending",
+    "Not a complete accessibility audit",
+    "Step 9 findings review remains"
+  ]
+}

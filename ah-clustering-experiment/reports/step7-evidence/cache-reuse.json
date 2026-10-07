@@ -1,0 +1,62 @@
+{
+  "source_digest": "1a77022f866aec4931fa67603c155401a0aaa20ed6cddcebe930f73c1963b71a",
+  "check": "Reopen actual metrics artifacts with evaluator replaced by failing sentinel; no replacement numerical outputs",
+  "results": [
+    {
+      "artifact_id": "metrics-caa6e7d343a717723785",
+      "reused": true
+    },
+    {
+      "artifact_id": "metrics-71967027d3b1c04fcd18",
+      "reused": true
+    },
+    {
+      "artifact_id": "metrics-017648c85fd92d988bb0",
+      "reused": true
+    },
+    {
+      "artifact_id": "metrics-2abb4654f1be19776302",
+      "reused": true
+    },
+    {
+      "artifact_id": "metrics-67d2b7b2919d072373d1",
+      "reused": true
+    },
+    {
+      "artifact_id": "metrics-059e6287ca1b8d5d3f00",
+      "reused": true
+    },
+    {
+      "artifact_id": "metrics-47a7fef83bccfe8950fe",
+      "reused": true
+    },
+    {
+      "artifact_id": "metrics-da8f99af889c4ea9e822",
+      "reused": true
+    },
+    {
+      "artifact_id": "metrics-925a5dbbdc796edc8422",
+      "reused": true
+    },
+    {
+      "artifact_id": "metrics-36b2ec46394c4b78e326",
+      "reused": true
+    },
+    {
+      "artifact_id": "metrics-4abc90e447daf4c326b9",
+      "reused": true
+    },
+    {
+      "artifact_id": "metrics-ca3f65b30ad9565e6fee",
+      "reused": true
+    },
+    {
+      "artifact_id": "metrics-54e1fcbaf1a0bc914c94",
+      "reused": true
+    },
+    {
+      "artifact_id": "metrics-3026701ed2d79b33bfc8",
+      "reused": true
+    }
+  ]
+}

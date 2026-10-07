@@ -1,0 +1,66 @@
+{
+  "status": "passed",
+  "evidence_grade": "LIVE_VERIFIED",
+  "settings": {
+    "family": "layoutlmv3",
+    "checkpoint": "microsoft/layoutlmv3-base",
+    "revision": "cfbbbff0762e6aab37086fdd4739ad14fe7d5db4",
+    "input_mode": "image_only",
+    "dtype": "float32",
+    "batch_size": 2,
+    "processor_options": {}
+  },
+  "source_digest": "7acf6ea0273b332ba63421772ff955530c739242a5f049a256d0e9a7a2801335",
+  "artifact_id": "embeddings-601ee99daa0effb5a53e",
+  "document_ids": [
+    0,
+    1
+  ],
+  "shapes": {
+    "0": {
+      "cls": [
+        1,
+        768
+      ],
+      "tokens": [
+        197,
+        768
+      ],
+      "attention_mask": [
+        197
+      ]
+    },
+    "1": {
+      "cls": [
+        1,
+        768
+      ],
+      "tokens": [
+        197,
+        768
+      ],
+      "attention_mask": [
+        197
+      ]
+    }
+  },
+  "differential_tolerance": 1e-05,
+  "negative_controls": [
+    "native numeric value mutation rejected",
+    "short output mask rejected",
+    "flipped output mask rejected"
+  ],
+  "metamorphic_checks": [
+    "changing OCR leaves every image-only output unchanged"
+  ],
+  "cache_reuse_without_loading": true,
+  "frozen_eval_inference_mode_verified": true,
+  "observed_model_forwards": 1,
+  "constructed_ocr_edge_checks": [],
+  "dependencies": {
+    "torch": "2.11.0+cu130",
+    "transformers": "5.17.0",
+    "numpy": "2.5.3",
+    "Pillow": "12.3.0"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "status": "pass",
+  "python": "3.14.0",
+  "platform": "Windows",
+  "clean_install": true,
+  "pip_check": "No broken requirements found",
+  "dashboard_unit_tests": 29,
+  "independent_comparison_tests": 13,
+  "apptest_checks": 48,
+  "restored_runs": 14,
+  "projections": 6,
+  "snapshot_bytes": 1289747,
+  "snapshot_sha256": "436e52726e0bba28d5e58b02dbf565a280a646346eb204fc32e4dc1a5e079bf0",
+  "downloaded_and_validated_source_documents": 1000,
+  "verified_dashboard_image_checksums": 700,
+  "image_preview_ids": [
+    0,
+    76,
+    356
+  ],
+  "torch_installed": false,
+  "transformers_installed": false,
+  "sklearn_installed": false,
+  "limits": [
+    "macOS and Linux commands documented but not executed",
+    "Use Python >=3.12 and a short Windows clone path",
+    "Preview conversion sampled three images; all 1000 originals were decoded by dataset preparation"
+  ]
+}

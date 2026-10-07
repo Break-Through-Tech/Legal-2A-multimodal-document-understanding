@@ -1,0 +1,46 @@
+{
+  "source_digest": "7acf6ea0273b332ba63421772ff955530c739242a5f049a256d0e9a7a2801335",
+  "results": [
+    {
+      "artifact_id": "embeddings-3ddee216db54d2c2a337",
+      "document_ids": [
+        0,
+        1
+      ],
+      "local_readback": "passed"
+    },
+    {
+      "artifact_id": "embeddings-ec70b1327ca4d51d930e",
+      "document_ids": [
+        0,
+        1
+      ],
+      "local_readback": "passed"
+    },
+    {
+      "artifact_id": "embeddings-3b93654e24044a2dee2a",
+      "document_ids": [
+        0,
+        1
+      ],
+      "local_readback": "passed"
+    },
+    {
+      "artifact_id": "embeddings-601ee99daa0effb5a53e",
+      "document_ids": [
+        0,
+        1
+      ],
+      "local_readback": "passed"
+    },
+    {
+      "artifact_id": "embeddings-6c93da1854e5670cfe3d",
+      "document_ids": [
+        0,
+        1,
+        2
+      ],
+      "local_readback": "passed"
+    }
+  ]
+}

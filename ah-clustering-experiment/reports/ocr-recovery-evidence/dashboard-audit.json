@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "surface": "Streamlit AppTest; browser rendering not tested",
+  "runs": 18,
+  "projections": 8,
+  "issues": [
+    {
+      "status": "unavailable",
+      "artifact_id": null,
+      "model": "colpali",
+      "reason": "kmeans: Standard K-means needs fixed feature vectors; retained-token similarity is not a feature matrix."
+    },
+    {
+      "status": "unavailable",
+      "artifact_id": null,
+      "model": "colqwen2",
+      "reason": "kmeans: Standard K-means needs fixed feature vectors; retained-token similarity is not a feature matrix."
+    }
+  ],
+  "checks": [
+    "portable snapshot restores 18 runs and 8 projections",
+    "snapshot restore is idempotent",
+    "overview",
+    "OCR filter",
+    "OCR embedding explorer",
+    "OCR UMAP",
+    "OCR PCA",
+    "OCR cluster explorer",
+    "OCR details"
+  ],
+  "inference_and_fitting_modules_loaded": false
+}

@@ -1,0 +1,9 @@
+{
+  "family": "colqwen2",
+  "checkpoint": "vidore/colqwen2-v1.0-hf",
+  "revision": "ddc07d2317c80f75fc742b7362ee9ad1912908f9",
+  "input_mode": "image_only",
+  "dtype": "float16",
+  "batch_size": 1,
+  "processor_options": {}
+}

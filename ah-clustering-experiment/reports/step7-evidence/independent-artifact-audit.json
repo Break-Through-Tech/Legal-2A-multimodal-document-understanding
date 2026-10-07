@@ -1,0 +1,1001 @@
+{
+  "audit": "Direct raw CSV/Parquet/NPY/JSON, no project imports, no model/cluster/projection fitting",
+  "checked_artifacts": {
+    "clusters-2c570644206a69347818": {
+      "file_count": 2,
+      "manifest_sha256": "08fe6ddbb9ea163b662383e6d6365e1db1f2e53f206a4454df968431629ef46e"
+    },
+    "clusters-39ac0cd9385da467f171": {
+      "file_count": 2,
+      "manifest_sha256": "0bfa074f65ef991c3d989f7cf174212f11c37e026a30cddc87e6e63d670181be"
+    },
+    "clusters-40b280874929384e5bc9": {
+      "file_count": 2,
+      "manifest_sha256": "c8763f0c6f28e8348e7e1fae767e7e79bd68485de326de421b9f4febba227f74"
+    },
+    "clusters-4700e2bad113d169c12c": {
+      "file_count": 2,
+      "manifest_sha256": "c76a58e605f5f88fdf13745be9f0f228ff8951f0e16f43c7a4e3bbac6fc8a701"
+    },
+    "clusters-5faff8c976b54b2a2fbd": {
+      "file_count": 2,
+      "manifest_sha256": "be39d2053059a13e3ab1f18babcb2057413dee6394e1b58d8a2b759f0eb5b42d"
+    },
+    "clusters-79f57ed40739b91cf392": {
+      "file_count": 2,
+      "manifest_sha256": "6ffa36481b10be0b4f1700701ae9272ad32a4a0379838c872de9021a1e9aaf70"
+    },
+    "clusters-7c58a2ef2e2dc1e1560a": {
+      "file_count": 2,
+      "manifest_sha256": "fd9ba9a4f3957ec9f1412c89a4730ea8af4a21697a38cbb1fca3988badac4141"
+    },
+    "clusters-a3b97f5bd553ae9cc906": {
+      "file_count": 2,
+      "manifest_sha256": "d8741abeaf4181ad46f3c29933843a8346870fe5101ac963d0857d76411d102c"
+    },
+    "clusters-b187c9c9938cc1b5bc38": {
+      "file_count": 2,
+      "manifest_sha256": "2b05dee9cf27f3e5f5532d65d2a27ac9fed9e13ca1b433494b80d72525e930a3"
+    },
+    "clusters-baecfbbcb1204706c2c5": {
+      "file_count": 2,
+      "manifest_sha256": "d82ea04102ea6cd84130515473461cfca504dd71956a2b8599aa85aa4d2964e2"
+    },
+    "clusters-c876fa642aa6c4948b1b": {
+      "file_count": 2,
+      "manifest_sha256": "49b4b3212476f45641ba349745bbbd888b98623a97a4e4d9422336917f353573"
+    },
+    "clusters-cc13d69204a20acd6d26": {
+      "file_count": 2,
+      "manifest_sha256": "b3f4f86449e1c185e6a0b3eec8e14b908e9e38d97c0c0b1f355c0b51266737b4"
+    },
+    "clusters-dbe077efe92a963b03df": {
+      "file_count": 2,
+      "manifest_sha256": "9cc655bcdbc1c990010b8eda06e19b264fee8d0f2faca0086461fbe8b82a6ed9"
+    },
+    "clusters-f0085da7b8db3aa2a971": {
+      "file_count": 2,
+      "manifest_sha256": "c7ede20cfa29df294cb4520da0c47981b17a31c3c882c446a0c5059d0fcfe320"
+    },
+    "metrics-017648c85fd92d988bb0": {
+      "file_count": 4,
+      "manifest_sha256": "953d6bdb8c01db2a1d1133c5f852a722de2f33baa8aa39da5a6173e15451748a"
+    },
+    "metrics-059e6287ca1b8d5d3f00": {
+      "file_count": 4,
+      "manifest_sha256": "8b21021f4e344b2e02fe6d7757650277a274e6afb552f699707d7e04641b8f9c"
+    },
+    "metrics-2abb4654f1be19776302": {
+      "file_count": 4,
+      "manifest_sha256": "98cbf7fca7f3ae2a7e084e33a68ac9bfa813c902eeab64bdcfc45f6dc18668ce"
+    },
+    "metrics-3026701ed2d79b33bfc8": {
+      "file_count": 4,
+      "manifest_sha256": "d40af91f8acd2fd99b8bb6c47fd093cada334eec5b1d356558d0c79976dba1d1"
+    },
+    "metrics-36b2ec46394c4b78e326": {
+      "file_count": 4,
+      "manifest_sha256": "d211561d177304b5a4309e914e1a223cfbdaf6f51e2251cfb7500626d70dad50"
+    },
+    "metrics-47a7fef83bccfe8950fe": {
+      "file_count": 4,
+      "manifest_sha256": "7ba1b57d9231e154ee97953c6cc54ce1498607b923592596365d73f08794839e"
+    },
+    "metrics-4abc90e447daf4c326b9": {
+      "file_count": 4,
+      "manifest_sha256": "a05ae111a6f955e03376ced0c8c7e8c502c9f17a215045ed52022e078652c774"
+    },
+    "metrics-54e1fcbaf1a0bc914c94": {
+      "file_count": 4,
+      "manifest_sha256": "9e82c49ebfeac8b00bfb8d4803c3d3b1cc0493db6825b0ac206d8f4f24d98d0e"
+    },
+    "metrics-67d2b7b2919d072373d1": {
+      "file_count": 4,
+      "manifest_sha256": "0ebf90127b32e8a93a8fd3af0d199261e65dd9bbb37f719293e64c6a9bf27624"
+    },
+    "metrics-71967027d3b1c04fcd18": {
+      "file_count": 4,
+      "manifest_sha256": "1f60bd5e8dfde12867e34606b77c0bedc0bc422eac9b225e0ddc968e9da55712"
+    },
+    "metrics-925a5dbbdc796edc8422": {
+      "file_count": 4,
+      "manifest_sha256": "8dc365bbc3218f79abb7de171186ddfa2cc565a4d422b2d3045fe6507ff3f1a2"
+    },
+    "metrics-ca3f65b30ad9565e6fee": {
+      "file_count": 4,
+      "manifest_sha256": "48dd2fc2d7cc7a613f62c0f0f8d2351b1b72f6c87d117401462eb3cb69624722"
+    },
+    "metrics-caa6e7d343a717723785": {
+      "file_count": 4,
+      "manifest_sha256": "07b674f2836dfb9f4a38fcb34806c478712225a2aab7fc31620b0827c903ab4f"
+    },
+    "metrics-da8f99af889c4ea9e822": {
+      "file_count": 4,
+      "manifest_sha256": "c30ffa3ee4443fe6a404c07cd533b392830fb814d5d27f9344cef3b6c20e6137"
+    },
+    "projections-07d761c4bba0ce5c33a4": {
+      "file_count": 2,
+      "manifest_sha256": "99fdaf6a3b97dce8f4976f863703649e19fef447058fac8af6fe44398f68ffab"
+    },
+    "projections-10d88662f6c1bb1d1582": {
+      "file_count": 2,
+      "manifest_sha256": "4a686aa16861e6ab3d86cce88fd0188c3c71866adc88c698ee8d667e5d094246"
+    },
+    "projections-24c44b03a03e2cb16728": {
+      "file_count": 2,
+      "manifest_sha256": "68ad978cf16ae084024e1e852d2de43539245c1b2d6f6c810ad04e508a8aed42"
+    },
+    "projections-296636281ddd354aecdc": {
+      "file_count": 2,
+      "manifest_sha256": "e8bd127c9a89c2b273ddd480f3e86298cd32a3b13fc5afbe71ad5bf04bb43b04"
+    },
+    "projections-3e26f408fd49e60a16cc": {
+      "file_count": 2,
+      "manifest_sha256": "cc1dc6dc379a3f3ce4245a3762d3da66ce36825b7dc91d75e7fc35e1fcc67e4e"
+    },
+    "projections-c579da635a1bd5c492d7": {
+      "file_count": 2,
+      "manifest_sha256": "2b5c10ab25d010a7d130d91cca1998840d385a28127ef1b0b00884aa9d56fcca"
+    },
+    "similarities-d60d7b3eb5c6cf3b6f8d": {
+      "file_count": 6,
+      "manifest_sha256": "d559dc4f841e98d368af99f2befe735f5340d921cb406f212abb3e0276fae091"
+    },
+    "similarities-db1ed3d1ed9349d36b5d": {
+      "file_count": 6,
+      "manifest_sha256": "bba97cc881a5c9c835f13e669512f96d7f285313f8b3d835d7019012cc9aaede"
+    }
+  },
+  "documents": 700,
+  "excluded_heldout_documents": 300,
+  "limitations": [
+    "UMAP saved outputs validated for IDs, finite coordinates, configuration, source hashes and saved repeat evidence; not independently refit in artifact audit.",
+    "Full OCR mode pending embeddings; dashboard remains Step 8.",
+    "No claim that cluster quality is universally sufficient or optimal."
+  ],
+  "metric_artifacts": [
+    {
+      "artifact_id": "metrics-caa6e7d343a717723785",
+      "cluster_sizes": {
+        "0": 36,
+        "1": 41,
+        "10": 25,
+        "11": 46,
+        "12": 36,
+        "13": 46,
+        "14": 26,
+        "15": 27,
+        "16": 37,
+        "17": 29,
+        "18": 14,
+        "2": 36,
+        "3": 51,
+        "4": 35,
+        "5": 43,
+        "6": 35,
+        "7": 40,
+        "8": 65,
+        "9": 32
+      },
+      "clustering_artifact": "clusters-7c58a2ef2e2dc1e1560a",
+      "noise_count": 0,
+      "scores_including_noise": {
+        "ami": 0.8155618777989221,
+        "ari": 0.7029189609433771,
+        "calinski_harabasz": 46.69000069489499,
+        "completeness": 0.8378224136094196,
+        "davies_bouldin": 1.6946116189262208,
+        "homogeneity": 0.8271165397944216,
+        "nmi": 0.8324350563005274,
+        "purity": 0.7885714285714286,
+        "silhouette": 0.23993477993068307,
+        "v_measure": 0.8324350563005274
+      },
+      "source_digest": "1a77022f866aec4931fa67603c155401a0aaa20ed6cddcebe930f73c1963b71a"
+    },
+    {
+      "artifact_id": "metrics-71967027d3b1c04fcd18",
+      "cluster_sizes": {
+        "0": 2,
+        "1": 666,
+        "10": 1,
+        "11": 1,
+        "12": 1,
+        "13": 1,
+        "14": 1,
+        "15": 1,
+        "16": 1,
+        "17": 1,
+        "18": 1,
+        "2": 2,
+        "3": 3,
+        "4": 3,
+        "5": 8,
+        "6": 1,
+        "7": 2,
+        "8": 2,
+        "9": 2
+      },
+      "clustering_artifact": "clusters-40b280874929384e5bc9",
+      "noise_count": 0,
+      "scores_including_noise": {
+        "ami": 0.022193613093809066,
+        "ari": 0.000131180805702771,
+        "calinski_harabasz": 3.976167564180298,
+        "completeness": 0.42793626424419967,
+        "davies_bouldin": 0.9674235925290173,
+        "homogeneity": 0.046957029372381665,
+        "nmi": 0.08462791957574421,
+        "purity": 0.10285714285714286,
+        "silhouette": 0.15212258990677396,
+        "v_measure": 0.08462791957574421
+      },
+      "source_digest": "1a77022f866aec4931fa67603c155401a0aaa20ed6cddcebe930f73c1963b71a"
+    },
+    {
+      "artifact_id": "metrics-017648c85fd92d988bb0",
+      "cluster_sizes": {
+        "-1": 180,
+        "0": 30,
+        "1": 35,
+        "10": 41,
+        "11": 23,
+        "12": 19,
+        "13": 10,
+        "14": 33,
+        "15": 10,
+        "16": 46,
+        "17": 22,
+        "18": 30,
+        "2": 37,
+        "3": 24,
+        "4": 36,
+        "5": 32,
+        "6": 35,
+        "7": 33,
+        "8": 10,
+        "9": 14
+      },
+      "clustering_artifact": "clusters-2c570644206a69347818",
+      "noise_count": 180,
+      "scores_including_noise": {
+        "ami": 0.7893015692187269,
+        "ari": 0.4862077424313622,
+        "calinski_harabasz": 32.26652677464132,
+        "completeness": 0.8467214407284129,
+        "davies_bouldin": 1.9088453381181296,
+        "homogeneity": 0.7766791184885188,
+        "nmi": 0.8101892764007537,
+        "purity": 0.79,
+        "silhouette": 0.20567720867916356,
+        "v_measure": 0.8101892764007537
+      },
+      "source_digest": "1a77022f866aec4931fa67603c155401a0aaa20ed6cddcebe930f73c1963b71a"
+    },
+    {
+      "artifact_id": "metrics-2abb4654f1be19776302",
+      "cluster_sizes": {
+        "0": 43,
+        "1": 39,
+        "10": 39,
+        "11": 35,
+        "12": 40,
+        "13": 33,
+        "14": 34,
+        "15": 30,
+        "16": 28,
+        "17": 23,
+        "18": 27,
+        "2": 71,
+        "3": 43,
+        "4": 35,
+        "5": 41,
+        "6": 33,
+        "7": 36,
+        "8": 34,
+        "9": 36
+      },
+      "clustering_artifact": "clusters-a3b97f5bd553ae9cc906",
+      "noise_count": 0,
+      "scores_including_noise": {
+        "ami": 0.8314830117011933,
+        "ari": 0.7409775902685712,
+        "calinski_harabasz": 46.399834566297834,
+        "completeness": 0.8504736688561519,
+        "davies_bouldin": 1.7290456290038754,
+        "homogeneity": 0.8434229257789909,
+        "nmi": 0.8469336231697817,
+        "purity": 0.8357142857142857,
+        "silhouette": 0.2413062687124223,
+        "v_measure": 0.8469336231697817
+      },
+      "source_digest": "1a77022f866aec4931fa67603c155401a0aaa20ed6cddcebe930f73c1963b71a"
+    },
+    {
+      "artifact_id": "metrics-67d2b7b2919d072373d1",
+      "cluster_sizes": {
+        "0": 12,
+        "1": 33,
+        "10": 1,
+        "11": 1,
+        "12": 21,
+        "13": 86,
+        "14": 61,
+        "15": 25,
+        "16": 60,
+        "17": 25,
+        "18": 21,
+        "2": 28,
+        "3": 100,
+        "4": 36,
+        "5": 16,
+        "6": 50,
+        "7": 61,
+        "8": 23,
+        "9": 40
+      },
+      "clustering_artifact": "clusters-5faff8c976b54b2a2fbd",
+      "noise_count": 0,
+      "scores_including_noise": {
+        "ami": 0.3980440578005408,
+        "ari": 0.21528927155056243,
+        "calinski_harabasz": 25.716983093561993,
+        "completeness": 0.47141650297469145,
+        "davies_bouldin": 2.266925210442503,
+        "homogeneity": 0.43057755764258665,
+        "nmi": 0.4500725123275022,
+        "purity": 0.4328571428571429,
+        "silhouette": 0.12731178095094492,
+        "v_measure": 0.4500725123275022
+      },
+      "source_digest": "1a77022f866aec4931fa67603c155401a0aaa20ed6cddcebe930f73c1963b71a"
+    },
+    {
+      "artifact_id": "metrics-059e6287ca1b8d5d3f00",
+      "cluster_sizes": {
+        "0": 639,
+        "1": 2,
+        "10": 1,
+        "11": 1,
+        "12": 1,
+        "13": 1,
+        "14": 1,
+        "15": 1,
+        "16": 2,
+        "17": 1,
+        "18": 3,
+        "2": 2,
+        "3": 3,
+        "4": 2,
+        "5": 20,
+        "6": 3,
+        "7": 11,
+        "8": 5,
+        "9": 1
+      },
+      "clustering_artifact": "clusters-39ac0cd9385da467f171",
+      "noise_count": 0,
+      "scores_including_noise": {
+        "ami": 0.06845100895435564,
+        "ari": 0.003466143777275224,
+        "calinski_harabasz": 5.570104304564322,
+        "completeness": 0.4692274814888716,
+        "davies_bouldin": 1.2077155626022833,
+        "homogeneity": 0.07939816618918713,
+        "nmi": 0.13581501963484355,
+        "purity": 0.14,
+        "silhouette": 0.03761133114771408,
+        "v_measure": 0.13581501963484355
+      },
+      "source_digest": "1a77022f866aec4931fa67603c155401a0aaa20ed6cddcebe930f73c1963b71a"
+    },
+    {
+      "artifact_id": "metrics-47a7fef83bccfe8950fe",
+      "cluster_sizes": {
+        "-1": 468,
+        "0": 12,
+        "1": 10,
+        "2": 20,
+        "3": 35,
+        "4": 31,
+        "5": 23,
+        "6": 15,
+        "7": 72,
+        "8": 14
+      },
+      "clustering_artifact": "clusters-baecfbbcb1204706c2c5",
+      "noise_count": 468,
+      "scores_including_noise": {
+        "ami": 0.3143218653125971,
+        "ari": 0.048055055110685294,
+        "calinski_harabasz": 18.959492200826382,
+        "completeness": 0.5828447250925637,
+        "davies_bouldin": 1.925649640716409,
+        "homogeneity": 0.25697146158869755,
+        "nmi": 0.35668391074520506,
+        "purity": 0.2914285714285714,
+        "silhouette": 0.023376454412898633,
+        "v_measure": 0.356683910745205
+      },
+      "source_digest": "1a77022f866aec4931fa67603c155401a0aaa20ed6cddcebe930f73c1963b71a"
+    },
+    {
+      "artifact_id": "metrics-da8f99af889c4ea9e822",
+      "cluster_sizes": {
+        "0": 37,
+        "1": 47,
+        "10": 46,
+        "11": 34,
+        "12": 86,
+        "13": 31,
+        "14": 14,
+        "15": 20,
+        "16": 27,
+        "17": 16,
+        "18": 43,
+        "2": 40,
+        "3": 33,
+        "4": 76,
+        "5": 13,
+        "6": 23,
+        "7": 60,
+        "8": 52,
+        "9": 2
+      },
+      "clustering_artifact": "clusters-c876fa642aa6c4948b1b",
+      "noise_count": 0,
+      "scores_including_noise": {
+        "ami": 0.3935810511920261,
+        "ari": 0.20899385000243204,
+        "calinski_harabasz": 24.83221375121372,
+        "completeness": 0.4609951895135017,
+        "davies_bouldin": 2.414363074696985,
+        "homogeneity": 0.4355451840673646,
+        "nmi": 0.44790896336073893,
+        "purity": 0.42,
+        "silhouette": 0.11848990376830167,
+        "v_measure": 0.44790896336073893
+      },
+      "source_digest": "1a77022f866aec4931fa67603c155401a0aaa20ed6cddcebe930f73c1963b71a"
+    },
+    {
+      "artifact_id": "metrics-925a5dbbdc796edc8422",
+      "cluster_sizes": {
+        "0": 59,
+        "1": 73,
+        "10": 1,
+        "11": 1,
+        "12": 36,
+        "13": 12,
+        "14": 7,
+        "15": 1,
+        "16": 9,
+        "17": 1,
+        "18": 36,
+        "2": 15,
+        "3": 2,
+        "4": 3,
+        "5": 71,
+        "6": 358,
+        "7": 9,
+        "8": 5,
+        "9": 1
+      },
+      "clustering_artifact": "clusters-79f57ed40739b91cf392",
+      "noise_count": 0,
+      "scores_including_noise": {
+        "ami": 0.6150566480269805,
+        "ari": 0.1879793402328878,
+        "calinski_harabasz": null,
+        "completeness": 0.862526307241729,
+        "davies_bouldin": null,
+        "homogeneity": 0.5155875213584413,
+        "nmi": 0.6453861671338541,
+        "purity": 0.4085714285714286,
+        "silhouette": 0.23126756705651494,
+        "v_measure": 0.645386167133854
+      },
+      "source_digest": "1a77022f866aec4931fa67603c155401a0aaa20ed6cddcebe930f73c1963b71a"
+    },
+    {
+      "artifact_id": "metrics-36b2ec46394c4b78e326",
+      "cluster_sizes": {
+        "-1": 75,
+        "0": 14,
+        "1": 35,
+        "10": 35,
+        "11": 35,
+        "12": 41,
+        "13": 35,
+        "14": 37,
+        "15": 37,
+        "16": 36,
+        "17": 37,
+        "18": 33,
+        "2": 20,
+        "3": 14,
+        "4": 36,
+        "5": 36,
+        "6": 36,
+        "7": 36,
+        "8": 36,
+        "9": 36
+      },
+      "clustering_artifact": "clusters-4700e2bad113d169c12c",
+      "noise_count": 75,
+      "scores_including_noise": {
+        "ami": 0.9579956611140006,
+        "ari": 0.904822320005667,
+        "calinski_harabasz": null,
+        "completeness": 0.9616433942244145,
+        "davies_bouldin": null,
+        "homogeneity": 0.9624149389863063,
+        "nmi": 0.962029011911163,
+        "purity": 0.96,
+        "silhouette": 0.41557947327080674,
+        "v_measure": 0.9620290119111629
+      },
+      "source_digest": "1a77022f866aec4931fa67603c155401a0aaa20ed6cddcebe930f73c1963b71a"
+    },
+    {
+      "artifact_id": "metrics-4abc90e447daf4c326b9",
+      "cluster_sizes": {
+        "0": 12,
+        "1": 37,
+        "10": 35,
+        "11": 36,
+        "12": 36,
+        "13": 37,
+        "14": 35,
+        "15": 37,
+        "16": 36,
+        "17": 36,
+        "18": 25,
+        "2": 35,
+        "3": 36,
+        "4": 36,
+        "5": 83,
+        "6": 36,
+        "7": 37,
+        "8": 34,
+        "9": 41
+      },
+      "clustering_artifact": "clusters-b187c9c9938cc1b5bc38",
+      "noise_count": 0,
+      "scores_including_noise": {
+        "ami": 0.9608847646225193,
+        "ari": 0.8995138697527365,
+        "calinski_harabasz": null,
+        "completeness": 0.9719580216852106,
+        "davies_bouldin": null,
+        "homogeneity": 0.9570933544513943,
+        "nmi": 0.9644684168274467,
+        "purity": 0.94,
+        "silhouette": 0.4130802115994903,
+        "v_measure": 0.9644684168274467
+      },
+      "source_digest": "1a77022f866aec4931fa67603c155401a0aaa20ed6cddcebe930f73c1963b71a"
+    },
+    {
+      "artifact_id": "metrics-ca3f65b30ad9565e6fee",
+      "cluster_sizes": {
+        "0": 22,
+        "1": 458,
+        "10": 2,
+        "11": 1,
+        "12": 2,
+        "13": 1,
+        "14": 36,
+        "15": 1,
+        "16": 1,
+        "17": 1,
+        "18": 5,
+        "2": 59,
+        "3": 16,
+        "4": 3,
+        "5": 2,
+        "6": 4,
+        "7": 14,
+        "8": 71,
+        "9": 1
+      },
+      "clustering_artifact": "clusters-dbe077efe92a963b03df",
+      "noise_count": 0,
+      "scores_including_noise": {
+        "ami": 0.47921972510253413,
+        "ari": 0.09613357887439285,
+        "calinski_harabasz": null,
+        "completeness": 0.8281073371494552,
+        "davies_bouldin": null,
+        "homogeneity": 0.37719833886297466,
+        "nmi": 0.5183095345678843,
+        "purity": 0.3142857142857143,
+        "silhouette": 0.11546193044307802,
+        "v_measure": 0.5183095345678842
+      },
+      "source_digest": "1a77022f866aec4931fa67603c155401a0aaa20ed6cddcebe930f73c1963b71a"
+    },
+    {
+      "artifact_id": "metrics-54e1fcbaf1a0bc914c94",
+      "cluster_sizes": {
+        "-1": 76,
+        "0": 21,
+        "1": 14,
+        "10": 10,
+        "11": 36,
+        "12": 34,
+        "13": 35,
+        "14": 35,
+        "15": 36,
+        "16": 37,
+        "17": 41,
+        "18": 24,
+        "19": 37,
+        "2": 13,
+        "3": 35,
+        "4": 36,
+        "5": 36,
+        "6": 37,
+        "7": 35,
+        "8": 36,
+        "9": 36
+      },
+      "clustering_artifact": "clusters-f0085da7b8db3aa2a971",
+      "noise_count": 76,
+      "scores_including_noise": {
+        "ami": 0.9549817527558963,
+        "ari": 0.899724777808833,
+        "calinski_harabasz": null,
+        "completeness": 0.9546205107156527,
+        "davies_bouldin": null,
+        "homogeneity": 0.9644136861428969,
+        "nmi": 0.9594921102646278,
+        "purity": 0.9614285714285714,
+        "silhouette": 0.3219134953391866,
+        "v_measure": 0.9594921102646278
+      },
+      "source_digest": "1a77022f866aec4931fa67603c155401a0aaa20ed6cddcebe930f73c1963b71a"
+    },
+    {
+      "artifact_id": "metrics-3026701ed2d79b33bfc8",
+      "cluster_sizes": {
+        "0": 37,
+        "1": 28,
+        "10": 34,
+        "11": 24,
+        "12": 35,
+        "13": 36,
+        "14": 36,
+        "15": 35,
+        "16": 36,
+        "17": 41,
+        "18": 36,
+        "2": 36,
+        "3": 76,
+        "4": 35,
+        "5": 34,
+        "6": 34,
+        "7": 34,
+        "8": 37,
+        "9": 36
+      },
+      "clustering_artifact": "clusters-cc13d69204a20acd6d26",
+      "noise_count": 0,
+      "scores_including_noise": {
+        "ami": 0.9397220795494698,
+        "ari": 0.8773501962300786,
+        "calinski_harabasz": null,
+        "completeness": 0.949095961847276,
+        "davies_bouldin": null,
+        "homogeneity": 0.9414409634710044,
+        "nmi": 0.945252964680932,
+        "purity": 0.92,
+        "silhouette": 0.3149111625269111,
+        "v_measure": 0.945252964680932
+      },
+      "source_digest": "1a77022f866aec4931fa67603c155401a0aaa20ed6cddcebe930f73c1963b71a"
+    }
+  ],
+  "negative_controls": {
+    "permuted_ids_rejected": true,
+    "wrong_silhouette_rejected": true
+  },
+  "projection_artifacts": [
+    {
+      "artifact_id": "projections-3e26f408fd49e60a16cc",
+      "details": {
+        "additional_normalization": "none",
+        "construction": "Centered feature PCA with exact full SVD, two components, no whitening",
+        "explained_variance_ratio": [
+          0.1355589256736202,
+          0.10114275779837137
+        ],
+        "input_count": 700,
+        "input_dimensions": 384,
+        "input_geometry": "euclidean_features",
+        "method": "pca",
+        "parameters": {
+          "n_components": 2,
+          "svd_solver": "full",
+          "whiten": false
+        },
+        "purpose": "visualization only; not clustering features",
+        "repeat_absolute_tolerance": 1e-05,
+        "repeat_coordinates_equal": true,
+        "repeat_max_error": 0.0,
+        "row_order": "unchanged_from_input",
+        "seed": 42,
+        "visualization_only": true
+      },
+      "method": "pca",
+      "parameters": {
+        "n_components": 2,
+        "svd_solver": "full",
+        "whiten": false
+      },
+      "precomputed": false,
+      "seed": 42,
+      "source_digest": "1a77022f866aec4931fa67603c155401a0aaa20ed6cddcebe930f73c1963b71a"
+    },
+    {
+      "artifact_id": "projections-c579da635a1bd5c492d7",
+      "details": {
+        "additional_normalization": "none",
+        "construction": "UMAP on supplied feature vectors with Euclidean distance",
+        "input_count": 700,
+        "input_dimensions": 384,
+        "input_geometry": "euclidean_features",
+        "method": "umap",
+        "parameters": {
+          "init": "random",
+          "metric": "euclidean",
+          "min_dist": 0.1,
+          "n_components": 2,
+          "n_epochs": 500,
+          "n_jobs": 1,
+          "n_neighbors": 15,
+          "random_state": 42,
+          "transform_seed": 42
+        },
+        "purpose": "visualization only; not clustering features",
+        "repeat_absolute_tolerance": 1e-05,
+        "repeat_coordinates_equal": true,
+        "repeat_max_error": 0.0,
+        "row_order": "unchanged_from_input",
+        "seed": 42,
+        "visualization_only": true
+      },
+      "method": "umap",
+      "parameters": {
+        "min_dist": 0.1,
+        "n_epochs": 500,
+        "n_neighbors": 15
+      },
+      "precomputed": false,
+      "seed": 42,
+      "source_digest": "1a77022f866aec4931fa67603c155401a0aaa20ed6cddcebe930f73c1963b71a"
+    },
+    {
+      "artifact_id": "projections-24c44b03a03e2cb16728",
+      "details": {
+        "additional_normalization": "none",
+        "construction": "Centered feature PCA with exact full SVD, two components, no whitening",
+        "explained_variance_ratio": [
+          0.1302042803283404,
+          0.057449136299732716
+        ],
+        "input_count": 700,
+        "input_dimensions": 768,
+        "input_geometry": "euclidean_features",
+        "method": "pca",
+        "parameters": {
+          "n_components": 2,
+          "svd_solver": "full",
+          "whiten": false
+        },
+        "purpose": "visualization only; not clustering features",
+        "repeat_absolute_tolerance": 1e-05,
+        "repeat_coordinates_equal": true,
+        "repeat_max_error": 0.0,
+        "row_order": "unchanged_from_input",
+        "seed": 42,
+        "visualization_only": true
+      },
+      "method": "pca",
+      "parameters": {
+        "n_components": 2,
+        "svd_solver": "full",
+        "whiten": false
+      },
+      "precomputed": false,
+      "seed": 42,
+      "source_digest": "1a77022f866aec4931fa67603c155401a0aaa20ed6cddcebe930f73c1963b71a"
+    },
+    {
+      "artifact_id": "projections-10d88662f6c1bb1d1582",
+      "details": {
+        "additional_normalization": "none",
+        "construction": "UMAP on supplied feature vectors with Euclidean distance",
+        "input_count": 700,
+        "input_dimensions": 768,
+        "input_geometry": "euclidean_features",
+        "method": "umap",
+        "parameters": {
+          "init": "random",
+          "metric": "euclidean",
+          "min_dist": 0.1,
+          "n_components": 2,
+          "n_epochs": 500,
+          "n_jobs": 1,
+          "n_neighbors": 15,
+          "random_state": 42,
+          "transform_seed": 42
+        },
+        "purpose": "visualization only; not clustering features",
+        "repeat_absolute_tolerance": 1e-05,
+        "repeat_coordinates_equal": true,
+        "repeat_max_error": 0.0,
+        "row_order": "unchanged_from_input",
+        "seed": 42,
+        "visualization_only": true
+      },
+      "method": "umap",
+      "parameters": {
+        "min_dist": 0.1,
+        "n_epochs": 500,
+        "n_neighbors": 15
+      },
+      "precomputed": false,
+      "seed": 42,
+      "source_digest": "1a77022f866aec4931fa67603c155401a0aaa20ed6cddcebe930f73c1963b71a"
+    },
+    {
+      "artifact_id": "projections-07d761c4bba0ce5c33a4",
+      "details": {
+        "additional_normalization": "none",
+        "construction": "UMAP on supplied nonmetric dissimilarity; no triangle-inequality assumption claimed",
+        "input_count": 700,
+        "input_dimensions": 700,
+        "input_geometry": "precomputed_nonmetric_dissimilarity",
+        "method": "umap",
+        "parameters": {
+          "init": "random",
+          "metric": "precomputed",
+          "min_dist": 0.1,
+          "n_components": 2,
+          "n_epochs": 500,
+          "n_jobs": 1,
+          "n_neighbors": 15,
+          "random_state": 42,
+          "transform_seed": 42
+        },
+        "purpose": "visualization only; not clustering features",
+        "repeat_absolute_tolerance": 1e-05,
+        "repeat_coordinates_equal": true,
+        "repeat_max_error": 0.0,
+        "row_order": "unchanged_from_input",
+        "seed": 42,
+        "visualization_only": true
+      },
+      "method": "umap",
+      "parameters": {
+        "min_dist": 0.1,
+        "n_epochs": 500,
+        "n_neighbors": 15
+      },
+      "precomputed": true,
+      "seed": 42,
+      "source_digest": "1a77022f866aec4931fa67603c155401a0aaa20ed6cddcebe930f73c1963b71a"
+    },
+    {
+      "artifact_id": "projections-296636281ddd354aecdc",
+      "details": {
+        "additional_normalization": "none",
+        "construction": "UMAP on supplied nonmetric dissimilarity; no triangle-inequality assumption claimed",
+        "input_count": 700,
+        "input_dimensions": 700,
+        "input_geometry": "precomputed_nonmetric_dissimilarity",
+        "method": "umap",
+        "parameters": {
+          "init": "random",
+          "metric": "precomputed",
+          "min_dist": 0.1,
+          "n_components": 2,
+          "n_epochs": 500,
+          "n_jobs": 1,
+          "n_neighbors": 15,
+          "random_state": 42,
+          "transform_seed": 42
+        },
+        "purpose": "visualization only; not clustering features",
+        "repeat_absolute_tolerance": 1e-05,
+        "repeat_coordinates_equal": true,
+        "repeat_max_error": 0.0,
+        "row_order": "unchanged_from_input",
+        "seed": 42,
+        "visualization_only": true
+      },
+      "method": "umap",
+      "parameters": {
+        "min_dist": 0.1,
+        "n_epochs": 500,
+        "n_neighbors": 15
+      },
+      "precomputed": true,
+      "seed": 42,
+      "source_digest": "1a77022f866aec4931fa67603c155401a0aaa20ed6cddcebe930f73c1963b71a"
+    }
+  ],
+  "shared_csv_sha256": "0f4c5d9e29795744d7eff33e192460a56ae4651b536b1723900fd2fe30e82e0c",
+  "source_identity": {
+    "experiment_dirty": true,
+    "git_commit": "d0650e86581b6ca89eb1ae2b6f0bef45c73727b7",
+    "git_status": "available",
+    "repository_dirty": true,
+    "source_digest": "1a77022f866aec4931fa67603c155401a0aaa20ed6cddcebe930f73c1963b71a",
+    "source_files_sha256": {
+      ".gitignore": "9a11f48aed9f26050f01d7757b844a85d2c4fc2a500b3a4d9d644bf10aa85df2",
+      "configs/clustering.json": "0790d728d7791f20b10295524f3c6bb7f9c38600f6a7b284e437bad33d59a5cb",
+      "configs/dataset.json": "7f34939218997cfadadd1a32a435fdcc08596c3919253dffadcbc7d19b254efe",
+      "configs/evaluation.json": "5bd28297adfa581b050adfd5b0010922319cf4dbd93461950c3142fc96a5100c",
+      "configs/models/colpali.json": "e458d7a7129117576d3cc7dd6c36bac7b69ed4e5979e5439b75706d1a142aaad",
+      "configs/models/colqwen2.json": "cd90bbec0e3e0a7a7ef209118f89a8c4361807db210365a65d5ce7a974c4ae51",
+      "configs/models/dinov3.json": "6eb0d7e34c22c58f0c7a207d5f954248694bb6f09f51985fe37e7713b2f11f99",
+      "configs/models/layoutlmv3-image.json": "8813b8ca279b6316b150484e4bf660a40266b59f0d5682f0327f7c1cd7a365f6",
+      "configs/models/layoutlmv3-ocr.json": "825fb3f7acb50d692f450e9809d0cb4f621e97122b223d34819439f50d28532f",
+      "experiments/extract_embeddings.py": "d7eefb24da244cb992a527ebd6aaed1badb05eee08c5736e09210c08fc7a2df7",
+      "experiments/prepare_dataset.py": "75f3775b8a7e4535c46f4dd289435dffadfab559e5b777fb283c8f914ad272b5",
+      "experiments/prepare_ocr.py": "a9f6ddbe6685455cf8ffa25ba2d7576bb7c6ef52c7eb739247d06f3fa495117b",
+      "experiments/run_clustering.py": "bfae315f03a4166c38949bc4436cce98997aae15d7c367e038032c6243e76445",
+      "experiments/run_evaluation.py": "ff59d438aab98c7ff7c1cae17b5ccfe136830ac1ac8faff1d4f89ae558ac0d53",
+      "experiments/verify_recovery_storage.py": "ecd1d05fd4489eb17b76258da48c7f65afbf290e01e111a7f919f1d7038385f4",
+      "experiments/verify_step4.py": "ae870bc93f1a226fecfb747b761b3b5c06134a4207d57081d6d7e42e1d1083a4",
+      "experiments/verify_step5_live.py": "ff18464718aead2b2305cfe10d675c7bfb40db152d02e37c7b5a6809875bf66a",
+      "requirements-clustering.txt": "8974165d0c1174626fae0b86ba3cb78e5de4b883929c12bfadd780d5979f9f55",
+      "requirements-embeddings.txt": "54cd9cf314e68c9d989ad3cac0bb9c0ebe8d18fe9acd8f1afd1ce03b62cf399e",
+      "requirements-evaluation.txt": "b142220c87fdaba2692527322968012cafc1bde35f3b41b45e7da938a8df36cb",
+      "requirements.txt": "5264f5336bea601cd9444a4d3bc3c438b8f6d5b99dd0d388674f1fbae4fef901",
+      "src/__init__.py": "a4222cca0520f10858e2d34a7a4f7f4688fece0b51badd1891b62c51d473f89f",
+      "src/artifacts.py": "45229ec5e79ce966006ab1758fc95dc2df9d0e421ea2c8444fe4348db0aabf9c",
+      "src/clustering/__init__.py": "aafa3d4492eb9a189754310d56bc8059602eab8a7e4e7068192a0ed45186a4e5",
+      "src/clustering/experiment.py": "bbc12df0be2639050b35466ea867337519f52ed5b62673081c327529f54ff10d",
+      "src/clustering/runner.py": "09bb6b78d21c14263e536620d5e3cc677766f11beb837a087c04fcd46678bcd0",
+      "src/clustering/similarity.py": "111975cbead55f0a3e2fe1cfd9587994e6d33ed6044935cb3de08df83578f468",
+      "src/contracts.py": "80930efd988d4b9a8dceca2faf628b0da1f461df946e8bb8ff951529e5fd5204",
+      "src/dataset.py": "62e47bfa9a8f3a94bfd10dafdf6bb53f26ac32dbba4f78c3ee7c92a696a273ba",
+      "src/embeddings/__init__.py": "5309cf345f6b4381a2c5e5f1d9746e0e2f17d326e9438ef9599fa4ff422ab6b6",
+      "src/embeddings/checkpoints.py": "5d40d250ee218e90dcc18a6e958125e11fd6bdde79ae5d965c4ab80fcc4896a8",
+      "src/embeddings/models.py": "4b32aaa73b17d0eb8df16fa5024bbcab4cd93e4d8731b578ea9635f112c0d53a",
+      "src/embeddings/ocr.py": "70bd7f30d2f5d689b95b53b02dd0bc92c793fc2927513974c2e284945c5c283f",
+      "src/embeddings/pipeline.py": "6435a9df4c8b627f7f98d720a5f40311524c94e59f7a272a6dac6300c7b8445e",
+      "src/evaluation/__init__.py": "876334e4fc6a2ae5e5449172438f8fd69511c1354e07807e6781879a68ba966b",
+      "src/evaluation/experiment.py": "8066da135d4f7711f790dfbe9fc97b2c5174275d93a31eabbd6f0ce04e44e29e",
+      "src/evaluation/metrics.py": "9fff6c1ac5a93b56d5b9adb5a8afd0a7ca1633c98c9c7898aab644a74cf3c583",
+      "src/evaluation/projections.py": "c628087162840b2f0f29986dd9af70a2213ae3f8061c0c4a9404b9d961a9d440",
+      "src/provenance.py": "3255e9093b2aa1e9a726c0730963cc3ae086e4349102670eb07310aa6f8454c7",
+      "src/recovery.py": "65757b22ea9de9500c248fa2284f1280020a4b2d13591f97b244771fa685ee62",
+      "tests/test_artifact_contract.py": "bfb4af9d6968e206bc0e7cf8420c8488aa2f4e2c987fd38a1e8d660a845bf717",
+      "tests/test_clustering_artifacts.py": "3f52ea3a4afc319e728adbcb249547b6a53f7a54e8bb55453d758aed022edc3e",
+      "tests/test_dataset_contract.py": "188c469f43d01f3c03ef8c3d4fb228f9e4b7b6089c5f0edbfa8e9597e561f5b7",
+      "tests/test_embedding_models.py": "24a8314306cda21ea4c72f24ed2801acb012aca7661dfe7712e99ec0e25f3b93",
+      "tests/test_embedding_pipeline.py": "b4c79d9f5350eff6164cc21f0e606da767a4efdb0b18f85812bcccd54b719fd6",
+      "tests/test_evaluation_artifacts.py": "ab1c159260750c0b7619c3f5dc489ccb8ededfdefd6f841f8febd4a19bee57a8",
+      "tests/test_evaluation_metrics.py": "23514346582c466f65922b885b47f604e8a61aa4ed4eb042edf89d536354f615",
+      "tests/test_evaluation_projections.py": "b177233283ea21349020f9792fe95c08ecf09d3e3c9537c5afb87083326c3844",
+      "tests/test_ocr.py": "829c6c9373506738eae28dbd513422ff16d1712bef0ee29c0c73f3985fbe8745",
+      "tests/test_ocr_recovery.py": "49bcb0b1ec3bcbc3f03bff87d63c22a90d95b8e2f457a9faeb691cc7ceb29af0",
+      "tests/test_publication_process.py": "aab5daf9ac08fc1decda0afd37e6c54c60b0b089d14cc4b13df3833916a13306",
+      "tests/test_recovery_edges.py": "ba9829c705b1c9e401a73111ebbf0e4277bfdd2bfa8c8ad764a8e8f87312199c",
+      "tests/test_similarity.py": "2be360b2483baa6a68e8d8c4016d2c8855cc384d256b9b9dad26df72c116b26e",
+      "tests/test_step2_independent.py": "a3cefd3defc79a5db480a0ad1f360a34d8358324ec721eed97407cc197a326da",
+      "tests/test_step3_independent.py": "569035f40f12adabddb0740050105acb995d2993b7c2c3b25c81d4d9e08c0950",
+      "tests/test_step4_independent.py": "cb3a92b422b90e34c0f72ed3cc7f9898406b6e1581669dbd7fffc4153225e525",
+      "tests/test_step5_independent.py": "1d99162559f6a142734fb9211ded6f898f4b16cd0928156eca658dd713059403",
+      "tests/test_step6_independent.py": "f9bd38ea77eb14effb71a2b2cf7ee65f9824f49332abeeb437ddd6cc2adcb080",
+      "tests/test_step7_independent.py": "01ac92f81bde42e80ebc47504551312b8616d6d6fd1bc24be013c5bb84f41fbd",
+      "tests/verify_real_dataset.py": "dfa38a87cb972e60e9cea0f1b9369625292aa91e4c8d7c8f3cd5e86773e645a1",
+      "tests/verify_step2_real.py": "10bdc82f2e3ac711c3a0d3bb025ecab2281ceb92f69b9d8e9d6c3becccb2cdec"
+    }
+  },
+  "verdict": "PASS"
+}

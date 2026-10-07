@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "model": "layoutlmv3-image",
+  "document_ids": [
+    0,
+    1,
+    2
+  ],
+  "source_digest": "19f95fe14111b8abff529bad79c673e054befb50859b71e68efec76c5e4c63d6",
+  "artifact_id": "embeddings-324ac06ad4d360c926c7",
+  "storage_root": "D:\\InProgressProject\\Legal-2A-multimodal-document-understanding\\ah-clustering-experiment",
+  "device": "cuda:0",
+  "interruption_exit_code": 74,
+  "events": [
+    {
+      "phase": "crash",
+      "ids": [
+        0
+      ]
+    },
+    {
+      "phase": "crash",
+      "ids": [
+        1
+      ]
+    },
+    {
+      "phase": "resume",
+      "ids": [
+        1
+      ]
+    },
+    {
+      "phase": "resume",
+      "ids": [
+        2
+      ]
+    }
+  ],
+  "oracle": "Direct uninterrupted real pretrained encode, outside extraction/checkpoint writer",
+  "allowed_mocks": "None; termination and trace instrumentation only",
+  "float_rtol": 1e-05,
+  "float_atol": 1e-05,
+  "integer_masks": "exact",
+  "maximum_absolute_error": 0.0,
+  "baseline_seconds": 8.110430000000633,
+  "payload_bytes": 1835531,
+  "checkpoint_bytes": 2445384,
+  "measurements": {
+    "batch_size": 1,
+    "cuda_peak_allocated_bytes": 528624128,
+    "cuda_peak_reserved_bytes": 566231040,
+    "device": "cuda:0",
+    "estimated_1000_document_tensor_bytes": 608453000.0,
+    "inference_documents_per_second": 4.736344289748647,
+    "inference_seconds": 0.42226660007145256,
+    "inferred_documents": 2,
+    "precision": "float32",
+    "resumed_documents": 1,
+    "retained_tensor_bytes": 1825359
+  },
+  "completed_cache_reused_without_encoder": true,
+  "limitations": "Three image-only training documents; no OCR, full extraction, or Colab mount claim"
+}

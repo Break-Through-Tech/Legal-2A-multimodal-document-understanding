@@ -1,0 +1,9 @@
+{
+  "family": "colpali",
+  "checkpoint": "vidore/colpali-v1.3-hf",
+  "revision": "133a9eb02947310513f52f8f0d39d622e0eab8dc",
+  "input_mode": "image_only",
+  "dtype": "float16",
+  "batch_size": 1,
+  "processor_options": {}
+}

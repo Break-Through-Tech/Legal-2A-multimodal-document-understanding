@@ -1,0 +1,10 @@
+{
+  "source_digest": "1a77022f866aec4931fa67603c155401a0aaa20ed6cddcebe930f73c1963b71a",
+  "command": "ah-clustering-experiment/.venv/Scripts/python.exe -m unittest discover -s ah-clustering-experiment/tests -q",
+  "ran": 210,
+  "skipped": 1,
+  "failures": 0,
+  "errors": 0,
+  "elapsed_seconds": 285.672,
+  "skip_reason": "Local Tesseract unavailable (earlier OCR check)"
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "model": "dinov3",
+    "exit_code": 0,
+    "seconds": 18.24
+  },
+  {
+    "model": "layoutlmv3-image",
+    "exit_code": 0,
+    "seconds": 17.467
+  },
+  {
+    "model": "layoutlmv3-ocr",
+    "exit_code": 0,
+    "seconds": 36.101
+  },
+  {
+    "model": "colpali",
+    "exit_code": 0,
+    "seconds": 107.578
+  },
+  {
+    "model": "colqwen2",
+    "exit_code": 0,
+    "seconds": 89.794
+  }
+]

@@ -1,0 +1,4 @@
+-r requirements.txt
+streamlit==1.65.0
+plotly==7.1.0
+scipy==1.17.1
