@@ -1,0 +1,240 @@
+{
+  "verdict": "PASS",
+  "evidence_grade": "INDEPENDENTLY_CHECKED",
+  "scope": "Read-only independent artifact verification of LayoutLMv3 OCR downstream recovery.",
+  "oracle_source": [
+    "Original data/split.csv captured before candidate changes",
+    "Frozen preexisting 14 metric and 14 cluster manifest hashes",
+    "Requirement: four OCR algorithms on the original 700 training documents, existing results retained",
+    "Mathematical ARI and arithmetic-normalized NMI formulas calculated from contingency counts"
+  ],
+  "real_components": [
+    "Actual checksummed saved cluster, metric, and projection payloads",
+    "Actual catalog and artifact readers",
+    "CLI NoEncoderImports find_spec guards"
+  ],
+  "allowed_mocks": [],
+  "baseline": {
+    "metrics_to_clusters": {
+      "metrics-017648c85fd92d988bb0": "clusters-2c570644206a69347818",
+      "metrics-059e6287ca1b8d5d3f00": "clusters-39ac0cd9385da467f171",
+      "metrics-2abb4654f1be19776302": "clusters-a3b97f5bd553ae9cc906",
+      "metrics-3026701ed2d79b33bfc8": "clusters-cc13d69204a20acd6d26",
+      "metrics-36b2ec46394c4b78e326": "clusters-4700e2bad113d169c12c",
+      "metrics-47a7fef83bccfe8950fe": "clusters-baecfbbcb1204706c2c5",
+      "metrics-4abc90e447daf4c326b9": "clusters-b187c9c9938cc1b5bc38",
+      "metrics-54e1fcbaf1a0bc914c94": "clusters-f0085da7b8db3aa2a971",
+      "metrics-67d2b7b2919d072373d1": "clusters-5faff8c976b54b2a2fbd",
+      "metrics-71967027d3b1c04fcd18": "clusters-40b280874929384e5bc9",
+      "metrics-925a5dbbdc796edc8422": "clusters-79f57ed40739b91cf392",
+      "metrics-ca3f65b30ad9565e6fee": "clusters-dbe077efe92a963b03df",
+      "metrics-caa6e7d343a717723785": "clusters-7c58a2ef2e2dc1e1560a",
+      "metrics-da8f99af889c4ea9e822": "clusters-c876fa642aa6c4948b1b"
+    },
+    "hashes": {
+      "metrics-2abb4654f1be19776302": "1f0f8ade47df695134e3f2a3e1d4fa8a28ce0f9bd9b6f83ed589230a62f00447",
+      "metrics-47a7fef83bccfe8950fe": "c51f325be71e431e558d18eba6157ab636f5237ed1677aea809b954225610a58",
+      "metrics-67d2b7b2919d072373d1": "5e538b25562eca9fe3914e5a2d24de435037d6958ffe564293f7fd77877a7015",
+      "clusters-79f57ed40739b91cf392": "cbd5cb0e7f12474edbd6c1e8ce8e8d824320abb53d552599847a0148637b3e85",
+      "metrics-54e1fcbaf1a0bc914c94": "7c89afc7c1629e229e199fbad66739c34a25b3aa92715d17e159e877eccdba6f",
+      "clusters-baecfbbcb1204706c2c5": "09fe4655a483cc0f7e4557cda021de108c996bd91a8ee28e4488fc0910af9b53",
+      "clusters-40b280874929384e5bc9": "5060ddff62c1147e2efc90c188ceab8e76a7fd41a4bc67db437bb9b3b93602e4",
+      "metrics-017648c85fd92d988bb0": "7fd540440b2c301bd6f993662fae6bb812fd49004ff5c72bf947e320b2e66587",
+      "metrics-3026701ed2d79b33bfc8": "45bd51b62aa19d925efd1c48efe57ce9f0ff0e05b079b773a66b59664c781c44",
+      "metrics-925a5dbbdc796edc8422": "7f7dce08ec56fc3900a11ab04416b26b1382312b7f8e2ac577c0f6acf27435a7",
+      "metrics-4abc90e447daf4c326b9": "20f81d35614a897371fa1ad643a980c37d4ff50034c2022d3c199363613c1983",
+      "metrics-ca3f65b30ad9565e6fee": "1ef41e54fe08d0668e562a25b6b7e7a729b8989c90510d99ad063a97dfba4664",
+      "clusters-5faff8c976b54b2a2fbd": "c99c7b849bf5c0d63086056b2790cb859e863e44bd11de6e2e5120ff3e074f5b",
+      "metrics-059e6287ca1b8d5d3f00": "39236452ccf660b531caddaaca1fdf8eaf1a44476eb63ada91e2ae01df34d0d0",
+      "metrics-71967027d3b1c04fcd18": "44dd02956292133ac02a6d1dfa705cdd32609ff0b7d4152aac896b11932ffd06",
+      "clusters-c876fa642aa6c4948b1b": "beb1eb3431813e14520ffaf19e5ecf2b79917759114c4aa1b70d352962c28a6d",
+      "clusters-dbe077efe92a963b03df": "a701d467a1ff1197b972b292557d3d8563c339a865beaa69dbdb4f5d5a5fefbf",
+      "clusters-b187c9c9938cc1b5bc38": "5c1f111dcd8cd947da25a36f47f3efc2f9b8a40b8a4185de9dd20b0e7c6b2e71",
+      "clusters-7c58a2ef2e2dc1e1560a": "be08115cbab44e607978fcbd7c3e98572c4721f3529db38343ff9791e5e12b05",
+      "metrics-36b2ec46394c4b78e326": "95f4ba4416df17ce0910c7c8eac499d5184e72c10e24d8cb6afe1072747c44af",
+      "clusters-a3b97f5bd553ae9cc906": "d1e70157d55cf20803d56a34d06f2119fa3418730c54bf09da05aac856aa17dc",
+      "clusters-cc13d69204a20acd6d26": "239edc7fd6fe820633cd3ea5e21e6307b727cfaee8d1cb9ea6bc5fdea76ce033",
+      "clusters-2c570644206a69347818": "ce11d8c93b63f162787e132ddbd8a67b2f4b9075dce92a4974cc6683cd9e840b",
+      "metrics-caa6e7d343a717723785": "bfbff9fda38a08bba4d79daa0618410d386146d447aa3faae18bbd4f878b0d6d",
+      "clusters-4700e2bad113d169c12c": "8c5e73fae8ebbf1d01822ac2e56324e460aa762fdefdbe29086ac0e44e1fce74",
+      "clusters-f0085da7b8db3aa2a971": "983e7189a9e337e17655732f9c4d313dd798e7a0ef4bd2479881a1bb77764be7",
+      "clusters-39ac0cd9385da467f171": "a1047146f3741fea8c325f83650c8d41db1bd3cf1d4c94cba156b373515c03b8",
+      "metrics-da8f99af889c4ea9e822": "3085775ca578d4667b4d493358fc265446689900ca24e0ba13c23b0aba9b7485"
+    },
+    "training_count": 700,
+    "train_ids_sha256": "7e430f9bad462d4fd417f5d7641afc26fcd2e4bfd66434586e1795ebe8528968",
+    "split_csv_sha256": "0f4c5d9e29795744d7eff33e192460a56ae4651b536b1723900fd2fe30e82e0c"
+  },
+  "checks": [
+    "Recompute raw hashes of all frozen manifests and load all 28 original artifacts with read_artifact checksum verification.",
+    "Require 18 configured runs and 18 validated catalog runs; retain all original clustering and metrics IDs.",
+    "Require precisely kmeans, agglomerative, hdbscan, and spectral OCR results from embeddings-14f0c9c4cc8cb38ae601 using CLS and L2 normalization.",
+    "Compare assignment and evaluation document IDs with frozen original training IDs, compare evaluation assignments with cluster assignments, compare truth labels with authoritative split.csv.",
+    "Calculate ARI and arithmetic-normalized NMI independently using collections.Counter contingency counts and math.log; compare both noise scopes within 1e-12.",
+    "Require every metric to have a finite value and no reason, or a null value and an explicit reason.",
+    "Checksum-load PCA and UMAP coordinates, require finite x/y and all 700 IDs, and require exactly two shared projection artifact IDs.",
+    "Delete one assignment row, alter one assignment label, and alter one truth label in separate in-memory copies; require independent comparison assertions to reject all three controls.",
+    "Call both actual CLI import guard find_spec methods for seven encoder-module cases and require ImportError; verify encoder modules absent from sys.modules.",
+    "Inspect catalog issues to confirm precisely the two intentional retrieval-model K-means restrictions."
+  ],
+  "execution": {
+    "original_method": "PowerShell here-string piped to ah-clustering-experiment/.venv/Scripts/python.exe -B - from repository root.",
+    "preserved_checker": "ah-clustering-experiment/reports/ocr-recovery-evidence/independent_audit.py",
+    "rerun_command": "ah-clustering-experiment/.venv/Scripts/python.exe -B ah-clustering-experiment/reports/ocr-recovery-evidence/independent_audit.py",
+    "checker_preservation": "Exact script executed for final artifact verification, with frozen baseline embedded; saved afterward without rerunning.",
+    "exit_code": 0
+  },
+  "final_result": {
+    "source_digest": "a549fc50e9d405903300ea6cc05debaafbe9c723afc656e5a25fb62d9f8eec96",
+    "original_manifests_unchanged": 28,
+    "original_metrics_retained": 14,
+    "training_count": 700,
+    "ocr_runs": [
+      {
+        "algorithm": "spectral",
+        "metrics": "metrics-13b15ca895dd5d4b5514",
+        "clusters": "clusters-3d69dfa5f283ddf9a2d8",
+        "cluster_count": 19,
+        "noise_count": 0,
+        "ari": 0.20141838993954306,
+        "nmi": 0.4158013701551577
+      },
+      {
+        "algorithm": "kmeans",
+        "metrics": "metrics-392a579f70f68c84a68f",
+        "clusters": "clusters-15e00b3a10b0d6815eae",
+        "cluster_count": 19,
+        "noise_count": 0,
+        "ari": 0.20960240016286116,
+        "nmi": 0.43477926433994313
+      },
+      {
+        "algorithm": "agglomerative",
+        "metrics": "metrics-b1da1d23b3efcb4940a3",
+        "clusters": "clusters-a63804aa4701271d5c73",
+        "cluster_count": 19,
+        "noise_count": 0,
+        "ari": 0.003266499643062539,
+        "nmi": 0.14838187007314607
+      },
+      {
+        "algorithm": "hdbscan",
+        "metrics": "metrics-e216df2f5cd09fecdfe4",
+        "clusters": "clusters-119f6ff1c9ac8954d1d1",
+        "cluster_count": 11,
+        "noise_count": 443,
+        "ari": 0.05838649600657035,
+        "nmi": 0.41589082224185453
+      }
+    ],
+    "projection_ids": [
+      "projections-076af2b8068d4957f08a",
+      "projections-f86380eb4e33f99439a5"
+    ],
+    "negative_controls": [
+      {
+        "control": "missing_assignment_id",
+        "detected": "Assignment cohort differs"
+      },
+      {
+        "control": "changed_assignment_label",
+        "detected": "Evaluation assignments differ"
+      },
+      {
+        "control": "changed_truth_label",
+        "detected": "Ground truth labels differ"
+      }
+    ],
+    "encoder_guard_checks": [
+      {
+        "entrypoint": "experiments.run_clustering",
+        "module": "transformers",
+        "blocked": "Clustering must consume saved embeddings; encoder loading is disabled"
+      },
+      {
+        "entrypoint": "experiments.run_clustering",
+        "module": "colpali_engine",
+        "blocked": "Clustering must consume saved embeddings; encoder loading is disabled"
+      },
+      {
+        "entrypoint": "experiments.run_clustering",
+        "module": "src.embeddings.models",
+        "blocked": "Clustering must consume saved embeddings; encoder loading is disabled"
+      },
+      {
+        "entrypoint": "experiments.run_evaluation",
+        "module": "transformers",
+        "blocked": "Evaluation consumes saved artifacts; encoder loading is disabled"
+      },
+      {
+        "entrypoint": "experiments.run_evaluation",
+        "module": "colpali_engine",
+        "blocked": "Evaluation consumes saved artifacts; encoder loading is disabled"
+      },
+      {
+        "entrypoint": "experiments.run_evaluation",
+        "module": "src.embeddings.models",
+        "blocked": "Evaluation consumes saved artifacts; encoder loading is disabled"
+      },
+      {
+        "entrypoint": "experiments.run_evaluation",
+        "module": "tensorflow",
+        "blocked": "Evaluation consumes saved artifacts; encoder loading is disabled"
+      }
+    ],
+    "catalog_keys": [
+      "runs",
+      "issues"
+    ],
+    "catalog_issues": {
+      "issues": [
+        {
+          "status": "unavailable",
+          "artifact_id": null,
+          "model": "colpali",
+          "reason": "kmeans: Standard K-means needs fixed feature vectors; retained-token similarity is not a feature matrix."
+        },
+        {
+          "status": "unavailable",
+          "artifact_id": null,
+          "model": "colqwen2",
+          "reason": "kmeans: Standard K-means needs fixed feature vectors; retained-token similarity is not a feature matrix."
+        }
+      ]
+    }
+  },
+  "compute_log_checks": [
+    {
+      "log": "outputs/logs/step6-1791334044737744600.json",
+      "source_digest": "4ad1efaa5eae1d8e3b8649745a4e9443d7d3f930a30ae7eb4410c95e7b581357",
+      "encoder_imports_blocked": true,
+      "source_changed_during_run": false,
+      "completed": 4,
+      "models": [
+        "layoutlmv3-ocr"
+      ],
+      "pending": {},
+      "elapsed_seconds": 99.52953540009912
+    },
+    {
+      "log": "outputs/logs/step7-1791334153550756200.json",
+      "source_digest": "4317c3f2b852fa38ffc4e6ccb68b3b4101ee9fbee7e380aeb242c6cffa1601b9",
+      "encoder_imports_blocked": true,
+      "source_changed_during_run": false,
+      "completed": 4,
+      "models": [
+        "layoutlmv3-ocr"
+      ],
+      "pending": {},
+      "clustering_refit": false,
+      "elapsed_seconds": 87.72917710000183
+    }
+  ],
+  "limitations": [
+    "No model inference or clustering rerun by verifier.",
+    "Guard checks exercise actual finder methods; historical no-inference evidence additionally relies on guarded entrypoints and saved execution logs.",
+    "Browser rendering and saved-results bundle restore are verified separately by parent.",
+    "No claim that OCR produces better clustering quality."
+  ],
+  "source_digest_note": "Final source digest differs from compute-time digests after configuration registration/format preservation and saved-results index regeneration. No compute log reported source changes during its execution. Evidence files under reports are excluded from source_identity."
+}

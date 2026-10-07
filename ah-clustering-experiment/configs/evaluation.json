@@ -69,11 +69,25 @@
     {
       "model": "colqwen2",
       "artifact_id": "clusters-cc13d69204a20acd6d26"
+    },
+    {
+      "model": "layoutlmv3-ocr",
+      "artifact_id": "clusters-15e00b3a10b0d6815eae"
+    },
+    {
+      "model": "layoutlmv3-ocr",
+      "artifact_id": "clusters-a63804aa4701271d5c73"
+    },
+    {
+      "model": "layoutlmv3-ocr",
+      "artifact_id": "clusters-119f6ff1c9ac8954d1d1"
+    },
+    {
+      "model": "layoutlmv3-ocr",
+      "artifact_id": "clusters-3d69dfa5f283ddf9a2d8"
     }
   ],
-  "pending": {
-    "layoutlmv3-ocr": "Full expected-cohort embedding cache is unavailable"
-  },
+  "pending": {},
   "unavailable": [
     {
       "algorithm": "kmeans",

@@ -77,6 +77,53 @@ class DashboardDataChecks(unittest.TestCase):
         self.assertEqual(len(catalog['runs']), 1)
         self.assertEqual(catalog['runs'][0]['model'], 'fixture')
         self.assertEqual({item['status'] for item in catalog['issues']}, {'pending', 'unavailable'})
+        self.assertIn({'status': 'pending', 'artifact_id': None, 'model': 'layoutlmv3-ocr',
+                       'reason': 'Missing full embeddings'}, catalog['issues'])
+
+    def test_completed_configured_runs_supersede_model_pending(self):
+        settings_path = self.root / 'configs/evaluation.json'
+        settings = json.loads(settings_path.read_text())
+        settings['pending']['fixture'] = 'Missing full embeddings'
+        settings_path.write_text(json.dumps(settings))
+        self.publish()
+        catalog = scan_catalog(self.root)
+        self.assertEqual(len(catalog['runs']), 1)
+        self.assertFalse(any(item['model'] == 'fixture' and item['status'] == 'pending'
+                             for item in catalog['issues']))
+        self.assertTrue(any(item['model'] == 'layoutlmv3-ocr' and item['status'] == 'pending'
+                            for item in catalog['issues']))
+
+    def test_partial_configured_runs_retain_model_pending(self):
+        with ArtifactWriter(self.root, 'clusters', {**self.cluster_config, 'seed': 43}) as writer:
+            writer.table('assignments', self.assignments)
+            writer.json('summary', {'document_count': 3, 'cluster_count': 1, 'noise_count': 1})
+            writer.complete(self.provenance)
+        settings_path = self.root / 'configs/evaluation.json'
+        settings = json.loads(settings_path.read_text())
+        settings['runs'].append({'artifact_id': writer.artifact_id, 'model': 'fixture'})
+        settings['pending']['fixture'] = 'Missing full embeddings'
+        settings_path.write_text(json.dumps(settings))
+        self.publish()
+        catalog = scan_catalog(self.root)
+        self.assertEqual(len(catalog['runs']), 1)
+        self.assertIn({'status': 'pending', 'artifact_id': None, 'model': 'fixture',
+                       'reason': 'Missing full embeddings'}, catalog['issues'])
+        self.assertTrue(any(item['artifact_id'] == writer.artifact_id and item['status'] == 'pending'
+                            for item in catalog['issues']))
+
+    def test_invalid_evaluation_retains_model_pending(self):
+        settings_path = self.root / 'configs/evaluation.json'
+        settings = json.loads(settings_path.read_text())
+        settings['pending']['fixture'] = 'Missing full embeddings'
+        settings_path.write_text(json.dumps(settings))
+        artifact = self.publish()
+        (self.root / f'outputs/metrics/{artifact}/scores.json').write_text('{}')
+        catalog = scan_catalog(self.root)
+        self.assertEqual(catalog['runs'], [])
+        self.assertIn({'status': 'pending', 'artifact_id': None, 'model': 'fixture',
+                       'reason': 'Missing full embeddings'}, catalog['issues'])
+        self.assertTrue(any(item['status'] == 'invalid' and 'checksum' in item['reason']
+                            for item in catalog['issues']))
 
     def test_wrong_assignment_labels_rejected(self):
         self.documents.loc[0, 'cluster_id'] = 1

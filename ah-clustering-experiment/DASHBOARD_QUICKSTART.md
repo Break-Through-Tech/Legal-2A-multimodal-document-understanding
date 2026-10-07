@@ -1,17 +1,17 @@
-# Run the dashboard from a fork
+# Clone the repository and run the dashboard
 
-The repository includes a compressed snapshot of 14 evaluated clustering runs and six projections for 700 training documents. You can inspect these results on a CPU without training models, downloading model weights or using Colab. Full OCR-mode results remain pending.
+The repository includes a compressed snapshot of 18 evaluated clustering runs and eight projections for 700 training documents. You can inspect these results on a CPU without training models, downloading model weights or using Colab. The snapshot includes all five input modes, including LayoutLMv3 with OCR.
 
 ## Get the code
 
-Fork the repository on GitHub. Until this work is merged into the default branch, uncheck **Copy the default branch only** when creating your fork so it includes `anh-embedding-experiments`. Clone your fork and select that branch:
+Clone the repository directly. Until this work is merged into the default branch, select `anh-embedding-experiments`:
 
 ```text
-git clone --branch anh-embedding-experiments https://github.com/YOUR-USERNAME/Legal-2A-multimodal-document-understanding.git legal2a
+git clone --branch anh-embedding-experiments https://github.com/Break-Through-Tech/Legal-2A-multimodal-document-understanding.git legal2a
 cd legal2a
 ```
 
-You can also clone the original repository with the same branch argument. Use Python 3.12 or newer; the clean installation was tested with Python 3.14. The pinned NumPy release does not support Python 3.11.
+Use Python 3.12 or newer; the clean installation was tested with Python 3.14. The pinned NumPy release does not support Python 3.11.
 
 ## Windows PowerShell
 

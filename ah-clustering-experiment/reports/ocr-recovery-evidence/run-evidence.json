@@ -1,0 +1,533 @@
+{
+  "clustering_log": "outputs/logs/step6-1791334044737744600.json",
+  "evaluation_log": "outputs/logs/step7-1791334153550756200.json",
+  "clustering_source_digest": "4ad1efaa5eae1d8e3b8649745a4e9443d7d3f930a30ae7eb4410c95e7b581357",
+  "evaluation_source_digest": "4317c3f2b852fa38ffc4e6ccb68b3b4101ee9fbee7e380aeb242c6cffa1601b9",
+  "final_source_digest": "a549fc50e9d405903300ea6cc05debaafbe9c723afc656e5a25fb62d9f8eec96",
+  "clustering": [
+    {
+      "algorithm": "kmeans",
+      "artifact_id": "clusters-15e00b3a10b0d6815eae",
+      "cluster_count": 19,
+      "document_count": 700,
+      "elapsed_seconds": 3.1842467000242323,
+      "model": "layoutlmv3-ocr",
+      "noise_count": 0,
+      "repeat_partition_equal": true,
+      "reused": false,
+      "status": "complete"
+    },
+    {
+      "algorithm": "agglomerative",
+      "artifact_id": "clusters-a63804aa4701271d5c73",
+      "cluster_count": 19,
+      "document_count": 700,
+      "elapsed_seconds": 1.2417232999578118,
+      "model": "layoutlmv3-ocr",
+      "noise_count": 0,
+      "repeat_partition_equal": true,
+      "reused": false,
+      "status": "complete"
+    },
+    {
+      "algorithm": "hdbscan",
+      "artifact_id": "clusters-119f6ff1c9ac8954d1d1",
+      "cluster_count": 11,
+      "document_count": 700,
+      "elapsed_seconds": 0.9664824999636039,
+      "model": "layoutlmv3-ocr",
+      "noise_count": 443,
+      "repeat_partition_equal": true,
+      "reused": false,
+      "status": "complete"
+    },
+    {
+      "algorithm": "spectral",
+      "artifact_id": "clusters-3d69dfa5f283ddf9a2d8",
+      "cluster_count": 19,
+      "document_count": 700,
+      "elapsed_seconds": 1.5184944999637082,
+      "model": "layoutlmv3-ocr",
+      "noise_count": 0,
+      "repeat_partition_equal": true,
+      "reused": false,
+      "status": "complete"
+    }
+  ],
+  "evaluation": [
+    {
+      "algorithm": "kmeans",
+      "artifact_id": "metrics-392a579f70f68c84a68f",
+      "clustering_artifact": "clusters-15e00b3a10b0d6815eae",
+      "document_count": 700,
+      "elapsed_seconds": 1.4203534999396652,
+      "model": "layoutlmv3-ocr",
+      "reused": false,
+      "scores": {
+        "excluding_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.37892711432761167
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.20960240016286116
+            },
+            "calinski_harabasz": {
+              "reason": null,
+              "value": 22.332547920902975
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.446541951634881
+            },
+            "davies_bouldin": {
+              "reason": null,
+              "value": 2.37335701679805
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.4236203711184041
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.43477926433994313
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.42142857142857143
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.12322424773795551
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.43477926433994313
+            }
+          },
+          "noise_policy": "Noise label -1 is excluded from all metrics in this scope."
+        },
+        "including_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.37892711432761167
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.20960240016286116
+            },
+            "calinski_harabasz": {
+              "reason": null,
+              "value": 22.332547920902975
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.446541951634881
+            },
+            "davies_bouldin": {
+              "reason": null,
+              "value": 2.37335701679805
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.4236203711184041
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.43477926433994313
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.42142857142857143
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.12322424773795551
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.43477926433994313
+            }
+          },
+          "noise_policy": "Noise label -1 participates as one group."
+        }
+      },
+      "status": "complete"
+    },
+    {
+      "algorithm": "agglomerative",
+      "artifact_id": "metrics-b1da1d23b3efcb4940a3",
+      "clustering_artifact": "clusters-a63804aa4701271d5c73",
+      "document_count": 700,
+      "elapsed_seconds": 1.543359600007534,
+      "model": "layoutlmv3-ocr",
+      "reused": false,
+      "scores": {
+        "excluding_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.0765756150501923
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.003266499643062539
+            },
+            "calinski_harabasz": {
+              "reason": null,
+              "value": 5.503877154183147
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.41741640102759464
+            },
+            "davies_bouldin": {
+              "reason": null,
+              "value": 1.301135760232978
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.09022790020087988
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.14838187007314607
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.14714285714285713
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.03528383299560636
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.14838187007314607
+            }
+          },
+          "noise_policy": "Noise label -1 is excluded from all metrics in this scope."
+        },
+        "including_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.0765756150501923
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.003266499643062539
+            },
+            "calinski_harabasz": {
+              "reason": null,
+              "value": 5.503877154183147
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.41741640102759464
+            },
+            "davies_bouldin": {
+              "reason": null,
+              "value": 1.301135760232978
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.09022790020087988
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.14838187007314607
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.14714285714285713
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.03528383299560636
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.14838187007314607
+            }
+          },
+          "noise_policy": "Noise label -1 participates as one group."
+        }
+      },
+      "status": "complete"
+    },
+    {
+      "algorithm": "hdbscan",
+      "artifact_id": "metrics-e216df2f5cd09fecdfe4",
+      "clustering_artifact": "clusters-119f6ff1c9ac8954d1d1",
+      "document_count": 700,
+      "elapsed_seconds": 1.3686939999461174,
+      "model": "layoutlmv3-ocr",
+      "reused": false,
+      "scores": {
+        "excluding_noise": {
+          "coverage": 0.36714285714285716,
+          "document_count": 257,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 257,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.7748851374936461
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.6920107125609167
+            },
+            "calinski_harabasz": {
+              "reason": null,
+              "value": 33.24327829657439
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.8713848548726595
+            },
+            "davies_bouldin": {
+              "reason": null,
+              "value": 1.5340898577666784
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.752944004729143
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.8078462663638009
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.7509727626459144
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.3047073123849313
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.807846266363801
+            }
+          },
+          "noise_policy": "Noise label -1 is excluded from all metrics in this scope."
+        },
+        "including_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.37015296980232
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.05838649600657035
+            },
+            "calinski_harabasz": {
+              "reason": null,
+              "value": 15.60847817177495
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.6151659238957837
+            },
+            "davies_bouldin": {
+              "reason": null,
+              "value": 2.2910487575117733
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.3141318448828204
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.41589082224185453
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.3357142857142857
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.008724594053210877
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.41589082224185453
+            }
+          },
+          "noise_policy": "Noise label -1 participates as one group."
+        }
+      },
+      "status": "complete"
+    },
+    {
+      "algorithm": "spectral",
+      "artifact_id": "metrics-13b15ca895dd5d4b5514",
+      "clustering_artifact": "clusters-3d69dfa5f283ddf9a2d8",
+      "document_count": 700,
+      "elapsed_seconds": 1.608562899986282,
+      "model": "layoutlmv3-ocr",
+      "reused": false,
+      "scores": {
+        "excluding_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.3581175988189242
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.20141838993954306
+            },
+            "calinski_harabasz": {
+              "reason": null,
+              "value": 21.323479718401604
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.42382557657250114
+            },
+            "davies_bouldin": {
+              "reason": null,
+              "value": 2.519248717129335
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.4080753595047885
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.4158013701551577
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.40714285714285714
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.10941446853923267
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.4158013701551577
+            }
+          },
+          "noise_policy": "Noise label -1 is excluded from all metrics in this scope."
+        },
+        "including_noise": {
+          "coverage": 1.0,
+          "document_count": 700,
+          "labeled_coverage": 1.0,
+          "labeled_document_count": 700,
+          "metrics": {
+            "ami": {
+              "reason": null,
+              "value": 0.3581175988189242
+            },
+            "ari": {
+              "reason": null,
+              "value": 0.20141838993954306
+            },
+            "calinski_harabasz": {
+              "reason": null,
+              "value": 21.323479718401604
+            },
+            "completeness": {
+              "reason": null,
+              "value": 0.42382557657250114
+            },
+            "davies_bouldin": {
+              "reason": null,
+              "value": 2.519248717129335
+            },
+            "homogeneity": {
+              "reason": null,
+              "value": 0.4080753595047885
+            },
+            "nmi": {
+              "reason": null,
+              "value": 0.4158013701551577
+            },
+            "purity": {
+              "reason": null,
+              "value": 0.40714285714285714
+            },
+            "silhouette": {
+              "reason": null,
+              "value": 0.10941446853923267
+            },
+            "v_measure": {
+              "reason": null,
+              "value": 0.4158013701551577
+            }
+          },
+          "noise_policy": "Noise label -1 participates as one group."
+        }
+      },
+      "status": "complete"
+    }
+  ],
+  "projections": [
+    {
+      "artifact_id": "projections-f86380eb4e33f99439a5",
+      "manifest_sha256": "3d03f1c52755fa83369f870f47bd873188257fe38aaf4fbc63abd00000f62f4d",
+      "method": "pca",
+      "model": "layoutlmv3-ocr",
+      "reused": false,
+      "status": "complete"
+    },
+    {
+      "artifact_id": "projections-076af2b8068d4957f08a",
+      "manifest_sha256": "e5c9f5470a284f2041fc298aed41ac98d988df61515ac80a5bc6584ddbb11068",
+      "method": "umap",
+      "model": "layoutlmv3-ocr",
+      "reused": false,
+      "status": "complete"
+    }
+  ],
+  "encoder_imports_blocked": true,
+  "clustering_refit_during_evaluation": false,
+  "unit_tests": {
+    "run": 256,
+    "failures": 0,
+    "skipped": 1,
+    "skip_reason": "Live Tesseract executable unavailable"
+  },
+  "catalog_expected": {
+    "completed_runs": 18,
+    "projections": 8,
+    "unavailable_models": [
+      "colpali",
+      "colqwen2"
+    ]
+  }
+}

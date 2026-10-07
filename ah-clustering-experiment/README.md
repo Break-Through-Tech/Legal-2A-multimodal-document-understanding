@@ -1,8 +1,8 @@
 # Anh's document clustering experiment
 
-To fork this repository and explore the saved results without a GPU, follow [the dashboard quickstart](DASHBOARD_QUICKSTART.md). The repository includes the saved score tables, assignments and projections; the setup command downloads document images separately.
+To clone this repository and explore the saved results without a GPU, follow [the dashboard quickstart](DASHBOARD_QUICKSTART.md). The repository includes the saved score tables, assignments and projections; the setup command downloads document images separately.
 
-Steps 2 and 3 prepare the shared dataset and define storage and provenance. Steps 4 and 5 add pretrained extraction, actual OCR, and restart checkpoints. Steps 6 through 8 provide 14 clustering experiments, saved evaluations, six projections and a verified Streamlit dashboard for four available modes using the 700 training documents. See [step 8 verification](reports/STEP_8_VERIFICATION.md). The full OCR cache and Drive recovery remain [step 5 gates](reports/STEP_5_VERIFICATION.md); the Step 9 findings review and classification remain later work.
+Steps 2 and 3 prepare the shared dataset and define storage and provenance. Steps 4 and 5 add pretrained extraction, actual OCR, and restart checkpoints. Steps 6 through 8 provide 18 clustering experiments, saved evaluations, eight projections and a verified Streamlit dashboard for five available modes using the 700 training documents. See [step 8 verification](reports/STEP_8_VERIFICATION.md) and the [OCR clustering recovery](reports/OCR_CLUSTERING_RECOVERY.md). Full OCR embeddings and downstream results are complete. Drive backend verification remains a separate [step 5 gate](reports/STEP_5_VERIFICATION.md); the Step 9 findings review and classification remain later work.
 
 ## Install the dataset dependencies
 
@@ -157,7 +157,7 @@ After reconnecting, remount the same Drive location, restore the same source sna
 
 ## Step 6: cluster saved embeddings
 
-Clustering uses the four completed full caches already on disk. The default cohort is exactly the shared 700 training documents. Install the additional clustering dependency in the experiment environment and run:
+Clustering uses the five completed full caches already on disk. The default cohort is exactly the shared 700 training documents. Install the additional clustering dependency in the experiment environment and run:
 
 ```powershell
 ah-clustering-experiment/.venv/Scripts/python.exe -m pip install -r ah-clustering-experiment/requirements-clustering.txt
@@ -181,7 +181,7 @@ ah-clustering-experiment/.venv/Scripts/python.exe -m pip install -r ah-clusterin
 ah-clustering-experiment/.venv/Scripts/python.exe ah-clustering-experiment/experiments/run_evaluation.py
 ```
 
-The configuration in `configs/evaluation.json` names the 14 verified Step 6 artifacts explicitly. `--models dinov3` selects a subset; `--storage-root` selects a prepared directory named `ah-clustering-experiment`. The shared CSV remains at the repository's `data/split.csv`. This runner uses local CPU computation, blocks encoder imports, and never refits clusters. It checks upstream artifacts before consuming them, so the first read of a large native embedding cache can take time.
+The configuration in `configs/evaluation.json` names the 18 verified clustering artifacts explicitly. `--models dinov3` selects a subset; `--storage-root` selects a prepared directory named `ah-clustering-experiment`. The shared CSV remains at the repository's `data/split.csv`. This runner uses local CPU computation, blocks encoder imports, and never refits clusters. It checks upstream artifacts before consuming them, so the first read of a large native embedding cache can take time.
 
 Metrics and examples live under `outputs/metrics/<artifact_id>/`: `scores.json` records both noise policies and coverage, `clusters.parquet` contains label distributions and representative/outlier IDs, and `documents.parquet` joins IDs to labels, assignments, image references and example ranks. Undefined or unsupported scores have a null value and an explicit reason. Noise is distinct from the benchmark's `Unknown` label. Majority-label mismatches and farthest-from-medoid examples are review candidates, not proven errors.
 
@@ -202,6 +202,6 @@ Use the sidebar to switch among the overview, embedding explorer, cluster explor
 
 In the embedding explorer, select PCA or UMAP, choose a color mapping, and click a point or use the document picker to open the original image. Cluster review shows label distributions, medoid representatives and farthest-member candidates. Comparison checks exact cohort identity and aligns cluster numbers by maximum overlap, with noise and unmatched groups handled separately. Details preserve configuration, unavailable-score reasons and execution provenance.
 
-The app blocks encoder and fitting imports and never recomputes embeddings, clustering, metrics or coordinates. It caches reads for up to 30 seconds; **Refresh saved results** immediately rechecks the files. Missing or corrupt outputs are shown as unavailable, and an absent image does not hide its document record. OCR-mode results remain pending and standard retained-vector K-means remains unsupported.
+The app blocks encoder and fitting imports and never recomputes embeddings, clustering, metrics or coordinates. It caches reads for up to 30 seconds; **Refresh saved results** immediately rechecks the files. Missing or corrupt outputs are shown as unavailable, and an absent image does not hide its document record. OCR-mode results are included. Standard retained-vector K-means remains unsupported for ColPali and ColQwen2.
 
 The independent AppTest checks and raw artifact audit are documented in [Step 8 verification](reports/STEP_8_VERIFICATION.md), alongside the real browser evidence. Results interpretation and a findings report remain Step 9.

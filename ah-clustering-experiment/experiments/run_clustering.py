@@ -20,6 +20,13 @@ class NoEncoderImports(importlib.abc.MetaPathFinder):
             raise ImportError("Clustering must consume saved embeddings; encoder loading is disabled")
 
 
+def unconfigured_models(source_root: Path, configured_models: dict) -> dict[str, str]:
+    """Report omitted models without inferring whether their caches exist."""
+    return {path.stem: "No embedding artifact is configured for clustering."
+            for path in sorted((source_root / "configs/models").glob("*.json"))
+            if path.stem not in configured_models}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--storage-root", type=Path, default=ROOT)
@@ -57,8 +64,7 @@ def main():
     result = {"source_digest": source["source_digest"], "settings": settings,
               "cohort": settings["cohort"], "encoder_imports_blocked": True,
               "results": results, "elapsed_seconds": time.perf_counter()-started,
-              "pending": {"layoutlmv3-ocr": "Full expected-cohort embedding cache is unavailable"}
-              if "layoutlmv3-ocr" not in settings["models"] else {}}
+              "pending": unconfigured_models(ROOT, settings["models"])}
     if source_identity(ROOT)["source_digest"] != source["source_digest"]:
         result["source_changed_during_run"] = True
     report = owned_path(root, f"outputs/logs/step6-{time.time_ns()}.json")

@@ -5,6 +5,7 @@
   "models": {
     "dinov3": "embeddings-9ef1694d986576ba0acf",
     "layoutlmv3-image": "embeddings-af5fe5262fbc515a18be",
+    "layoutlmv3-ocr": "embeddings-14f0c9c4cc8cb38ae601",
     "colpali": "embeddings-d987f31cbdb073fed394",
     "colqwen2": "embeddings-17d7e1b5ec380770c824"
   },

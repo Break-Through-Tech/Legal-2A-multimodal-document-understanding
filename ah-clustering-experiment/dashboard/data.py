@@ -212,7 +212,9 @@ def scan_catalog(root: Path) -> dict:
             issues = [item for item in issues if not (item['model'] == model and item['status'] == 'pending' and item['artifact_id'] in expected)]
             issues.append({'status': 'failed', 'artifact_id': None, 'model': model, 'reason': entry.get('error', 'Recorded experiment failure')})
     for model, reason in settings.get('pending', {}).items():
-        issues.append({'status': 'pending', 'artifact_id': None, 'model': model, 'reason': reason})
+        model_runs = {cluster_id for cluster_id, name in expected.items() if name == model}
+        if not model_runs or not model_runs <= successful:
+            issues.append({'status': 'pending', 'artifact_id': None, 'model': model, 'reason': reason})
     for entry in settings.get('unavailable', []):
         issues.append({'status': 'unavailable', 'artifact_id': None, 'model': entry['model'], 'reason': f"{entry['algorithm']}: {entry['reason']}"})
     unique = {tuple(item.values()): item for item in issues}
