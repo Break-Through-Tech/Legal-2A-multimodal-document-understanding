@@ -28,3 +28,13 @@ env/
 # OS
 .DS_Store
 Thumbs.db
+
+# Legal 2A additions
+results/embeddings/**/*.npy
+results/embeddings/**/*.pt
+results/embeddings/**/*.pkl
+*.ckpt
+*.pth
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

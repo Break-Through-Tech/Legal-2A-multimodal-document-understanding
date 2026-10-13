@@ -1,1 +1,20 @@
+# Core data handling — pinned to what's known to work together (2026-09-27)
+datasets==5.0.1
+pandas==3.0.6
+numpy==2.5.3
+pillow==12.3.0
+pyarrow==25.0.1
+pyyaml
 
+# EDA / clustering / classical baselines
+matplotlib==3.11.2
+scikit-learn==1.9.1
+umap-learn
+
+# Deterministic JSON validation (extraction stage, November)
+jsonschema
+
+# --- Not yet pinned: added when each pipeline stage is built ---
+# torch, transformers, colpali-engine   -> embeddings stage (see src/embeddings/)
+# pytesseract or easyocr                -> OCR-text channel (sandbox-only per Sept scope decision,
+#                                           see src/ingestion/scope_policy.md)
