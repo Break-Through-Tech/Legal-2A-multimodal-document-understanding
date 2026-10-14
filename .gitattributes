@@ -1,2 +1,5 @@
 # Saved dataset identities include the exact CSV bytes on every operating system.
 data/split.csv -text
+# Full computed embedding snapshots, one archive per model.
+ah-clustering-experiment/saved-embeddings/*.zip.part-* filter=lfs diff=lfs merge=lfs -text
+ah-clustering-experiment/saved-embeddings/index.json text eol=lf linguist-generated=true

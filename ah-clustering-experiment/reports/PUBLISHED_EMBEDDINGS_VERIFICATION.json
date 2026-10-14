@@ -1,0 +1,123 @@
+{
+  "verification_date": "2026-10-13",
+  "focused_restore_tests_passed": 8,
+  "clean_directory_restore": "passed",
+  "encoder_imports": false,
+  "total_archive_bytes": 2971242258,
+  "lfs_parts": 357,
+  "native_reader_checks": [
+    {
+      "model": "dinov3",
+      "documents": 1000,
+      "training_documents": 700,
+      "sample_tensor_shapes": {
+        "cls": [
+          1,
+          384
+        ],
+        "patches": [
+          196,
+          384
+        ],
+        "registers": [
+          4,
+          384
+        ]
+      }
+    },
+    {
+      "model": "layoutlmv3-image",
+      "documents": 1000,
+      "training_documents": 700,
+      "sample_tensor_shapes": {
+        "attention_mask": [
+          197
+        ],
+        "cls": [
+          1,
+          768
+        ],
+        "tokens": [
+          197,
+          768
+        ]
+      }
+    },
+    {
+      "model": "layoutlmv3-ocr",
+      "documents": 1000,
+      "training_documents": 700,
+      "sample_tensor_shapes": {
+        "attention_mask": [
+          304
+        ],
+        "boxes": [
+          107,
+          4
+        ],
+        "cls": [
+          1,
+          768
+        ],
+        "input_ids": [
+          107
+        ],
+        "tokens": [
+          304,
+          768
+        ],
+        "word_ids": [
+          107
+        ]
+      }
+    },
+    {
+      "model": "colpali",
+      "documents": 1000,
+      "training_documents": 700,
+      "sample_tensor_shapes": {
+        "attention_mask": [
+          1030
+        ],
+        "image_mask": [
+          1030
+        ],
+        "input_ids": [
+          1030
+        ],
+        "special_mask": [
+          1030
+        ],
+        "vectors": [
+          1030,
+          128
+        ]
+      }
+    },
+    {
+      "model": "colqwen2",
+      "documents": 1000,
+      "training_documents": 700,
+      "sample_tensor_shapes": {
+        "attention_mask": [
+          551
+        ],
+        "image_mask": [
+          551
+        ],
+        "input_ids": [
+          551
+        ],
+        "special_mask": [
+          551
+        ],
+        "vectors": [
+          551,
+          128
+        ]
+      }
+    }
+  ],
+  "max_part_bytes": 8388608,
+  "split_archive_reassembly": "All five archive SHA-256 values match the snapshots used by the clean restore checks."
+}

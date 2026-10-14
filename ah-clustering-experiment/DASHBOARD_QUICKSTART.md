@@ -4,6 +4,8 @@ The repository includes a compressed snapshot of 18 evaluated clustering runs an
 
 ## Get the code
 
+Full computed embeddings are also available on this branch through Git LFS. Follow [the embedding download and restore instructions](saved-embeddings/README.md) to reuse all five models without encoder inference. The dashboard snapshot itself remains separate from those archives.
+
 Clone the repository directly. Until this work is merged into the default branch, select `anh-embedding-experiments`:
 
 ```text
