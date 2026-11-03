@@ -1,0 +1,788 @@
+{
+  "cost": {
+    "pooled_vector_bytes": 512000,
+    "pooling_elapsed_seconds": 0.24933930000042892,
+    "retained_vector_bytes": 190275072,
+    "similarity_elapsed_seconds": 75.14955220000002,
+    "storage_ratio": 371.631,
+    "tokens_per_document_median": 752
+  },
+  "definitions": {
+    "pooling": {
+      "name": "pooled_single_vector_v1",
+      "normalization": "L2 after reduction",
+      "output_shape": "[dimension]; one vector per document",
+      "reduction": "arithmetic mean over selected tokens in float64",
+      "token_selection": "attention_mask & image_mask (identical to the retained-vector arm)",
+      "training": "none for the reduction itself; the classifier is fit on training vectors only"
+    },
+    "vote": {
+      "abstain": "never; every query receives one of its neighbours' labels",
+      "k_values": [
+        1,
+        3,
+        5
+      ],
+      "name": "topk_label_vote_v1",
+      "ranking": "descending similarity, restricted to the neighbour cohort",
+      "self_match": "query and neighbour ID sets must be disjoint",
+      "tie_break": "highest summed similarity among tied labels, then lexicographically smallest label",
+      "uncovered_labels": "labels absent from the neighbour cohort can never be predicted",
+      "vote": "plurality of the k neighbour labels"
+    }
+  },
+  "embedding_artifact": "embeddings-17d7e1b5ec380770c824",
+  "embedding_identity_sha256": "17d7e1b5ec380770c824783cb6a151d2fe93145f0db9dbeec664d9c72650b361",
+  "label_column": "label",
+  "query_count": 150,
+  "query_split": "val",
+  "rows": [
+    {
+      "accuracy": 0.9733333333333334,
+      "arm": "pooled",
+      "fit_predict_seconds": 0.0096,
+      "macro_f1": 0.9753930280246069,
+      "method": "logistic_regression (C=1)",
+      "per_label": {
+        "ACCOUNT_STATEMENT": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "BANK_CHECK": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "CHART": {
+          "f1": 0.7142857142857143,
+          "precision": 0.7142857142857143,
+          "recall": 0.7142857142857143,
+          "support": 7
+        },
+        "COMMERCIAL_LEASE_AGREEMENT": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "CREDIT_CARD_STATEMENT": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "DELIVERY_NOTE": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 7
+        },
+        "EQUIPMENT_INSPECTION": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 7
+        },
+        "FORM_1040": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "GLOSSARY": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 7
+        },
+        "NUTRITION": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 7
+        },
+        "PATENT": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "PATIENT_INTAKE": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "PAY_IN_SHEET": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "PETITION_FORM": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "PROXY_VOTING": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "REAL_ESTATE": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 9
+        },
+        "SHIFT_SCHEDULE": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "SHIPPING_INVOICE": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 7
+        },
+        "Unknown": {
+          "f1": 0.8181818181818182,
+          "precision": 0.8181818181818182,
+          "recall": 0.8181818181818182,
+          "support": 11
+        }
+      },
+      "representation": "mean-pool -> 1 x 128"
+    },
+    {
+      "accuracy": 0.98,
+      "arm": "pooled",
+      "fit_predict_seconds": 0.0095,
+      "macro_f1": 0.9809892624537934,
+      "method": "logistic_regression (C=10)",
+      "per_label": {
+        "ACCOUNT_STATEMENT": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "BANK_CHECK": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "CHART": {
+          "f1": 0.7692307692307692,
+          "precision": 0.8333333333333334,
+          "recall": 0.7142857142857143,
+          "support": 7
+        },
+        "COMMERCIAL_LEASE_AGREEMENT": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "CREDIT_CARD_STATEMENT": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "DELIVERY_NOTE": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 7
+        },
+        "EQUIPMENT_INSPECTION": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 7
+        },
+        "FORM_1040": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "GLOSSARY": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 7
+        },
+        "NUTRITION": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 7
+        },
+        "PATENT": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "PATIENT_INTAKE": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "PAY_IN_SHEET": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "PETITION_FORM": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "PROXY_VOTING": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "REAL_ESTATE": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 9
+        },
+        "SHIFT_SCHEDULE": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "SHIPPING_INVOICE": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 7
+        },
+        "Unknown": {
+          "f1": 0.8695652173913043,
+          "precision": 0.8333333333333334,
+          "recall": 0.9090909090909091,
+          "support": 11
+        }
+      },
+      "representation": "mean-pool -> 1 x 128"
+    },
+    {
+      "accuracy": 0.9733333333333334,
+      "arm": "pooled",
+      "fit_predict_seconds": 0.1553,
+      "macro_f1": 0.9763157894736842,
+      "method": "nearest_centroid",
+      "per_label": {
+        "ACCOUNT_STATEMENT": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "BANK_CHECK": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "CHART": {
+          "f1": 0.75,
+          "precision": 0.6666666666666666,
+          "recall": 0.8571428571428571,
+          "support": 7
+        },
+        "COMMERCIAL_LEASE_AGREEMENT": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "CREDIT_CARD_STATEMENT": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "DELIVERY_NOTE": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 7
+        },
+        "EQUIPMENT_INSPECTION": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 7
+        },
+        "FORM_1040": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "GLOSSARY": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 7
+        },
+        "NUTRITION": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 7
+        },
+        "PATENT": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "PATIENT_INTAKE": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "PAY_IN_SHEET": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "PETITION_FORM": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "PROXY_VOTING": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "REAL_ESTATE": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 9
+        },
+        "SHIFT_SCHEDULE": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "SHIPPING_INVOICE": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 7
+        },
+        "Unknown": {
+          "f1": 0.7999999999999999,
+          "precision": 0.8888888888888888,
+          "recall": 0.7272727272727273,
+          "support": 11
+        }
+      },
+      "representation": "mean-pool -> 1 x 128"
+    },
+    {
+      "accuracy": 0.9733333333333334,
+      "arm": "retained",
+      "fit_predict_seconds": 0.0036,
+      "macro_f1": 0.975188897789517,
+      "method": "top-1 vote",
+      "per_label": {
+        "ACCOUNT_STATEMENT": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "BANK_CHECK": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "CHART": {
+          "f1": 0.7692307692307692,
+          "precision": 0.8333333333333334,
+          "recall": 0.7142857142857143,
+          "support": 7
+        },
+        "COMMERCIAL_LEASE_AGREEMENT": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "CREDIT_CARD_STATEMENT": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "DELIVERY_NOTE": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 7
+        },
+        "EQUIPMENT_INSPECTION": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 7
+        },
+        "FORM_1040": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "GLOSSARY": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 7
+        },
+        "NUTRITION": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 7
+        },
+        "PATENT": {
+          "f1": 0.9411764705882353,
+          "precision": 0.8888888888888888,
+          "recall": 1.0,
+          "support": 8
+        },
+        "PATIENT_INTAKE": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "PAY_IN_SHEET": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "PETITION_FORM": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "PROXY_VOTING": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "REAL_ESTATE": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 9
+        },
+        "SHIFT_SCHEDULE": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "SHIPPING_INVOICE": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 7
+        },
+        "Unknown": {
+          "f1": 0.8181818181818182,
+          "precision": 0.8181818181818182,
+          "recall": 0.8181818181818182,
+          "support": 11
+        }
+      },
+      "representation": "752 x 128"
+    },
+    {
+      "accuracy": 0.9466666666666667,
+      "arm": "retained",
+      "fit_predict_seconds": 0.0036,
+      "macro_f1": 0.9483623920482319,
+      "method": "top-3 vote",
+      "per_label": {
+        "ACCOUNT_STATEMENT": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "BANK_CHECK": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "CHART": {
+          "f1": 0.8333333333333333,
+          "precision": 1.0,
+          "recall": 0.7142857142857143,
+          "support": 7
+        },
+        "COMMERCIAL_LEASE_AGREEMENT": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "CREDIT_CARD_STATEMENT": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "DELIVERY_NOTE": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 7
+        },
+        "EQUIPMENT_INSPECTION": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 7
+        },
+        "FORM_1040": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "GLOSSARY": {
+          "f1": 0.9333333333333333,
+          "precision": 0.875,
+          "recall": 1.0,
+          "support": 7
+        },
+        "NUTRITION": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 7
+        },
+        "PATENT": {
+          "f1": 0.9411764705882353,
+          "precision": 0.8888888888888888,
+          "recall": 1.0,
+          "support": 8
+        },
+        "PATIENT_INTAKE": {
+          "f1": 0.8421052631578948,
+          "precision": 0.7272727272727273,
+          "recall": 1.0,
+          "support": 8
+        },
+        "PAY_IN_SHEET": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "PETITION_FORM": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "PROXY_VOTING": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "REAL_ESTATE": {
+          "f1": 0.9473684210526316,
+          "precision": 0.9,
+          "recall": 1.0,
+          "support": 9
+        },
+        "SHIFT_SCHEDULE": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "SHIPPING_INVOICE": {
+          "f1": 0.9333333333333333,
+          "precision": 0.875,
+          "recall": 1.0,
+          "support": 7
+        },
+        "Unknown": {
+          "f1": 0.5882352941176471,
+          "precision": 0.8333333333333334,
+          "recall": 0.45454545454545453,
+          "support": 11
+        }
+      },
+      "representation": "752 x 128"
+    },
+    {
+      "accuracy": 0.94,
+      "arm": "retained",
+      "fit_predict_seconds": 0.0037,
+      "macro_f1": 0.9381161883035763,
+      "method": "top-5 vote",
+      "per_label": {
+        "ACCOUNT_STATEMENT": {
+          "f1": 0.9411764705882353,
+          "precision": 0.8888888888888888,
+          "recall": 1.0,
+          "support": 8
+        },
+        "BANK_CHECK": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "CHART": {
+          "f1": 0.8571428571428571,
+          "precision": 0.8571428571428571,
+          "recall": 0.8571428571428571,
+          "support": 7
+        },
+        "COMMERCIAL_LEASE_AGREEMENT": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "CREDIT_CARD_STATEMENT": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "DELIVERY_NOTE": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 7
+        },
+        "EQUIPMENT_INSPECTION": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 7
+        },
+        "FORM_1040": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "GLOSSARY": {
+          "f1": 0.9333333333333333,
+          "precision": 0.875,
+          "recall": 1.0,
+          "support": 7
+        },
+        "NUTRITION": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 7
+        },
+        "PATENT": {
+          "f1": 0.9411764705882353,
+          "precision": 0.8888888888888888,
+          "recall": 1.0,
+          "support": 8
+        },
+        "PATIENT_INTAKE": {
+          "f1": 0.8421052631578948,
+          "precision": 0.7272727272727273,
+          "recall": 1.0,
+          "support": 8
+        },
+        "PAY_IN_SHEET": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "PETITION_FORM": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "PROXY_VOTING": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "REAL_ESTATE": {
+          "f1": 0.9473684210526316,
+          "precision": 0.9,
+          "recall": 1.0,
+          "support": 9
+        },
+        "SHIFT_SCHEDULE": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 8
+        },
+        "SHIPPING_INVOICE": {
+          "f1": 0.9333333333333333,
+          "precision": 0.875,
+          "recall": 1.0,
+          "support": 7
+        },
+        "Unknown": {
+          "f1": 0.42857142857142855,
+          "precision": 1.0,
+          "recall": 0.2727272727272727,
+          "support": 11
+        }
+      },
+      "representation": "752 x 128"
+    }
+  ],
+  "similarity_artifact": "similarities-b2b547ad87293124058d",
+  "split_file": "E:\\Project\\ColPali similarity-based classifier-oa77\\repo\\data\\split.csv",
+  "train_count": 700
+}

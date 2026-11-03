@@ -1,0 +1,161 @@
+{
+  "embedding_artifact": "embeddings-17d7e1b5ec380770c824",
+  "label_column": "label",
+  "random_split": [
+    {
+      "accuracy": 0.96,
+      "arm": "pooled + logistic regression (C=1)",
+      "macro_f1": 0.9618163054695562
+    },
+    {
+      "accuracy": 0.9866666666666667,
+      "arm": "retained + top-1 vote",
+      "macro_f1": 0.9877061073736974
+    },
+    {
+      "accuracy": 0.9866666666666667,
+      "arm": "retained + top-3 vote",
+      "macro_f1": 0.9877061073736974
+    },
+    {
+      "accuracy": 0.9866666666666667,
+      "arm": "retained + top-5 vote",
+      "macro_f1": 0.9877061073736974
+    }
+  ],
+  "similarity_artifact": "similarities-b2b547ad87293124058d",
+  "thresholds": [
+    {
+      "classes_without_test": 0,
+      "group_count": 837,
+      "grouped_split": [
+        {
+          "accuracy": 0.9696969696969697,
+          "arm": "pooled + logistic regression (C=1)",
+          "macro_f1": 0.9740563530037214
+        },
+        {
+          "accuracy": 0.9772727272727273,
+          "arm": "retained + top-1 vote",
+          "macro_f1": 0.9814536340852131
+        },
+        {
+          "accuracy": 0.9848484848484849,
+          "arm": "retained + top-3 vote",
+          "macro_f1": 0.987719298245614
+        },
+        {
+          "accuracy": 0.9772727272727273,
+          "arm": "retained + top-5 vote",
+          "macro_f1": 0.9815762316006735
+        }
+      ],
+      "grouped_split_counts": {
+        "test": 132,
+        "train": 727,
+        "val": 141
+      },
+      "grouped_split_leak": {
+        "queries": 132,
+        "share": 0.0,
+        "with_train_twin": 0
+      },
+      "largest_group": 48,
+      "random_split_leak": {
+        "queries": 150,
+        "share": 0.16,
+        "with_train_twin": 24
+      },
+      "singletons": 830,
+      "threshold": 0.8
+    },
+    {
+      "classes_without_test": 0,
+      "group_count": 937,
+      "grouped_split": [
+        {
+          "accuracy": 0.9794520547945206,
+          "arm": "pooled + logistic regression (C=1)",
+          "macro_f1": 0.9819548872180451
+        },
+        {
+          "accuracy": 0.9794520547945206,
+          "arm": "retained + top-1 vote",
+          "macro_f1": 0.9814536340852131
+        },
+        {
+          "accuracy": 0.9863013698630136,
+          "arm": "retained + top-3 vote",
+          "macro_f1": 0.987719298245614
+        },
+        {
+          "accuracy": 0.9794520547945206,
+          "arm": "retained + top-5 vote",
+          "macro_f1": 0.9815762316006735
+        }
+      ],
+      "grouped_split_counts": {
+        "test": 146,
+        "train": 698,
+        "val": 156
+      },
+      "grouped_split_leak": {
+        "queries": 146,
+        "share": 0.0,
+        "with_train_twin": 0
+      },
+      "largest_group": 26,
+      "random_split_leak": {
+        "queries": 150,
+        "share": 0.06,
+        "with_train_twin": 9
+      },
+      "singletons": 927,
+      "threshold": 0.85
+    },
+    {
+      "classes_without_test": 0,
+      "group_count": 1000,
+      "grouped_split": [
+        {
+          "accuracy": 0.9794520547945206,
+          "arm": "pooled + logistic regression (C=1)",
+          "macro_f1": 0.9819548872180451
+        },
+        {
+          "accuracy": 0.9794520547945206,
+          "arm": "retained + top-1 vote",
+          "macro_f1": 0.9814536340852131
+        },
+        {
+          "accuracy": 0.9863013698630136,
+          "arm": "retained + top-3 vote",
+          "macro_f1": 0.987719298245614
+        },
+        {
+          "accuracy": 0.9794520547945206,
+          "arm": "retained + top-5 vote",
+          "macro_f1": 0.9815762316006735
+        }
+      ],
+      "grouped_split_counts": {
+        "test": 146,
+        "train": 698,
+        "val": 156
+      },
+      "grouped_split_leak": {
+        "queries": 146,
+        "share": 0.0,
+        "with_train_twin": 0
+      },
+      "largest_group": 1,
+      "random_split_leak": {
+        "queries": 150,
+        "share": 0.0,
+        "with_train_twin": 0
+      },
+      "singletons": 1000,
+      "threshold": 0.9
+    }
+  ]
+}

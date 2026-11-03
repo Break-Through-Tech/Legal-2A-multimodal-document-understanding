@@ -1,0 +1,172 @@
+{
+  "difference_vs_primary": {
+    "retained + top-1 vote": {
+      "stratified": {
+        "ci_high": 0.025589926783453534,
+        "ci_low": -0.013011843010519133,
+        "mean": 0.005652798708892509,
+        "point": 0.005852867462774691,
+        "share_greater_than_zero": 0.6735,
+        "std": 0.010151102479213287
+      },
+      "unstratified": {
+        "ci_high": 0.031241138849968597,
+        "ci_low": -0.01683989022772422,
+        "mean": 0.006191971860951611,
+        "point": 0.005852867462774691,
+        "share_greater_than_zero": 0.694,
+        "std": 0.011744735374197754
+      }
+    },
+    "retained + top-3 vote": {
+      "stratified": {
+        "ci_high": 0.025589926783453534,
+        "ci_low": -0.013011843010519133,
+        "mean": 0.005652798708892509,
+        "point": 0.005852867462774691,
+        "share_greater_than_zero": 0.6735,
+        "std": 0.010151102479213287
+      },
+      "unstratified": {
+        "ci_high": 0.031241138849968597,
+        "ci_low": -0.01683989022772422,
+        "mean": 0.006191971860951611,
+        "point": 0.005852867462774691,
+        "share_greater_than_zero": 0.694,
+        "std": 0.011744735374197754
+      }
+    },
+    "retained + top-5 vote": {
+      "stratified": {
+        "ci_high": 0.012903409392736301,
+        "ci_low": -0.042335886507713076,
+        "mean": -0.013985424190212096,
+        "point": -0.013720575949678016,
+        "share_greater_than_zero": 0.16,
+        "std": 0.014728552911426007
+      },
+      "unstratified": {
+        "ci_high": 0.017402182183141917,
+        "ci_low": -0.04600297175124049,
+        "mean": -0.014101714832358916,
+        "point": -0.013720575949678016,
+        "share_greater_than_zero": 0.18,
+        "std": 0.016348260046186194
+      }
+    }
+  },
+  "embedding_artifact": "embeddings-d987f31cbdb073fed394",
+  "intervals": {
+    "stratified": {
+      "pooled + logistic regression (C=1)": {
+        "ci_high": 0.9939849624060151,
+        "ci_low": 0.940998183323636,
+        "mean": 0.9689655834111781,
+        "point": 0.9686569364587939,
+        "std": 0.013139116024362624
+      },
+      "pooled + nearest centroid": {
+        "ci_high": 0.9881320949432404,
+        "ci_low": 0.9343793617578784,
+        "mean": 0.9630282266174227,
+        "point": 0.962641898864809,
+        "std": 0.013910438973971123
+      },
+      "retained + top-1 vote": {
+        "ci_high": 0.9943977591036415,
+        "ci_low": 0.9486761020197552,
+        "mean": 0.9746183821200707,
+        "point": 0.9745098039215686,
+        "std": 0.011785607760674095
+      },
+      "retained + top-3 vote": {
+        "ci_high": 0.9943977591036415,
+        "ci_low": 0.9486761020197552,
+        "mean": 0.9746183821200707,
+        "point": 0.9745098039215686,
+        "std": 0.011785607760674095
+      },
+      "retained + top-5 vote": {
+        "ci_high": 0.9822841417268662,
+        "ci_low": 0.9255098223499927,
+        "mean": 0.954980159220966,
+        "point": 0.9549363605091159,
+        "std": 0.014670406637387149
+      }
+    },
+    "unstratified": {
+      "pooled + logistic regression (C=1)": {
+        "ci_high": 0.9931813339015555,
+        "ci_low": 0.9326900219178763,
+        "mean": 0.9661412739633449,
+        "point": 0.9686569364587939,
+        "std": 0.015521881948870971
+      },
+      "pooled + nearest centroid": {
+        "ci_high": 0.9878480639923634,
+        "ci_low": 0.9261065068904997,
+        "mean": 0.9598068972253738,
+        "point": 0.962641898864809,
+        "std": 0.016206678673848663
+      },
+      "retained + top-1 vote": {
+        "ci_high": 0.9952054048163888,
+        "ci_low": 0.9387632458338829,
+        "mean": 0.9723332458242967,
+        "point": 0.9745098039215686,
+        "std": 0.014553782040601763
+      },
+      "retained + top-3 vote": {
+        "ci_high": 0.9952054048163888,
+        "ci_low": 0.9387632458338829,
+        "mean": 0.9723332458242967,
+        "point": 0.9745098039215686,
+        "std": 0.014553782040601763
+      },
+      "retained + top-5 vote": {
+        "ci_high": 0.9843649619910592,
+        "ci_low": 0.9125717227600069,
+        "mean": 0.952039559130986,
+        "point": 0.9549363605091159,
+        "std": 0.017787662134695077
+      }
+    }
+  },
+  "label_column": "label",
+  "label_set": [
+    "ACCOUNT_STATEMENT",
+    "BANK_CHECK",
+    "CHART",
+    "COMMERCIAL_LEASE_AGREEMENT",
+    "CREDIT_CARD_STATEMENT",
+    "DELIVERY_NOTE",
+    "EQUIPMENT_INSPECTION",
+    "FORM_1040",
+    "GLOSSARY",
+    "NUTRITION",
+    "PATENT",
+    "PATIENT_INTAKE",
+    "PAY_IN_SHEET",
+    "PETITION_FORM",
+    "PROXY_VOTING",
+    "REAL_ESTATE",
+    "SHIFT_SCHEDULE",
+    "SHIPPING_INVOICE",
+    "Unknown"
+  ],
+  "mode": "random",
+  "points": {
+    "pooled + logistic regression (C=1)": 0.9686569364587939,
+    "pooled + nearest centroid": 0.962641898864809,
+    "retained + top-1 vote": 0.9745098039215686,
+    "retained + top-3 vote": 0.9745098039215686,
+    "retained + top-5 vote": 0.9549363605091159
+  },
+  "primary_arm": "pooled + logistic regression (C=1)",
+  "replicates": 2000,
+  "seed": 42,
+  "similarity_artifact": "similarities-3a73eea732676da37fd9",
+  "test_count": 150,
+  "threshold": null,
+  "train_count": 700
+}
