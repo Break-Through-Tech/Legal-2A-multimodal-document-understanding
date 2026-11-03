@@ -1,0 +1,161 @@
+{
+  "embedding_artifact": "embeddings-d987f31cbdb073fed394",
+  "label_column": "label",
+  "random_split": [
+    {
+      "accuracy": 0.9666666666666667,
+      "arm": "pooled + logistic regression (C=1)",
+      "macro_f1": 0.9686569364587939
+    },
+    {
+      "accuracy": 0.9733333333333334,
+      "arm": "retained + top-1 vote",
+      "macro_f1": 0.9745098039215686
+    },
+    {
+      "accuracy": 0.9733333333333334,
+      "arm": "retained + top-3 vote",
+      "macro_f1": 0.9745098039215686
+    },
+    {
+      "accuracy": 0.9533333333333334,
+      "arm": "retained + top-5 vote",
+      "macro_f1": 0.9549363605091159
+    }
+  ],
+  "similarity_artifact": "similarities-3a73eea732676da37fd9",
+  "thresholds": [
+    {
+      "classes_without_test": 1,
+      "group_count": 557,
+      "grouped_split": [
+        {
+          "accuracy": 0.9801980198019802,
+          "arm": "pooled + logistic regression (C=1)",
+          "macro_f1": 0.9875420875420876
+        },
+        {
+          "accuracy": 0.9702970297029703,
+          "arm": "retained + top-1 vote",
+          "macro_f1": 0.9800653594771241
+        },
+        {
+          "accuracy": 0.9603960396039604,
+          "arm": "retained + top-3 vote",
+          "macro_f1": 0.9735810113519092
+        },
+        {
+          "accuracy": 0.9306930693069307,
+          "arm": "retained + top-5 vote",
+          "macro_f1": 0.9487381989832969
+        }
+      ],
+      "grouped_split_counts": {
+        "test": 101,
+        "train": 787,
+        "val": 112
+      },
+      "grouped_split_leak": {
+        "queries": 101,
+        "share": 0.0,
+        "with_train_twin": 0
+      },
+      "largest_group": 55,
+      "random_split_leak": {
+        "queries": 150,
+        "share": 0.46,
+        "with_train_twin": 69
+      },
+      "singletons": 532,
+      "threshold": 0.8
+    },
+    {
+      "classes_without_test": 0,
+      "group_count": 868,
+      "grouped_split": [
+        {
+          "accuracy": 0.9779411764705882,
+          "arm": "pooled + logistic regression (C=1)",
+          "macro_f1": 0.9736614262930052
+        },
+        {
+          "accuracy": 0.9779411764705882,
+          "arm": "retained + top-1 vote",
+          "macro_f1": 0.9736842105263158
+        },
+        {
+          "accuracy": 0.9705882352941176,
+          "arm": "retained + top-3 vote",
+          "macro_f1": 0.9675411438813754
+        },
+        {
+          "accuracy": 0.9485294117647058,
+          "arm": "retained + top-5 vote",
+          "macro_f1": 0.946345029239766
+        }
+      ],
+      "grouped_split_counts": {
+        "test": 136,
+        "train": 719,
+        "val": 145
+      },
+      "grouped_split_leak": {
+        "queries": 136,
+        "share": 0.0,
+        "with_train_twin": 0
+      },
+      "largest_group": 48,
+      "random_split_leak": {
+        "queries": 150,
+        "share": 0.12666666666666668,
+        "with_train_twin": 19
+      },
+      "singletons": 851,
+      "threshold": 0.85
+    },
+    {
+      "classes_without_test": 0,
+      "group_count": 976,
+      "grouped_split": [
+        {
+          "accuracy": 0.9794520547945206,
+          "arm": "pooled + logistic regression (C=1)",
+          "macro_f1": 0.9801391590865274
+        },
+        {
+          "accuracy": 0.9794520547945206,
+          "arm": "retained + top-1 vote",
+          "macro_f1": 0.9801619433198381
+        },
+        {
+          "accuracy": 0.9726027397260274,
+          "arm": "retained + top-3 vote",
+          "macro_f1": 0.9740188766748975
+        },
+        {
+          "accuracy": 0.952054794520548,
+          "arm": "retained + top-5 vote",
+          "macro_f1": 0.9528227620332883
+        }
+      ],
+      "grouped_split_counts": {
+        "test": 146,
+        "train": 698,
+        "val": 156
+      },
+      "grouped_split_leak": {
+        "queries": 146,
+        "share": 0.0,
+        "with_train_twin": 0
+      },
+      "largest_group": 14,
+      "random_split_leak": {
+        "queries": 150,
+        "share": 0.03333333333333333,
+        "with_train_twin": 5
+      },
+      "singletons": 969,
+      "threshold": 0.9
+    }
+  ]
+}
