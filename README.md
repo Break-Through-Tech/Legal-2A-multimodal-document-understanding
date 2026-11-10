@@ -119,3 +119,39 @@ Cite relevant papers, articles, or resources that supported your project.
 ## 🙏 **Acknowledgements** (Optional but encouraged)
 
 Thank your Challenge Advisor, host company representatives, TA, and others who supported your project.
+
+---
+
+# Document-intake pipeline (v1)
+
+Scanned image → predicted type (18 types + `Unknown` = out of scope) → human-review flag → extracted, schema-validated JSON.
+Model: SigLIP `google/siglip-base-patch16-224` embeddings + logistic regression, with test-time rotation (0/90/180/270, most confident angle wins).
+Data: HuggingFace `getomni-ai/ocr-benchmark` (1000 images, downloaded on first use).
+
+## Run (WSL, `.venv` active, `pip install -r requirements.txt`)
+Put `split.csv ids.npy labels.csv siglip_siglip-base-patch16-224.npy siglip_rot4.npy` in `data/embeddings/` (gitignored).
+
+| Step | Command |
+|---|---|
+| 1. Train classifier + flag table | `python classify_and_flag.py data/embeddings` → `outputs/classifier.joblib`, `outputs/predictions.csv` |
+| 2. Embed an image (self-check vs cache) | `python embed.py` |
+| 3. Predict (self-check vs predictions.csv) | `python pipeline.py` |
+| 4. Extraction (needs env vars below) | `python extract.py` (offline self-check); `python run_all.py --per-type 3` (live check) |
+| 5. Whole test split → `results.csv` | `python run_all.py` (add `--no-extract` for classification only) |
+| 6. Demo UI | `streamlit run app.py` |
+
+Env vars for extraction: `ANTHROPIC_API_KEY`, `CLAUDE_MODEL` (any vision-capable Claude model id).
+
+## Results (test split, 150 docs)
+| Metric | Value | Note |
+|---|---|---|
+| Macro-F1 (with rotation) | 0.993 | no rotation: 0.980 |
+| Sent to human review | 9.3% (14/150) | all 11 `Unknown` docs caught; 3 in-scope low-confidence |
+| C = 100 | – | **TODO tune** |
+| Review threshold = 0.70 | – | **TODO tune** |
+| JSON validity rate | not run yet | needs API key |
+| Mean field accuracy | not run yet | needs API key |
+
+## Notes
+- Dataset schemas are **per document**, not per type. `run_all.py` extracts with each document's own schema; the app uses one example schema per type (inexact for multi-schema types).
+- Deferred work: see `TODO.md`.

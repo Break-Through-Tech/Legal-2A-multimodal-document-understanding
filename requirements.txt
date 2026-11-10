@@ -18,3 +18,11 @@ jsonschema
 # torch, transformers, colpali-engine   -> embeddings stage (see src/embeddings/)
 # pytesseract or easyocr                -> OCR-text channel (sandbox-only per Sept scope decision,
 #                                           see src/ingestion/scope_policy.md)
+
+# Pipeline v1 (classify -> flag -> extract -> app)
+joblib
+torch
+transformers
+anthropic
+streamlit
+sentencepiece   # SigLIP processor needs it

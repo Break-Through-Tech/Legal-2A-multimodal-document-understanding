@@ -38,3 +38,10 @@ results/embeddings/**/*.pkl
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+
+# Pipeline v1
+data/embeddings/
+outputs/
+legal_idp-*/
+ocr_bench-*/
+.venv/
