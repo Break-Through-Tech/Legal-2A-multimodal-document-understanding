@@ -1,0 +1,93 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "title": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "pageNumber": {
+      "type": [
+        "null",
+        "number"
+      ],
+      "description": "The current page number of the glossary"
+    },
+    "glossary": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "term": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "The glossary term. Don't make up terms, use the ones provided in the glossary list."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    "glossarySections": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "letter": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "The letter heading for this section"
+          },
+          "terms": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "properties": {
+                "term": {
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "description": "The glossary term. Don't make up terms, use the ones provided in the glossary list."
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

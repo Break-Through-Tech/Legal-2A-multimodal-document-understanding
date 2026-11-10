@@ -1,0 +1,169 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "checks": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "bankInfo": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "properties": {
+              "bank": {
+                "type": [
+                  "enum",
+                  "null"
+                ],
+                "enum": [
+                  "BANK_OF_AMERICA",
+                  "CHASE",
+                  "CITIBANK",
+                  "US_BANK",
+                  "WELLS_FARGO"
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "checkInfo": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "properties": {
+              "payee": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "amount": {
+                "type": [
+                  "null",
+                  "number"
+                ]
+              },
+              "date": {
+                "type": [
+                  "null",
+                  "string"
+                ],
+                "description": "Date of the check, formatted as YYYY-MM-DD"
+              },
+              "micr": {
+                "type": [
+                  "null",
+                  "object"
+                ],
+                "properties": {
+                  "accountNumber": {
+                    "type": [
+                      "null",
+                      "number"
+                    ],
+                    "description": "Account number, usually 8 - 12 digits"
+                  },
+                  "routingNumber": {
+                    "type": [
+                      "null",
+                      "number"
+                    ],
+                    "description": "Routing number, usually 9 digits"
+                  },
+                  "checkNumber": {
+                    "type": [
+                      "null",
+                      "number"
+                    ],
+                    "description": "Check number, usually 4 digits"
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              },
+              "amountInWords": {
+                "type": [
+                  "null",
+                  "string"
+                ],
+                "description": "Amount in words, excluding the word 'dollars'"
+              },
+              "memo": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "personalInfo": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "properties": {
+              "address": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "firstName": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "state": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "lastName": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "zip": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "city": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

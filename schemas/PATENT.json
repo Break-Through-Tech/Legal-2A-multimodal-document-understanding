@@ -1,0 +1,85 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "patentNumber": {
+      "type": [
+        "null",
+        "number"
+      ],
+      "description": "Current patent number"
+    },
+    "patentStatus": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "Current patent status (e.g., application or granted status). Appears next to the patent number.",
+      "enum": [
+        "A",
+        "B1",
+        "B2",
+        "C",
+        "D"
+      ]
+    },
+    "latestPatent": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "description": "Most recent patent from the references cited.",
+      "properties": {
+        "patentNumber": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "Referenced patent number"
+        },
+        "date": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Month and year of the patent (ex: 2/1975)"
+        },
+        "name": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Name associated with the referenced patent"
+        },
+        "status": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Status of the referenced patent",
+          "enum": [
+            "A",
+            "B1",
+            "B2",
+            "C",
+            "D"
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "technologyCategory": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "IPC classification (section, class, and subclass). Example: B01F. Include only the first 4 characters."
+    }
+  },
+  "required": [],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

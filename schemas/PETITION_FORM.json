@@ -1,0 +1,141 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "header": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "state": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "county": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "electionDate": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "title": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "candidate": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "position": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "residence": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "name": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "witness": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "date": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "residence": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "name": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "signatures": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "town": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "residence": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "date": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "printName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

@@ -1,0 +1,118 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "distNumber": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "consultants": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "puerReturns": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Puer Returns"
+          },
+          "idNumber": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "grandTotal": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Grand Total"
+          },
+          "consultantName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "puerTotal": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Puer Total"
+          },
+          "sfmCode": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "sales": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "BB Sales"
+          },
+          "total": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "BB Total"
+          },
+          "puerSales": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Puer Sales"
+          },
+          "returns": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "BB Returns"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    "date": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "title": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "manager": {
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  },
+  "required": [],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

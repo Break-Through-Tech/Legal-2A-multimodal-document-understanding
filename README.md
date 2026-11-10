@@ -136,11 +136,13 @@ Put `split.csv ids.npy labels.csv siglip_siglip-base-patch16-224.npy siglip_rot4
 | 1. Train classifier + flag table | `python classify_and_flag.py data/embeddings` → `outputs/classifier.joblib`, `outputs/predictions.csv` |
 | 2. Embed an image (self-check vs cache) | `python embed.py` |
 | 3. Predict (self-check vs predictions.csv) | `python pipeline.py` |
-| 4. Extraction (needs env vars below) | `python extract.py` (offline self-check); `python run_all.py --per-type 3` (live check) |
-| 5. Whole test split → `results.csv` | `python run_all.py` (add `--no-extract` for classification only) |
+| 4a. Build per-class schemas | `python build_schemas.py data/embeddings` → `schemas/<CLASS>.json` |
+| 4b. Try extraction (live LLM) | `python test_extraction.py data/embeddings --per-class 3` |
+| 5. Split → `results.csv` | `python run_all.py [--split test] [--limit N] [--no-extract]`; saved after every document, re-runs skip finished ids (Groq free tier is rate-limited: use `--limit`) |
+| 5b. Offline test (fake LLM) | `python test_run_all.py` |
 | 6. Demo UI | `streamlit run app.py` |
 
-Env vars for extraction: `ANTHROPIC_API_KEY`, `CLAUDE_MODEL` (any vision-capable Claude model id).
+Extraction uses a vision LLM through an OpenAI-compatible API (Groq by default, `extract_grok.py`). Put `LLM_API_KEY` and `LLM_MODEL` in `.env` (gitignored; never commit).
 
 ## Results (test split, 150 docs)
 | Metric | Value | Note |
@@ -149,9 +151,10 @@ Env vars for extraction: `ANTHROPIC_API_KEY`, `CLAUDE_MODEL` (any vision-capable
 | Sent to human review | 9.3% (14/150) | all 11 `Unknown` docs caught; 3 in-scope low-confidence |
 | C = 100 | – | **TODO tune** |
 | Review threshold = 0.70 | – | **TODO tune** |
-| JSON validity rate | not run yet | needs API key |
-| Mean field accuracy | not run yet | needs API key |
+| JSON validity rate | not run yet | run `run_all.py` with the real LLM |
+| Mean field accuracy | not run yet | same |
 
 ## Notes
-- Dataset schemas are **per document**, not per type. `run_all.py` extracts with each document's own schema; the app uses one example schema per type (inexact for multi-schema types).
+- Dataset schemas are per document; `build_schemas.py` merges them into one schema per class (`schemas/`), used by `run_all.py` and the app. `Unknown` has no schema and goes straight to human review.
+- Review reasons: low confidence (< 0.70), predicted Unknown, extraction empty (filled ratio < 0.30).
 - Deferred work: see `TODO.md`.

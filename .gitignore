@@ -45,3 +45,5 @@ outputs/
 legal_idp-*/
 ocr_bench-*/
 .venv/
+
+.env

@@ -1,0 +1,163 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "accountNumber": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "Unique identifier for the account"
+    },
+    "totalDeposits": {
+      "type": [
+        "null",
+        "number"
+      ],
+      "description": "Total amount of deposits during the period"
+    },
+    "transactions": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "credit": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Amount credited to the account"
+          },
+          "type": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Type of transaction",
+            "enum": [
+              "credit",
+              "debit",
+              "deposit",
+              "withdrawal"
+            ]
+          },
+          "withdrawal": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Amount withdrawn from the account"
+          },
+          "deposit": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Amount deposited into the account"
+          },
+          "amount": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Total amount of the transaction"
+          },
+          "date": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Date of the transaction exactly as it appears"
+          },
+          "total": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Net balance after applying the credit and debit"
+          },
+          "description": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Description for the transaction"
+          },
+          "debit": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Amount debited from the account"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    "totalDebits": {
+      "type": [
+        "null",
+        "number"
+      ],
+      "description": "Total amount of debits during the period"
+    },
+    "totalCredits": {
+      "type": [
+        "null",
+        "number"
+      ],
+      "description": "Total amount of credits during the period"
+    },
+    "period": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "description": "Date range for the account statement period",
+      "properties": {
+        "start": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Start date of the statement period exactly as it appears"
+        },
+        "end": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "End date of the statement period exactly as it appears"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "totalWithdrawals": {
+      "type": [
+        "null",
+        "number"
+      ],
+      "description": "Total amount of withdrawals during the period"
+    },
+    "total": {
+      "type": [
+        "null",
+        "number"
+      ],
+      "description": "Net total (credits minus debits) for the period"
+    }
+  },
+  "required": [],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

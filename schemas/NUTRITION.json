@@ -1,0 +1,994 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "dressings": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Name of the menu item"
+          },
+          "nutritionalFacts": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "properties": {
+              "sugar": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Sugar (g)"
+              },
+              "protein": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Protein (g)"
+              },
+              "transFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Trans fat (g)"
+              },
+              "caloriesFromFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Calories from fat"
+              }
+            },
+            "description": "Nutrition facts for the menu item",
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        "description": "Information on menu item and its nutrition",
+        "additionalProperties": false
+      },
+      "description": "List of the menu items and nutrition facts in the Dressings category"
+    },
+    "burgers": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "List of the menu items and nutrition facts in the Burgers category",
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "description": "Information on menu item and its nutrition",
+        "properties": {
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Name of the menu item"
+          },
+          "nutritionalFacts": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "description": "Nutrition facts for the menu item",
+            "properties": {
+              "carbs": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Carbs (g)"
+              },
+              "fiber": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Fiber (g)"
+              },
+              "calories": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Calories"
+              },
+              "totalFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Total fat (g)"
+              },
+              "saturatedFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Saturated fat (g)"
+              },
+              "sugar": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Sugar (g)"
+              },
+              "sodium": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Sodium (mg)"
+              },
+              "protein": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Protein (g)"
+              },
+              "caloriesFromFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Calories from fat"
+              },
+              "cholesterol": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Cholesterol (mg)"
+              },
+              "transFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Trans fat (g)"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    "sides": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "List of the menu items and nutrition facts in the Sides category",
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "description": "Information on menu item and its nutrition",
+        "properties": {
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Name of the menu item"
+          },
+          "nutritionalFacts": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "description": "Nutrition facts for the menu item",
+            "properties": {
+              "carbs": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Carbs (g)"
+              },
+              "sodium": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Sodium (mg)"
+              },
+              "totalFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Total fat (g)"
+              },
+              "sugar": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Sugar (g)"
+              },
+              "saturatedFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Saturated fat (g)"
+              },
+              "protein": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Protein (g)"
+              },
+              "cholesterol": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Cholesterol (mg)"
+              },
+              "transFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Trans fat (g)"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    "breakfast": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "List of the menu items and nutrition facts in the Breakfast category",
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "description": "Information on menu item and its nutrition",
+        "properties": {
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Name of the menu item"
+          },
+          "nutritionalFacts": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "description": "Nutrition facts for the menu item",
+            "properties": {
+              "fiber": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Fiber (g)"
+              },
+              "carbs": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Carbs (g)"
+              },
+              "calories": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Calories"
+              },
+              "sugar": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Sugar (g)"
+              },
+              "sodium": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Sodium (mg)"
+              },
+              "saturatedFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Saturated fat (g)"
+              },
+              "totalFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Total fat (g)"
+              },
+              "protein": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Protein (g)"
+              },
+              "caloriesFromFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Calories from fat"
+              },
+              "cholesterol": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Cholesterol (mg)"
+              },
+              "transFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Trans fat (g)"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    "sandwiches": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Name of the menu item"
+          },
+          "nutritionalFacts": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "properties": {
+              "carbs": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Carbs (g)"
+              },
+              "fiber": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Fiber (g)"
+              },
+              "protein": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Protein (g)"
+              },
+              "calories": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Calories"
+              },
+              "transFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Trans fat (g)"
+              },
+              "cholesterol": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Cholesterol (mg)"
+              },
+              "saturatedFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Saturated fat (g)"
+              }
+            },
+            "description": "Nutrition facts for the menu item",
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        "description": "Information on menu item and its nutrition",
+        "additionalProperties": false
+      },
+      "description": "List of the menu items and nutrition facts in the Sandwiches category"
+    },
+    "fries": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Name of the menu item"
+          },
+          "nutritionalFacts": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "properties": {
+              "protein": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Protein (g)"
+              },
+              "calories": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Calories"
+              },
+              "cholesterol": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Cholesterol (mg)"
+              },
+              "saturatedFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Saturated fat (g)"
+              }
+            },
+            "description": "Nutrition facts for the menu item",
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        "description": "Information on menu item and its nutrition",
+        "additionalProperties": false
+      },
+      "description": "List of the menu items and nutrition facts in the Fries category"
+    },
+    "drinks": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "List of the menu items and nutrition facts in the Drinks category",
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "description": "Information on menu item and its nutrition",
+        "properties": {
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Name of the menu item"
+          },
+          "nutritionalFacts": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "description": "Nutrition facts for the menu item",
+            "properties": {
+              "fiber": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Fiber (g)"
+              },
+              "carbs": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Carbs (g)"
+              },
+              "calories": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Calories"
+              },
+              "sugar": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Sugar (g)"
+              },
+              "totalFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Total fat (g)"
+              },
+              "sodium": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Sodium (mg)"
+              },
+              "saturatedFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Saturated fat (g)"
+              },
+              "protein": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Protein (g)"
+              },
+              "caloriesFromFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Calories from fat"
+              },
+              "cholesterol": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Cholesterol (mg)"
+              },
+              "transFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Trans fat (g)"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    "dipsSpreads": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "List of the menu items and nutrition facts in the Dips + Spreads category",
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "description": "Information on menu item and its nutrition",
+        "properties": {
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Name of the menu item"
+          },
+          "nutritionalFacts": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "description": "Nutrition facts for the menu item",
+            "properties": {
+              "fiber": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Fiber (g)"
+              },
+              "carbs": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Carbs (g)"
+              },
+              "calories": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Calories"
+              },
+              "sugar": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Sugar (g)"
+              },
+              "saturatedFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Saturated fat (g)"
+              },
+              "sodium": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Sodium (mg)"
+              },
+              "totalFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Total fat (g)"
+              },
+              "protein": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Protein (g)"
+              },
+              "caloriesFromFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Calories from fat"
+              },
+              "cholesterol": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Cholesterol (mg)"
+              },
+              "transFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Trans fat (g)"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    "salads": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "List of the menu items and nutrition facts in the Salads category",
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "description": "Information on menu item and its nutrition",
+        "properties": {
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Name of the menu item"
+          },
+          "nutritionalFacts": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "description": "Nutrition facts for the menu item",
+            "properties": {
+              "carbs": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Carbs (g)"
+              },
+              "fiber": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Fiber (g)"
+              },
+              "calories": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Calories"
+              },
+              "sugar": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Sugar (g)"
+              },
+              "sodium": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Sodium (mg)"
+              },
+              "saturatedFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Saturated fat (g)"
+              },
+              "protein": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Protein (g)"
+              },
+              "caloriesFromFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Calories from fat"
+              },
+              "cholesterol": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Cholesterol (mg)"
+              },
+              "transFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Trans fat (g)"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    "wraps": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "List of the menu items and nutrition facts in the Wraps category",
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "description": "Information on menu item and its nutrition",
+        "properties": {
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Name of the menu item"
+          },
+          "nutritionalFacts": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "description": "Nutrition facts for the menu item",
+            "properties": {
+              "fiber": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Fiber (g)"
+              },
+              "carbs": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Carbs (g)"
+              },
+              "calories": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Calories"
+              },
+              "sugar": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Sugar (g)"
+              },
+              "sodium": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Sodium (mg)"
+              },
+              "totalFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Total fat (g)"
+              },
+              "saturatedFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Saturated fat (g)"
+              },
+              "protein": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Protein (g)"
+              },
+              "caloriesFromFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Calories from fat"
+              },
+              "cholesterol": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Cholesterol (mg)"
+              },
+              "transFat": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Trans fat (g)"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    "restaurant": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "Name of the restaurant offering the menu items"
+    }
+  },
+  "required": [],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

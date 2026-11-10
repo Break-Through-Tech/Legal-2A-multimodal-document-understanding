@@ -1,0 +1,87 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "transactions": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Quarterly real estate transcations by property class.",
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "period": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "The period in the format Q[1-4]-YYYY (e.g., Q1-2017)."
+          },
+          "value": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "The value of the transaction in millions."
+          },
+          "category": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "The category of the transaction (e.g., Multifamily Housing)."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    "transactionsByCity": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Total Real estate transcations by city.",
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "year": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "The year in YYYY format (e.g. 2017)."
+          },
+          "value": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Total value transactions in millions."
+          },
+          "city": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "City name"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

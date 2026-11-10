@@ -1,0 +1,166 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "lessee": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "state": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "streetAddress": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "name": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "premises": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "squareFeet": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "streetAddress": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "spaceType": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "enum": [
+            "Industrial Space",
+            "Office Space",
+            "Retail Space",
+            "Warehouse"
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "rent": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "securityDeposit": {
+          "type": [
+            "null",
+            "number"
+          ]
+        },
+        "monthlyAmount": {
+          "type": [
+            "null",
+            "number"
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "date": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "Date of the lease, formatted as YYYY-MM-DD"
+    },
+    "lease": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "startDate": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Start date of the lease, formatted as YYYY-MM-DD"
+        },
+        "months": {
+          "type": [
+            "null",
+            "number"
+          ]
+        },
+        "years": {
+          "type": [
+            "null",
+            "number"
+          ]
+        },
+        "endDate": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "End date of the lease, formatted as YYYY-MM-DD"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "lessor": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "state": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "streetAddress": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "name": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  "required": [],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

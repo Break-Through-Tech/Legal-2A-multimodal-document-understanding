@@ -1,0 +1,137 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "overallStatus": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "nextInspectionDue": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "passedInspection": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "equipmentInfo": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "model": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "department": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "equipmentId": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "inspectionDate": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "inspector": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "checkpoints": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "items": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "properties": {
+                "notes": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "checkpoint": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "status": {
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "enum": [
+                    "defective",
+                    "fail",
+                    "functional",
+                    "na",
+                    "needsService",
+                    "pass"
+                  ]
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            }
+          },
+          "category": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

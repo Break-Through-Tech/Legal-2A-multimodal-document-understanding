@@ -1,0 +1,317 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "items": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "type": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "enum": [
+              "Cable Assembly",
+              "Control System",
+              "Junction Box",
+              "LED Driver",
+              "LED Luminaire",
+              "Mounting Bracket",
+              "Power Supply",
+              "Sensor Module"
+            ]
+          },
+          "reference": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "brand": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "enum": [
+              "ABB",
+              "Legrand",
+              "Lutron",
+              "Mean Well",
+              "Osram",
+              "Philips",
+              "Schneider Electric",
+              "Siemens"
+            ]
+          },
+          "unit": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "enum": [
+              "pcs",
+              "set",
+              "unit"
+            ]
+          },
+          "productSpecsJson": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "properties": {
+              "power": {
+                "type": [
+                  "null",
+                  "object"
+                ],
+                "properties": {
+                  "efficiency": {
+                    "type": [
+                      "null",
+                      "number"
+                    ],
+                    "description": "Efficiency in percentage, 0-100"
+                  },
+                  "inputVoltage": {
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "enum": [
+                      "100-240v",
+                      "100-277v",
+                      "220-240v"
+                    ]
+                  },
+                  "powerFactor": {
+                    "type": [
+                      "null",
+                      "number"
+                    ]
+                  },
+                  "watts": {
+                    "type": [
+                      "null",
+                      "number"
+                    ]
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              },
+              "ratings": {
+                "type": [
+                  "null",
+                  "object"
+                ],
+                "properties": {
+                  "protection": {
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "enum": [
+                      "ip65",
+                      "ip66",
+                      "ip67"
+                    ]
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              },
+              "physical": {
+                "type": [
+                  "null",
+                  "object"
+                ],
+                "properties": {
+                  "material": {
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "enum": [
+                      "aluminum",
+                      "plastic",
+                      "steel"
+                    ]
+                  },
+                  "mountingType": {
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "enum": [
+                      "recessed",
+                      "surface",
+                      "track"
+                    ]
+                  },
+                  "weight": {
+                    "type": [
+                      "null",
+                      "number"
+                    ]
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "sn": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "quantity": {
+            "type": [
+              "null",
+              "number"
+            ]
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    "header": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "to": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "properties": {
+            "reference": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "tel": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "email": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "vatNumber": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "attention": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "companyName": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "location": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "date": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "from": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "properties": {
+            "reference": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "tel": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "email": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "vatNumber": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "companyName": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "location": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "projectName": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  "required": [],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

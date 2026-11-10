@@ -1,0 +1,106 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "weekStartDate": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "facility": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "title": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "employees": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "shifts": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "properties": {
+                "hours": {
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "description": "Shift hours, ex. 07:00-15:00. Only required for Morning, Afternoon, and Night."
+                },
+                "type": {
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "enum": [
+                    "Afternoon",
+                    "Leave",
+                    "Morning",
+                    "Night",
+                    "empty"
+                  ]
+                },
+                "notes": {
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "description": "Notes for the shift. Only required for Leave."
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            }
+          },
+          "employeeId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "employeeName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "department": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

@@ -1,0 +1,624 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "address": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "address1": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Address line one. Excludes Suites / Apartment numbers."
+        },
+        "address2": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Address line two"
+        },
+        "state": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "zipCode": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "city": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "dependents": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "List of dependents and their information. Return null if there are no dependents.",
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "childTaxCredit": {
+            "type": [
+              "boolean",
+              "null"
+            ],
+            "description": "Does the dependent qualify for child tax credit. Return false unless box is checked"
+          },
+          "firstName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "relationship": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "ssn": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Dependent social security number. Return in the following format: 123-45-6789"
+          },
+          "lastName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "otherCredit": {
+            "type": [
+              "boolean",
+              "null"
+            ],
+            "description": "Does the dependent qualify for other credit. Return false unless box is checked"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    "taxPeriod": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "taxDateEnd": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Month and day tax year end (ex: 12/31)"
+        },
+        "taxYearEnd": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Last 2 digits of the tax year (ex: 22)"
+        },
+        "taxDateStart": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Month and day tax year start (ex: 1/01)"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "standardDeductions": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "description": "Standard Deductions.",
+      "properties": {
+        "youAreDependent": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Someone can claim you as a dependent. Return false unless box is checked."
+        },
+        "spouseIsDependent": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Someone can claim your spouse as a dependent. Return false unless box is checked."
+        },
+        "spouseItemizes": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Spouse itemizes on a separate return. Return false unless box is checked."
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "digitalAssets": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Receive, sell, exchange, or otherwise dispose of digital assets"
+    },
+    "ageBlindness": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "description": "Taxpayer and Spouse age and blindess classification.",
+      "properties": {
+        "spouseBlind": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Spouse is blind. Return false unless box is checked."
+        },
+        "spouseBornBeforeJanuary": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Spouse born before January 2, 1960. Return false unless box is checked."
+        },
+        "bornBeforeJanuary": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Taxpayer born before January 2, 1960. Return false unless box is checked."
+        },
+        "blind": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Taxpayer is blind. Return false unless box is checked."
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "personalInfo": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "lastName": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "middleInitial": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "firstName": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Taxpayer first name. Exclude middle initial."
+        },
+        "ssn": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Primary social security number. Always return in the following format: 123-45-6789"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "filingStatus": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "description": "Taxpayer filing status.",
+      "properties": {
+        "nonResident": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "If treating a nonresident alien or dual-status alien spouse as a U.S. resident for the entire tax year. Return false unless box is checked."
+        },
+        "QSS": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Qualifying surviving spouse. Return false unless box is checked."
+        },
+        "MFS": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Married filing separately. Return false unless box is checked."
+        },
+        "HOH": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Head of household. Return false unless box is checked."
+        },
+        "MFJ": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Married filing jointly. Return false unless box is checked."
+        },
+        "single": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Single. Return false unless box is checked."
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "income": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "description": "Income items from Form 1040",
+      "properties": {
+        "line13": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "Qualified business income deduction "
+        },
+        "line1": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "properties": {
+            "b": {
+              "type": [
+                "null",
+                "number"
+              ],
+              "description": "Household employee wages not reported on Form W-2."
+            },
+            "e": {
+              "type": [
+                "null",
+                "number"
+              ],
+              "description": "Taxable dependent care benefits from Form 2441."
+            },
+            "c": {
+              "type": [
+                "null",
+                "number"
+              ],
+              "description": "Tip income not reported on line 1a."
+            },
+            "h": {
+              "type": [
+                "null",
+                "number"
+              ],
+              "description": "Other earned income."
+            },
+            "g": {
+              "type": [
+                "null",
+                "number"
+              ],
+              "description": "Wages from Form 8919."
+            },
+            "d": {
+              "type": [
+                "null",
+                "number"
+              ],
+              "description": "Medicaid waiver payments not reported on Form W-2"
+            },
+            "i": {
+              "type": [
+                "null",
+                "number"
+              ],
+              "description": "Nontaxable combat pay election."
+            },
+            "a": {
+              "type": [
+                "null",
+                "number"
+              ],
+              "description": "Total amount from Form W-2 box 1."
+            },
+            "f": {
+              "type": [
+                "null",
+                "number"
+              ],
+              "description": "Employer-provided adoption benefits from Form 8839."
+            },
+            "z": {
+              "type": [
+                "null",
+                "number"
+              ],
+              "description": "Total of lines 1a through 1h"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "line8": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "Additional income from Schedule 1"
+        },
+        "line5": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "properties": {
+            "a": {
+              "type": [
+                "null",
+                "number"
+              ],
+              "description": "Pensions and annuities."
+            },
+            "b": {
+              "type": [
+                "null",
+                "number"
+              ],
+              "description": "Taxable amount."
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "line3": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "properties": {
+            "a": {
+              "type": [
+                "null",
+                "number"
+              ],
+              "description": "Qualified dividends."
+            },
+            "b": {
+              "type": [
+                "null",
+                "number"
+              ],
+              "description": "Ordinary dividends."
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "line7": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "Capital gain or loss"
+        },
+        "line12": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "Standard deduction or itemized deductions"
+        },
+        "line6": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "properties": {
+            "b": {
+              "type": [
+                "null",
+                "number"
+              ],
+              "description": "Taxable amount."
+            },
+            "a": {
+              "type": [
+                "null",
+                "number"
+              ],
+              "description": "Social security benefits."
+            },
+            "c": {
+              "type": [
+                "boolean",
+                "null"
+              ],
+              "description": "Whether the taxpayer elected to use the lump sum election method. Return false unless box is checked."
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "line4": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "properties": {
+            "b": {
+              "type": [
+                "null",
+                "number"
+              ],
+              "description": "Taxable amount."
+            },
+            "a": {
+              "type": [
+                "null",
+                "number"
+              ],
+              "description": "IRA distributions."
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "line15": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "Taxpayer taxable income"
+        },
+        "line9": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "Taxpayer total income"
+        },
+        "line11": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "Taxpayer adjusted gross income"
+        },
+        "line14": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "Total of lines 12 and 13"
+        },
+        "line10": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "Adjustments to income from Schedule 1"
+        },
+        "line2": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "properties": {
+            "b": {
+              "type": [
+                "null",
+                "number"
+              ],
+              "description": "Taxable interest."
+            },
+            "a": {
+              "type": [
+                "null",
+                "number"
+              ],
+              "description": "Tax-exempt interest."
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "spouse": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "spouseLastName": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "spouseFirstName": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Spouse first name. Exclude middle initial"
+        },
+        "spouseSsn": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Spouse social security number. Return in the following format: 123-45-6789"
+        },
+        "spouseMiddleInitial": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  "required": [],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

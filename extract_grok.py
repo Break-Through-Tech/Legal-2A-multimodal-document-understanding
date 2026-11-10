@@ -1,8 +1,10 @@
-"""Extraction with Grok (xAI API, OpenAI-compatible) + jsonschema validation + field-level scoring.
-Env vars:  XAI_API_KEY (required), GROK_MODEL (required, a vision-capable Grok model id from your xAI console),
-           XAI_BASE_URL (optional, default https://api.x.ai/v1)
+"""Extraction with a vision LLM through an OpenAI-compatible API (default: Groq) + jsonschema validation + field scoring.
+Set in .env:  LLM_API_KEY=gsk_...   LLM_MODEL=<vision model id>   LLM_BASE_URL (optional, default Groq)
+(Old names XAI_API_KEY / GROQ_API_KEY / GROK_MODEL / XAI_BASE_URL still work.)
 """
-import os, io, re, json, base64
+import os, io, re, json, base64, time
+from dotenv import load_dotenv
+load_dotenv()
 from jsonschema import Draft7Validator
 
 SYSTEM = ("You extract data from a document image into JSON. Return ONLY one JSON object that follows the given schema. "
@@ -10,7 +12,9 @@ SYSTEM = ("You extract data from a document image into JSON. Return ONLY one JSO
 
 def make_client():
     from openai import OpenAI
-    return OpenAI(api_key=os.environ["XAI_API_KEY"], base_url=os.environ.get("XAI_BASE_URL", "https://api.x.ai/v1"))
+    key = os.environ.get("LLM_API_KEY") or os.environ.get("GROQ_API_KEY") or os.environ["XAI_API_KEY"]
+    base = os.environ.get("LLM_BASE_URL") or os.environ.get("XAI_BASE_URL") or "https://api.groq.com/openai/v1"
+    return OpenAI(api_key=key, base_url=base)
 
 def image_to_data_url(img, max_side=2000):
     img = img.convert("RGB")
@@ -32,19 +36,37 @@ def filled_ratio(obj):
     leaves = list(flatten(obj).values())
     return (sum(v not in (None, "", [], {}) for v in leaves) / len(leaves)) if leaves else 0.0
 
+def call_llm(client, **kw):
+    """Chat call that waits and retries when the provider says 'rate limit' (429)."""
+    for attempt in range(6):
+        try:
+            return client.chat.completions.create(**kw)
+        except Exception as e:
+            if "429" not in str(e) and "RateLimit" not in type(e).__name__: raise
+            m = re.search(r"try again in ([\d.]+)\s*(ms|s|m)", str(e))
+            wait = (float(m.group(1)) * {"ms": .001, "s": 1, "m": 60}[m.group(2)] + 1) if m else 20 * (attempt + 1)
+            print(f"  rate limited, waiting {wait:.0f}s (attempt {attempt + 1}/6)"); time.sleep(min(wait, 90))
+    raise RuntimeError("still rate limited after 6 tries")
+
 def extract(img, schema, client=None, model=None, retries=1):
-    client = client or make_client(); model = model or os.environ["GROK_MODEL"]
+    client = client or make_client(); model = model or os.environ.get("LLM_MODEL") or os.environ["GROK_MODEL"]
     url = image_to_data_url(img); validator = Draft7Validator(schema)
     user = [{"type": "text", "text": "Schema:\n" + json.dumps(schema)}, {"type": "image_url", "image_url": {"url": url, "detail": "high"}}]
     msgs = [{"role": "system", "content": SYSTEM}, {"role": "user", "content": user}]
     data, errors, raw = None, [], ""
     for attempt in range(retries + 1):
-        resp = client.chat.completions.create(model=model, messages=msgs, temperature=0, response_format={"type": "json_object"})
+        resp = call_llm(client, model=model, messages=msgs, temperature=0, response_format={"type": "json_object"},
+                        max_tokens=int(os.environ.get("LLM_MAX_TOKENS", 900)))
         raw = resp.choices[0].message.content or ""
         try:
-            data = parse_json(raw); errors = [f"{'/'.join(map(str, e.path)) or '<root>'}: {e.message}" for e in validator.iter_errors(data)]
+            data = parse_json(raw)
         except Exception as e:
             data, errors = None, [f"not valid JSON: {e}"]
+        else:
+            try:
+                errors = [f"{'/'.join(map(str, e.path)) or '<root>'}: {e.message}" for e in validator.iter_errors(data)]
+            except Exception as e:                       # the SCHEMA is broken, not the answer: retrying cannot help
+                return dict(data=data, valid=False, errors=[f"SCHEMA PROBLEM: {str(e)[:200]}"], raw=raw, filled=filled_ratio(data))
         if not errors: break
         msgs += [{"role": "assistant", "content": raw}, {"role": "user", "content": "That failed validation:\n" + "\n".join(errors[:10]) + "\nReturn corrected JSON only."}]
     return dict(data=data, valid=not errors, errors=errors, raw=raw, filled=filled_ratio(data) if data is not None else 0.0)
@@ -73,3 +95,15 @@ def field_accuracy(pred, truth):
     if not t: return None
     p = {k: norm(v) for k, v in flatten(pred or {}).items()}
     return sum(p.get(k) == v for k, v in t.items()) / len(t)
+
+
+def value_recall(pred, truth):
+    """Order-free score: share of the answer key's values that appear ANYWHERE in the prediction (ignores field names and list positions).
+    If this is much higher than field_accuracy, the model found the values but put them in the wrong place/position."""
+    t = [norm(v) for v in flatten(truth).values() if v not in (None, "", [], {})]
+    if not t: return None
+    bag = [norm(v) for v in flatten(pred or {}).values() if v not in (None, "", [], {})]
+    hit = 0
+    for v in t:
+        if v in bag: bag.remove(v); hit += 1
+    return hit / len(t)

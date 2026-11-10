@@ -23,6 +23,7 @@ jsonschema
 joblib
 torch
 transformers
-anthropic
 streamlit
 sentencepiece   # SigLIP processor needs it
+python-dotenvopenai
+python-dotenv

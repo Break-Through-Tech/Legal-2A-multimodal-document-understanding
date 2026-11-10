@@ -1,0 +1,725 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "reviewOfSymptoms": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "description": "Indicates if specific symptoms are present or not",
+      "properties": {
+        "blurredVision": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has experienced blurred vision, must return true or false"
+        },
+        "allergies": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has allergies, must return true or false"
+        },
+        "tuberculosisExposure": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has been exposed to tuberculosis, must return true or false"
+        },
+        "shortnessOfBreath": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has experienced shortness of breath, must return true or false"
+        },
+        "fatigue": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has experienced fatigue, must return true or false"
+        },
+        "coughingUpBlood": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has coughed up blood, must return true or false"
+        },
+        "hearingLoss": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has experienced hearing loss, must return true or false"
+        },
+        "calfPain": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has experienced calf pain, must return true or false"
+        },
+        "jointSwelling": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has experienced joint swelling, must return true or false"
+        },
+        "blackOuts": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has experienced blackouts, must return true or false"
+        },
+        "dentalProblems": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has experienced dental problems, must return true or false"
+        },
+        "eyePain": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has experienced eye pain, must return true or false"
+        },
+        "excessiveThirst": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has experienced excessive thirst, must return true or false"
+        },
+        "difficultyEmptyingBowelOrBladder": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has difficulty emptying their bowel or bladder, must return true or false"
+        },
+        "chills": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has experienced chills, must return true or false"
+        },
+        "stomachTroubleOrUlcers": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has experienced stomach trouble or ulcers, must return true or false"
+        },
+        "doubleVision": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has experienced double vision, must return true or false"
+        },
+        "headaches": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has experienced headaches, must return true or false"
+        },
+        "fever": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has experienced a fever, must return true or false"
+        },
+        "enlargedGlands": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has experienced enlarged glands, must return true or false"
+        },
+        "seizures": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has experienced seizures, must return true or false"
+        },
+        "irregularHeartRate": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has experienced an irregular heart rate, must return true or false"
+        },
+        "musclePain": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has experienced muscle pain, must return true or false"
+        },
+        "coughing": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has experienced persistent coughing, must return true or false"
+        },
+        "excessiveBruising": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has experienced excessive bruising, must return true or false"
+        },
+        "weightGainOrLossGreaterThan10Lbs": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has experienced weight gain or loss greater than 10 pounds, must return true or false"
+        },
+        "chestPain": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has experienced chest pain, must return true or false"
+        },
+        "excessiveStress": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has experienced excessive stress, must return true or false"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "address": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "Street address of the patient as it appears, only including number and street"
+    },
+    "firstName": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "Patient's first name"
+    },
+    "phone": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "Patient's phone number as it appears"
+    },
+    "spousePhone": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "Spouse's phone number as it appear"
+    },
+    "maritalStatus": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "Patient's marital status"
+    },
+    "lastName": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "Patient's last name"
+    },
+    "dob": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "Patient's date of birth as it appears"
+    },
+    "isHospitalized": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Indicates if patient has been hospitalized in the past year, must return true or false"
+    },
+    "socialHistory": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "description": "Overview of patient's social history",
+      "properties": {
+        "packsPerWeek": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "If applicable, number of packs per week"
+        },
+        "doYouExercise": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient exercises regularly, must return true or false"
+        },
+        "socialSupportSystem": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient has a social support system, must return true or false"
+        },
+        "doYouDrink": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient drinks, must return true or false"
+        },
+        "exercisePerWeek": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "If applicable, number of exercise sessions per week"
+        },
+        "doYouSmoke": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient smokes, must return true or false"
+        },
+        "drinksPerWeek": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "If applicable, number of drinks per week"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "city": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "Patient's city as it appears"
+    },
+    "isNewTherapy": {
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Indicates if requested medicine is new, must return true or false"
+    },
+    "previousHealthHistory": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "description": "Details of patient's previous health history",
+      "properties": {
+        "receivedChiropracticCare": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient received chiropractic care, must return true or false"
+        },
+        "overTheCounterDrugs": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "description": "List of over-the-counter drugs that patient uses, must return null if not provided",
+          "items": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "vitaminsOrSupplements": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "description": "List of vitamins or supplements that patient takes, must return null if not provided",
+          "items": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "accidentsOrInjuries": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "description": "List of accidents or injuries that patient has experienced, must return null if not provided",
+          "items": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "primaryCarePhysician": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Name of primary care physician"
+        },
+        "lastSeenDate": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Date last seen by physician"
+        },
+        "receivedAcupunctureCare": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "Indicates if patient received acupuncture care, must return true or false"
+        },
+        "prescriptionDrugs": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "description": "Details of prescription drugs currently taken",
+          "properties": {
+            "birthControlPills": {
+              "type": [
+                "boolean",
+                "null"
+              ],
+              "description": "Indicates if patient uses birth control, must return true or false"
+            },
+            "antidepressants": {
+              "type": [
+                "boolean",
+                "null"
+              ],
+              "description": "Indicates if patient uses antidepressants, must return true or false"
+            },
+            "sleepingPills": {
+              "type": [
+                "boolean",
+                "null"
+              ],
+              "description": "Indicates if patient uses sleeping pills, must return true or false"
+            },
+            "muscleRelaxers": {
+              "type": [
+                "boolean",
+                "null"
+              ],
+              "description": "Indicates if patient uses muscle relaxers, must return true or false"
+            },
+            "insulin": {
+              "type": [
+                "boolean",
+                "null"
+              ],
+              "description": "Indicates if patient uses insulin, must return true or false"
+            },
+            "bloodSugarMedication": {
+              "type": [
+                "boolean",
+                "null"
+              ],
+              "description": "Indicates if patient uses blood sugar medication, must return true or false"
+            },
+            "dietPills": {
+              "type": [
+                "boolean",
+                "null"
+              ],
+              "description": "Indicates if patient uses diet pills, must return true or false"
+            },
+            "antiInflammatory": {
+              "type": [
+                "boolean",
+                "null"
+              ],
+              "description": "Indicates if patient uses anti-inflammatories, must return true or false"
+            },
+            "other": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "description": "List of other prescription drugs that patient uses, must return null if not provided",
+              "items": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            },
+            "bloodPressureMedication": {
+              "type": [
+                "boolean",
+                "null"
+              ],
+              "description": "Indicates if patient uses blood pressure medication, must return true or false"
+            },
+            "painPills": {
+              "type": [
+                "boolean",
+                "null"
+              ],
+              "description": "Indicates if patient uses pain pills, must return true or false"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "state": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "Patient's state as it appears"
+    },
+    "zip": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "Patient's ZIP code as it appears"
+    },
+    "familyHealthHistory": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Patient's family health history, must return null if not provided",
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "relation": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Relation to patient"
+          },
+          "ageAtDeath": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "If applicable, age at death"
+          },
+          "chronicHealthProblems": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "description": "List of chronic health problems, must return null if not provided",
+            "items": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          },
+          "ageIfLiving": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Age if living"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    "spouseName": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "Spouse's name"
+    },
+    "financialResponsibility": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "description": "Details of financial responsibility for the patient",
+      "properties": {
+        "responsibleParty": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Person responsible for financial payments",
+          "enum": [
+            "Employer",
+            "Insurance",
+            "Other",
+            "Self",
+            "Spouse"
+          ]
+        },
+        "patientSignature": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "description": "Details of the patient's signature",
+          "properties": {
+            "date": {
+              "type": [
+                "null",
+                "string"
+              ],
+              "description": "Date the patient signed the form"
+            },
+            "isSigned": {
+              "type": [
+                "boolean",
+                "null"
+              ],
+              "description": "Indicates if the patient has signed the form, must return true or false"
+            },
+            "socialSecurityNumber": {
+              "type": [
+                "null",
+                "string"
+              ],
+              "description": "Patient's social security number if the form is signed"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "insuranceCompanyDetails": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "description": "Details of the patient's insurance",
+          "properties": {
+            "address": {
+              "type": [
+                "null",
+                "string"
+              ],
+              "description": "Street address of the insurance as it appears, only including number and street"
+            },
+            "phone": {
+              "type": [
+                "null",
+                "string"
+              ],
+              "description": "Phone number of the insurance as it appears"
+            },
+            "name": {
+              "type": [
+                "null",
+                "string"
+              ],
+              "description": "Name of the insurance"
+            },
+            "memberId": {
+              "type": [
+                "null",
+                "string"
+              ],
+              "description": "Member ID of the insurance policyholder"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "guardianSignature": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "required": [],
+          "properties": {
+            "isSigned": {
+              "type": [
+                "boolean",
+                "null"
+              ],
+              "description": "Indicates if guardian has signed the form, must return true or false"
+            },
+            "socialSecurityNumber": {
+              "type": [
+                "null",
+                "string"
+              ],
+              "description": "Guardian's social security number if the form is signed"
+            }
+          },
+          "description": "If applicable, details of guardian's signature",
+          "additionalProperties": false
+        },
+        "typeOfInsurance": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Type of insurance coverage",
+          "enum": [
+            "Automobile",
+            "Health",
+            "Worker\u2019s Comp"
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  "required": [],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

@@ -1,0 +1,386 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "clientServices": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "description": "Client representative",
+      "properties": {
+        "consultantId": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Client representative id"
+        },
+        "address": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Full address of the client representative"
+        },
+        "consultantName": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Full name of the client representative"
+        },
+        "contactInfo": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Phone number of the client representative"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "tableData": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "assetClass": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "oneDayChange": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "closingPrice": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "ytdPriceChange": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "symbol": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "etfName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "avgDailyVolume": {
+            "type": [
+              "null",
+              "number"
+            ]
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    "accountInfo": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "description": "Summary of account settings and investment elections",
+      "properties": {
+        "primaryBeneficiary": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Primary beneficiary designation",
+          "enum": [
+            "Charity",
+            "Estate",
+            "Individual",
+            "Trust"
+          ]
+        },
+        "premiumMethod": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Amortize premium on taxable bonds based on Constant Yield Method",
+          "enum": [
+            "NO",
+            "YES"
+          ]
+        },
+        "mutualFunds": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Default tax disposition method for Mutual Funds",
+          "enum": [
+            "AVERAGE",
+            "FIFO",
+            "LIFO",
+            "Specific"
+          ]
+        },
+        "contingentBeneficiary": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Contingent beneficiary designation",
+          "enum": [
+            "Charity",
+            "Estate",
+            "Individual",
+            "None",
+            "Trust"
+          ]
+        },
+        "otherSecurities": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Default Method for all Other Securities",
+          "enum": [
+            "FIFO",
+            "HIFO",
+            "LIFO",
+            "Specific"
+          ]
+        },
+        "discountMethod": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Accrual market discount method for all other bond types",
+          "enum": [
+            "Constant",
+            "Straight"
+          ]
+        },
+        "stocks": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Default Tax Method for Stocks in a Dividend Reinvestment Plan (DRIP)",
+          "enum": [
+            "AVERAGE",
+            "FIFO",
+            "HighCost",
+            "LIFO",
+            "Specific"
+          ]
+        },
+        "includeDiscount": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Include market discount in income annually",
+          "enum": [
+            "Defer",
+            "Include"
+          ]
+        },
+        "marginCallNotification": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Method of notification for margin calls",
+          "enum": [
+            "Email",
+            "None",
+            "Phone Call",
+            "Text"
+          ]
+        },
+        "autoReinvest": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Automatically reinvest dividends",
+          "enum": [
+            "NO",
+            "YES"
+          ]
+        },
+        "shortSellingEligibility": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Permission to short-sell securities",
+          "enum": [
+            "Allowed",
+            "Not Allowed"
+          ]
+        },
+        "marginLimit": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Margin limit relative to total portfolio value",
+          "enum": [
+            "25%",
+            "30%",
+            "40%",
+            "50%"
+          ]
+        },
+        "sweepVehicle": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Default sweep vehicle for uninvested cash",
+          "enum": [
+            "Bank Sweep",
+            "Money Market Fund",
+            "Treasury Fund"
+          ]
+        },
+        "sweepFrequency": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Frequency of cash sweep into selected vehicle",
+          "enum": [
+            "Daily",
+            "Monthly",
+            "Weekly"
+          ]
+        },
+        "partialShares": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Allow purchase of fractional shares",
+          "enum": [
+            "NO",
+            "YES"
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "portfolioSummary": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "description": "Overview of the portfolio with balances and changes",
+      "properties": {
+        "currentPeriodBeginningBalance": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "The current starting balance of the portfolio"
+        },
+        "changes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "description": "Summary of portfolio changes. Include only changes. Do not include starting and ending balance in this list.",
+          "items": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "properties": {
+              "yearToDate": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Amount recorded year to date"
+              },
+              "description": {
+                "type": [
+                  "null",
+                  "string"
+                ],
+                "description": "Description of the change"
+              },
+              "currentPeriod": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Amount recorded during the current period"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        "ytdEndingBalance": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "The year to date ending balance of the portfolio"
+        },
+        "ytdBeginningBalance": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "The year to date starting balance of the portfolio"
+        },
+        "currentPeriodEndingBalance": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "The current ending balance of the portfolio"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "institution": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "Name of the financial institution"
+    }
+  },
+  "required": [],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

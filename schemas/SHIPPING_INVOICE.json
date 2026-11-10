@@ -1,0 +1,213 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "documentNumber": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "Unique identifier for the invoice"
+    },
+    "mostRecentShipment": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "description": "Shipment with the most recent date (closest to today's date), always the last item in the list",
+      "properties": {
+        "referenceNumber": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Reference number for the shipment, must return null if not provided"
+        },
+        "baseCharge": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "Base charge for the shipment"
+        },
+        "serviceType": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Type of shipping service used as it appears"
+        },
+        "shipmentNumber": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Unique identifier for the shipment"
+        },
+        "numberOfShipments": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "Total number of shipments"
+        },
+        "date": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Date of the shipment"
+        },
+        "sender": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "properties": {
+            "company": {
+              "type": [
+                "null",
+                "string"
+              ],
+              "description": "Sender's company name as it appears"
+            },
+            "address": {
+              "type": [
+                "null",
+                "string"
+              ],
+              "description": "Street address of the sender as it appears, only including number and street"
+            },
+            "zipCode": {
+              "type": [
+                "null",
+                "string"
+              ],
+              "description": "Zip code of the sender as it appears"
+            },
+            "city": {
+              "type": [
+                "null",
+                "string"
+              ],
+              "description": "City of the sender as it appears, excluding zip code"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "additionalCharges": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "description": "Details of additional charges applied to the shipment",
+          "items": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "properties": {
+              "totalVAT": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Total VAT applied to the additional charge"
+              },
+              "grossValue": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Gross value of the charge, including VAT"
+              },
+              "description": {
+                "type": [
+                  "null",
+                  "string"
+                ],
+                "description": "Description of the additional charge as it appears"
+              },
+              "amount": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Amount of the additional charge"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        "weightInKg": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "Weight of the shipment in kilograms"
+        },
+        "recipient": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "properties": {
+            "company": {
+              "type": [
+                "null",
+                "string"
+              ],
+              "description": "Recipient's company name as it appears"
+            },
+            "address": {
+              "type": [
+                "null",
+                "string"
+              ],
+              "description": "Street address of the recipient as it appears, only including number and street"
+            },
+            "zipCode": {
+              "type": [
+                "null",
+                "string"
+              ],
+              "description": "Zip code of the recipient as it appears"
+            },
+            "city": {
+              "type": [
+                "null",
+                "string"
+              ],
+              "description": "City of the recipient as it appears, excluding zip code"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "clientNumber": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "Unique identifier for the client"
+    },
+    "issueDate": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "Date the invoice was issued"
+    }
+  },
+  "required": [],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

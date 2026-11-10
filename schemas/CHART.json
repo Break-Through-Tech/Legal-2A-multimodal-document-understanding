@@ -1,0 +1,1849 @@
+{
+  "type": [
+    "null",
+    "object"
+  ],
+  "properties": {
+    "geographyRevenue": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "region": {
+            "enum": [
+              "United States",
+              "Europe",
+              "Africa",
+              "South America",
+              "Greater Asia",
+              "South East Asia",
+              "Middle East",
+              "Other"
+            ],
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Name of the region or country group"
+          },
+          "revenueMillions": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Revenue in millions of USD"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "Revenue by geography (in millions USD)"
+    },
+    "rackDensity": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "range": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Rack density bracket in kW (e.g., '1\u20133', '4\u20136', '>50-59')"
+          },
+          "pct2023": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of the 2023 percentage (e.g., 0.20 for 20%)"
+          },
+          "pct2024": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of the 2024 percentage (e.g., 0.17 for 17%)"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "List of rack density brackets and the corresponding percentages for 2023 and 2024"
+    },
+    "byGender": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "group": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Gender group label"
+          },
+          "terminations": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Number of terminations in this group"
+          },
+          "terminationRate": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of termination rate (e.g. 0.29 for 29%)"
+          },
+          "averageHeadcount": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Average headcount for this group"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "2020 termination rates broken down by gender"
+    },
+    "current": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "required": [],
+      "properties": {
+        "direct": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "Direct spend (in billions)."
+        },
+        "directPct": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "Decimal representation of direct spend percentage (e.g., 0.23 means 23%)."
+        },
+        "influenced": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "Influenced spend (in billions)."
+        },
+        "influencedPct": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "Decimal representation of influenced spend percentage."
+        }
+      },
+      "additionalProperties": false
+    },
+    "spendingData": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "year": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "pctChange": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of year-over-year percentage change (e.g. 0.15 means 15%)"
+          },
+          "cpgDigitalAdSpending": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "CPG digital ad spending in billions of USD"
+          },
+          "pctOfTotalDigitalAdSpending": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of share of total digital ad spending (e.g. 0.15 means 15%)"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "CPG digital ad spending data by year"
+    },
+    "current_production_volume": {
+      "type": [
+        "null",
+        "number"
+      ],
+      "description": ""
+    },
+    "interconnectionQueueCapacityByState": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "state": {
+            "enum": [
+              "AL",
+              "AK",
+              "AZ",
+              "AR",
+              "CA",
+              "CO",
+              "CT",
+              "DE",
+              "FL",
+              "GA",
+              "HI",
+              "ID",
+              "IL",
+              "IN",
+              "IA",
+              "KS",
+              "KY",
+              "LA",
+              "ME",
+              "MD",
+              "MA",
+              "MI",
+              "MN",
+              "MS",
+              "MO",
+              "MT",
+              "NE",
+              "NV",
+              "NH",
+              "NJ",
+              "NM",
+              "NY",
+              "NC",
+              "ND",
+              "OH",
+              "OK",
+              "OR",
+              "PA",
+              "RI",
+              "SC",
+              "SD",
+              "TN",
+              "TX",
+              "UT",
+              "VT",
+              "VA",
+              "WA",
+              "WV",
+              "WI",
+              "WY"
+            ],
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "US state abbreviation"
+          },
+          "plannedCapacityMW": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Planned generation capacity in megawatts"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "Top 5 states with planned generation capacity in megawatts (MW). Return only the top 5 states by planned megawatt capacity."
+    },
+    "eduction_investments": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "month": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": ""
+          },
+          "education_type": {
+            "enum": [
+              "preschool",
+              "k-12",
+              "higher",
+              "online",
+              "vocational"
+            ],
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": ""
+          },
+          "investment_amount": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "in millions"
+          }
+        },
+        "description": "",
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    "impactfulOutage": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "required": [],
+      "properties": {
+        "noPct": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "Decimal representation of respondents who did not have an impactful outage"
+        },
+        "yesPct": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "Decimal representation of respondents who had an impactful outage (e.g., 0.53 = 53%)"
+        },
+        "sampleSize": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "Number of respondents to this question"
+        }
+      },
+      "additionalProperties": false
+    },
+    "workloads": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "percentage": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of the percentage (e.g., 0.49 for 49%)"
+          },
+          "workloadName": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Name/description of the workload"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "List of workloads that drive highest density deployments, with associated percentages"
+    },
+    "dataCenters": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "category": {
+            "enum": [
+              "Enterprise data center",
+              "Colocation data center",
+              "Cloud provider",
+              "Other"
+            ],
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Type of data center operator (e.g., 'Enterprise data center')"
+          },
+          "sampleSize": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Number of respondents in this category"
+          },
+          "decreasedPct": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of 'Decreased' percentage"
+          },
+          "remainedSamePct": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of 'Remained the same' percentage"
+          },
+          "slowlyIncreasedPct": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of 'Slowly increased' percentage"
+          },
+          "rapidlyIncreasedPct": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of 'Rapidly increased' percentage"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "constructionLaborForce2022": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "percentage": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of the percentage (e.g., 0.607 for 60.7%)"
+          },
+          "categoryName": {
+            "enum": [
+              "CONSTRUCTION",
+              "SALES_AND_OFFICE",
+              "PRODUCTION_AND_TRANSPORTATION",
+              "MANAGEMENT",
+              "BUSINESS_AND_FINANCIAL",
+              "LEGAL_DESIGN_AND_MEDIA",
+              "INSTALLATION_MAINTENANCE_AND_REPAIR",
+              "COMPUTER_ARCHITECTURE_AND_ENGINEERING",
+              "BUILDING_GROUNDS_AND_SERVICES",
+              "OTHER"
+            ],
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Name of the occupation category"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "Breakdown of the 2022 construction labor force by occupation category, in percentage terms"
+    },
+    "topWorkforceSector": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "description": "The largest employment category (e.g. Sales, Operations, Finance, etc.)"
+    },
+    "productRevenue": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "required": [],
+      "properties": {
+        "segments": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "null",
+              "object"
+            ],
+            "required": [],
+            "properties": {
+              "segmentName": {
+                "type": [
+                  "null",
+                  "string"
+                ],
+                "description": "Name of the product segment"
+              },
+              "revenueBillions": {
+                "type": [
+                  "null",
+                  "number"
+                ],
+                "description": "Revenue for this segment in billions of USD"
+              }
+            },
+            "additionalProperties": false
+          },
+          "description": "Breakdown of revenue by product segment (in billions USD)"
+        },
+        "totalRevenueBillions": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "Total BD revenue in billions of USD"
+        }
+      },
+      "description": "Detailed product/segment breakdown of total BD revenue",
+      "additionalProperties": false
+    },
+    "worldwideAssociates": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "required": [],
+      "properties": {
+        "total": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "Total number of worldwide associates reported"
+        },
+        "menPct": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "Decimal representation of the percentage of men"
+        },
+        "womenPct": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "Decimal representation of the percentage of women"
+        },
+        "notDisclosedPct": {
+          "type": [
+            "null",
+            "number"
+          ],
+          "description": "Decimal representation of the percentage of associates who did not disclose gender"
+        }
+      },
+      "additionalProperties": false
+    },
+    "current_production_efficiency": {
+      "type": [
+        "null",
+        "number"
+      ],
+      "description": ""
+    },
+    "builderLaborShortages": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "occupationName": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Name of the occupation (e.g., 'Carpenters-finished')"
+          },
+          "someShortagePct": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of the 'some shortage' percentage (e.g., 0.46 for 46%)"
+          },
+          "totalShortagePct": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of total shortage (serious + some). Often the chart's final number for that row (e.g., 0.65 for 65%)"
+          },
+          "seriousShortagePct": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of the serious shortage percentage (e.g., 0.19 for 19%)"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "List of builder/construction occupations and their shortage percentages"
+    },
+    "productCategories": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "onlinePct": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of 'preferably on online platforms'"
+          },
+          "physicalPct": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of 'preferably in physical stores'"
+          },
+          "categoryName": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Name of the product category (e.g. 'Food and beverages')"
+          },
+          "noPreferencePct": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of 'no preference'"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "Consumers' preferred shopping format by product category"
+    },
+    "data": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "group": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "net_likely": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "very_likely": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "net_not_likely": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "not_very_likely": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "somewhat_likely": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "not_at_all_likely": {
+            "type": [
+              "null",
+              "number"
+            ]
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    "averagePUEOverTime": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "pue": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Average annual PUE value"
+          },
+          "year": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Four-digit year"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "investmentsPerYear": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "year": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Four-digit year"
+          },
+          "numInvestments": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Number of investments made in that year"
+          },
+          "pctOfTotalCohort": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of the percentage of total cohort (e.g., 0.0054 for 0.54%)"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "Number of investments and percentage of total cohort, broken down by year"
+    },
+    "genZDirectSpend": {
+      "type": [
+        "null",
+        "number"
+      ],
+      "description": "Gen Z's direct spend in 2025 (in billions of USD)."
+    },
+    "trustInAI": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "year": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Four-digit year of the survey"
+          },
+          "noPct": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of respondents who would not trust AI"
+          },
+          "yesPct": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of respondents who would trust AI (e.g., 0.76 for 76%)"
+          },
+          "sampleSize": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Number of respondents for that year"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "Yearly data on trust in AI for operational decisions"
+    },
+    "sampleSize": {
+      "type": [
+        "null",
+        "number"
+      ],
+      "description": "Number of respondents (n)"
+    },
+    "concerns": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "topic": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Name of the concern topic (e.g. 'Cost')"
+          },
+          "notConcernedPct": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of 'not concerned'"
+          },
+          "veryConcernedPct": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of 'very concerned' (e.g., 0.44 for 44%)"
+          },
+          "slightlyConcernedPct": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of 'slightly concerned'"
+          },
+          "somewhatConcernedPct": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of 'somewhat concerned'"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "List of data center concerns along with associated concern levels"
+    },
+    "sampleSize2023": {
+      "type": [
+        "null",
+        "number"
+      ],
+      "description": "Number of respondents in 2023"
+    },
+    "leadershipGenderBreakdown": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "men": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Number of men in this leadership group"
+          },
+          "group": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Name of the leadership group (e.g., 'Board of Directors')"
+          },
+          "women": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Number of women in this leadership group"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "Gender breakdown for board of directors and executive officers"
+    },
+    "workforceByGender": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "male": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Number of male employees in that year rounded to nearest thousand (i.e. 1,234 should be 1000)."
+          },
+          "year": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Four-digit year"
+          },
+          "female": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Number of female employees in that year rounded to nearest thousand (i.e. 8,904 should be 9000)."
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "Data on the workforce split by gender, listed by year. Round all numbers to the nearest thousand."
+    },
+    "sampleSize2024": {
+      "type": [
+        "null",
+        "number"
+      ],
+      "description": "Number of respondents in 2024"
+    },
+    "turnoverRate": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "required": [],
+      "properties": {
+        "byAge": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "required": [],
+          "properties": {
+            "under35Pct": {
+              "type": [
+                "null",
+                "number"
+              ]
+            },
+            "age35to54Pct": {
+              "type": [
+                "null",
+                "number"
+              ]
+            },
+            "age55plusPct": {
+              "type": [
+                "null",
+                "number"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "byGender": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "required": [],
+          "properties": {
+            "malePct": {
+              "type": [
+                "null",
+                "number"
+              ]
+            },
+            "femalePct": {
+              "type": [
+                "null",
+                "number"
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "newHireRate": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "required": [],
+      "properties": {
+        "byAge": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "required": [],
+          "properties": {
+            "under35Pct": {
+              "type": [
+                "null",
+                "number"
+              ],
+              "description": "Decimal representation of new-hire rate for ages 0\u201334"
+            },
+            "age35to54Pct": {
+              "type": [
+                "null",
+                "number"
+              ],
+              "description": "Decimal representation of new-hire rate for ages 35\u201354"
+            },
+            "age55plusPct": {
+              "type": [
+                "null",
+                "number"
+              ],
+              "description": "Decimal representation of new-hire rate for ages 55+"
+            }
+          },
+          "additionalProperties": false
+        },
+        "byGender": {
+          "type": [
+            "null",
+            "object"
+          ],
+          "required": [],
+          "properties": {
+            "malePct": {
+              "type": [
+                "null",
+                "number"
+              ],
+              "description": "Decimal representation of male new-hire rate"
+            },
+            "femalePct": {
+              "type": [
+                "null",
+                "number"
+              ],
+              "description": "Decimal representation of female new-hire rate"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "highestPaidOccupations": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "List of highest paid construction occupations in 2023, showing median pay and top 25% pay (annual salaries in USD).",
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "occupationName": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Name of the occupation",
+            "enum": [
+              "Architectural/Engineering Managers",
+              "BOILERMAKER",
+              "BRICK_BLOCK_MASON",
+              "BUILDING_INSPECTOR",
+              "CARPENTER",
+              "CIS Managers",
+              "CONSTRUCTION_SUPERVISOR",
+              "Chief Executives",
+              "Commercial Pilots",
+              "Compensation/ Benefits Managers",
+              "DRYWALL_INSTALLER",
+              "ELECTRICIAN",
+              "ELEVATOR_INSTALLER_REPAIRER",
+              "Financial Managers",
+              "Human Resources Managers",
+              "IRON_STEEL_WORKER",
+              "Industrial Production Managers",
+              "Lawyers",
+              "Marketing Managers",
+              "OPERATING_ENGINEER",
+              "PILE_DRIVER_OPERATOR",
+              "Purchasing Managers",
+              "SHEET_METAL_WORKER",
+              "STONE_MASON",
+              "Sales Managers",
+              "TAPER"
+            ]
+          },
+          "medianPay": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Median annual pay (in USD). If not available, use null."
+          },
+          "top25PercentPay": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Annual pay (in USD) at or above the 75th percentile (top 25%). If not available, use null."
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    "emissions": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "year": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Four-digit year of GHG emissions data"
+          },
+          "scope1": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Metric tonnes of Scope 1 emissions"
+          },
+          "scope2": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Metric tonnes of Scope 2 emissions"
+          },
+          "scope3": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Metric tonnes of Scope 3 emissions"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "byAge": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "group": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Age group label"
+          },
+          "terminations": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Number of terminations in this group"
+          },
+          "terminationRate": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of termination rate (e.g. 0.29 for 29%)"
+          },
+          "averageHeadcount": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Average headcount for this group"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "2020 termination rates broken down by age group"
+    },
+    "skillGaps": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "pct2023": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of 2023 percentage (e.g., 0.43 for 43%)"
+          },
+          "pct2024": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of 2024 percentage (e.g., 0.39 for 39%)"
+          },
+          "skillArea": {
+            "enum": [
+              "Operations junior",
+              "Electrical",
+              "Operations management",
+              "Mechanical",
+              "Design",
+              "Cloud architecture",
+              "Senior management",
+              "Cabling",
+              "Other"
+            ],
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Name of the skill area (e.g., 'Operations junior / mid-level staff')"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "List of skill areas with respective 2023 and 2024 percentages of organizations experiencing significant gaps"
+    },
+    "sections": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "type": {
+            "enum": [
+              "budgeting",
+              "investing",
+              "retirement_planning",
+              "tax_management",
+              "debt_management"
+            ],
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": ""
+          },
+          "percentage": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": ""
+          }
+        },
+        "description": "",
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    "genderBreakdown": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "group": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Name of the group (e.g., 'Board of Directors')"
+          },
+          "total": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Total individuals in this group (if known)"
+          },
+          "malePct": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of male percentage (e.g., 0.70 means 70%)"
+          },
+          "femalePct": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of female percentage (e.g., 0.30 means 30%)"
+          },
+          "maleCount": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Number of males in this group (if provided)"
+          },
+          "femaleCount": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Number of females in this group (if provided)"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "Gender counts/percentages for various groups (Board, Executives, Management, etc.). Return null if the information is not provided. Do not calculate percentages. Some statistics are reported as percentages and others as counts."
+    },
+    "formatTrust": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "formatName": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Name of the shopping format (e.g., 'Specialty stores and boutiques')"
+          },
+          "percentage": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of the percentage (e.g., 0.72 for 72%)"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "Which format instills the most trust in Mexican consumers"
+    },
+    "expenditures": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "year": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Calendar year of the lobbying expenditures"
+          },
+          "total": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Total US lobbying expenditures in USD"
+          },
+          "distribution": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "required": [],
+              "properties": {
+                "amount": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "description": "Amount spent in USD"
+                },
+                "category": {
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "description": "The category name (e.g., 'Issue-based coalitions')"
+                }
+              },
+              "additionalProperties": false
+            },
+            "description": "Breakdown of expenditure by category"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "channels": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "viewership": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "properties": {
+                "year": {
+                  "type": [
+                    "null",
+                    "number"
+                  ]
+                },
+                "percentage": {
+                  "type": [
+                    "null",
+                    "number"
+                  ]
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    "categoryBreakdown": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "label": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Descriptive label (e.g., 'Negligible', 'Minimal', 'Significant', etc.)"
+          },
+          "percentage": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of the percentage of respondents in that category"
+          },
+          "categoryLevel": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Category level (1 = negligible, 5 = severe)"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "Classification of the most impactful outage on a scale of 1\u20135, along with percentage of total respondents"
+    },
+    "causeBreakdown": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "causeName": {
+            "enum": [
+              "Power",
+              "Cooling",
+              "Network",
+              "IT systems (hardware/software)",
+              "Colocation provider",
+              "Fire",
+              "Fire suppression",
+              "Third-party provider",
+              "Information security-related",
+              "Not known",
+              "Other"
+            ],
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Name of the outage cause"
+          },
+          "percentage": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of the percentage (e.g. 0.54 for 54%)"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "List of causes for the most recent impactful outage, with associated percentages"
+    },
+    "title": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "regions": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "region": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": ""
+          },
+          "year": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": ""
+          },
+          "production_amount": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": ""
+          },
+          "percentage": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": ""
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    "perceivedBenefits": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "benefit": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Name/description of the benefit"
+          },
+          "percentage": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of respondents citing this benefit (e.g., 0.58 for 58%)"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "List of perceived benefits of using AI in data center operations"
+    },
+    "laborForceByRaceEthnicity": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "required": [],
+        "properties": {
+          "raceEthnicity": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "Name of the racial/ethnic group (e.g. 'Hispanic', 'Non-Hispanic White')"
+          },
+          "allIndustryPct": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of the percentage in all industries (e.g. 0.187 for 18.7%)"
+          },
+          "constructionPct": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": "Decimal representation of the percentage in construction (e.g. 0.311 for 31.1%)"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "Comparison of labor force distribution by race/ethnicity in all industries vs. construction (in percentage terms)."
+    },
+    "prices": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "year": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": ""
+          },
+          "metal": {
+            "enum": [
+              "COPPER",
+              "STEEL"
+            ],
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": ""
+          },
+          "price": {
+            "type": [
+              "null",
+              "number"
+            ],
+            "description": ""
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

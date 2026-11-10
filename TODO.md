@@ -2,6 +2,5 @@
 - Tune C and the review threshold (0.70) on the **val** split; report test once.
 - Jina v4 vs SigLIP comparison / ensemble.
 - Extraction prompt tuning (null handling, number formats, few-shot); try structured outputs; smarter field-accuracy metric.
-- Per-type schema for the app: dataset schemas are per document, so the app uses one example schema per type (inexact for multi-schema types).
 - Image downscale (max side 2000) for extraction may hurt dense documents.
 - Speed: embed_image does 4 SigLIP forward passes on CPU; could skip rotations when angle 0 is confident.
