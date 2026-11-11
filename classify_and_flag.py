@@ -9,7 +9,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import f1_score, accuracy_score
 
 CACHE = Path(sys.argv[1]); SEED = 42
-C, THRESH = 100, 0.70            # first working values, tune later
+C, THRESH = 100, 0.80            # first working values, tune later
 OUT = Path("outputs"); OUT.mkdir(exist_ok=True)
 
 sp = pd.read_csv(CACHE / "split.csv"); y = sp["label"].to_numpy()

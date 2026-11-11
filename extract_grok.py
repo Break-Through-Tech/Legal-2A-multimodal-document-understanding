@@ -36,6 +36,30 @@ def filled_ratio(obj):
     leaves = list(flatten(obj).values())
     return (sum(v not in (None, "", [], {}) for v in leaves) / len(leaves)) if leaves else 0.0
 
+def compact_schema(node, keep_desc=True):
+    """Smaller copy of the schema for the PROMPT only (validation still uses the full schema)."""
+    if isinstance(node, list): return [compact_schema(x, keep_desc) for x in node]
+    if not isinstance(node, dict): return node
+    out = {}
+    for k, v in node.items():
+        if k in ("$schema", "additionalProperties") or (k == "required" and not v): continue
+        if k == "description" and not keep_desc: continue
+        if k == "description": out[k] = str(v)[:80]; continue
+        if k == "type":
+            ts = [t for t in ([v] if isinstance(v, str) else v) if t != "null"]
+            out[k] = ts[0] if len(ts) == 1 else ts; continue
+        if k == "enum": out[k] = [x for x in v if x is not None]; continue
+        out[k] = compact_schema(v, keep_desc) if k in ("properties", "items") else v
+        if k == "properties": out[k] = {p: compact_schema(s, keep_desc) for p, s in v.items()}
+    return out
+
+# (keep descriptions?, longest image side). We start at the first level and move down only if the provider says "request too large".
+LEVELS = [(True, 1600), (False, 1400), (False, 1000), (False, 700)]
+
+def too_large(e):
+    s = str(e).lower()
+    return "413" in s or "request too large" in s
+
 def call_llm(client, **kw):
     """Chat call that waits and retries when the provider says 'rate limit' (429)."""
     for attempt in range(6):
@@ -50,13 +74,29 @@ def call_llm(client, **kw):
 
 def extract(img, schema, client=None, model=None, retries=1):
     client = client or make_client(); model = model or os.environ.get("LLM_MODEL") or os.environ["GROK_MODEL"]
-    url = image_to_data_url(img); validator = Draft7Validator(schema)
-    user = [{"type": "text", "text": "Schema:\n" + json.dumps(schema)}, {"type": "image_url", "image_url": {"url": url, "detail": "high"}}]
-    msgs = [{"role": "system", "content": SYSTEM}, {"role": "user", "content": user}]
+    validator = Draft7Validator(schema)
+    level = 0
+    def base_msgs():
+        keep, side = LEVELS[level]
+        text = "Every field may be null if it is not visible. Schema:\n" + json.dumps(compact_schema(schema, keep), separators=(",", ":"))
+        user = [{"type": "text", "text": text}, {"type": "image_url", "image_url": {"url": image_to_data_url(img, side), "detail": "high"}}]
+        return [{"role": "system", "content": SYSTEM}, {"role": "user", "content": user}]
+    msgs = base_msgs(); history = []
     data, errors, raw = None, [], ""
     for attempt in range(retries + 1):
-        resp = call_llm(client, model=model, messages=msgs, temperature=0, response_format={"type": "json_object"},
-                        max_tokens=int(os.environ.get("LLM_MAX_TOKENS", 900)))
+        while True:
+            try:
+                resp = call_llm(client, model=model, messages=msgs + history, temperature=0, response_format={"type": "json_object"},
+                                max_tokens=int(os.environ.get("LLM_MAX_TOKENS", 900)))
+                break
+            except Exception as ex:
+                if too_large(ex) and level < len(LEVELS) - 1:
+                    level += 1; msgs = base_msgs(); print(f"  request too large -> shrinking (schema descriptions off={not LEVELS[level][0]}, image max side {LEVELS[level][1]}px)")
+                    continue
+                if too_large(ex):
+                    raise RuntimeError("Request is still too large at the smallest size. Use a class schema with fewer fields "
+                                       "(python build_schemas.py data/embeddings --max-fields 40) or upgrade the Groq tier.") from ex
+                raise
         raw = resp.choices[0].message.content or ""
         try:
             data = parse_json(raw)
@@ -68,7 +108,7 @@ def extract(img, schema, client=None, model=None, retries=1):
             except Exception as e:                       # the SCHEMA is broken, not the answer: retrying cannot help
                 return dict(data=data, valid=False, errors=[f"SCHEMA PROBLEM: {str(e)[:200]}"], raw=raw, filled=filled_ratio(data))
         if not errors: break
-        msgs += [{"role": "assistant", "content": raw}, {"role": "user", "content": "That failed validation:\n" + "\n".join(errors[:10]) + "\nReturn corrected JSON only."}]
+        history += [{"role": "assistant", "content": raw}, {"role": "user", "content": "That failed validation:\n" + "\n".join(errors[:10]) + "\nReturn corrected JSON only."}]
     return dict(data=data, valid=not errors, errors=errors, raw=raw, filled=filled_ratio(data) if data is not None else 0.0)
 
 # ---------- scoring against the dataset's answer key ----------
